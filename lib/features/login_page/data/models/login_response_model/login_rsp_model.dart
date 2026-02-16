@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/utils/rsp_auth.dart';
+import 'package:dallal_proj/core/common/models/rsp_auth.dart';
 import 'package:dallal_proj/features/login_page/data/models/login_response_model/user_data.dart';
 import 'package:dallal_proj/features/login_page/domain/entities/loggedin_user_entity.dart';
 

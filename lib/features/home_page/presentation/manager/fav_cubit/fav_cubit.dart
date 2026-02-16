@@ -1,5 +1,5 @@
 import 'package:dallal_proj/core/utils/functions/is_success.dart';
-import 'package:dallal_proj/core/utils/rsp_auth.dart';
+import 'package:dallal_proj/core/common/models/rsp_auth.dart';
 import 'package:dallal_proj/features/home_page/data/models/interaction_req_model.dart';
 import 'package:dallal_proj/features/home_page/domain/use_cases/fave_adv_use_case.dart';
 import 'package:dallal_proj/features/home_page/domain/use_cases/unfave_adv_use_case.dart';

@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/utils/rsp_auth.dart';
+import 'package:dallal_proj/core/common/models/rsp_auth.dart';
 
 class GetOtpRespModel extends RspAuth {
   String? otpStatus, otpMessage, otpCode;

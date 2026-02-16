@@ -1,6 +1,6 @@
 import 'package:dallal_proj/core/errors/failure.dart';
 import 'package:dallal_proj/core/use_cases/use_case2.dart';
-import 'package:dallal_proj/core/utils/rsp_auth.dart';
+import 'package:dallal_proj/core/common/models/rsp_auth.dart';
 import 'package:dallal_proj/features/edit_adv_info_page/domain/repos/edit_adv_page_repo.dart';
 import 'package:dallal_proj/features/edit_adv_info_page/domain/use_cases/delete_media_params.dart';
 import 'package:dartz/dartz.dart';

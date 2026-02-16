@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/utils/rsp_auth.dart';
+import 'package:dallal_proj/core/common/models/rsp_auth.dart';
 
 class UserProfileModel extends RspAuth {
   final String? respStatus, respMsg;

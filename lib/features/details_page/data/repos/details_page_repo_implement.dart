@@ -1,6 +1,6 @@
 import 'package:dallal_proj/core/errors/error_handler.dart';
 import 'package:dallal_proj/core/errors/failure.dart';
-import 'package:dallal_proj/core/utils/rsp_auth.dart';
+import 'package:dallal_proj/core/common/models/rsp_auth.dart';
 import 'package:dallal_proj/features/details_page/data/data_sources/details_remote_data_source.dart';
 import 'package:dallal_proj/features/details_page/data/models/report_req_model.dart';
 import 'package:dallal_proj/features/details_page/domain/repos/details_page_repo.dart';

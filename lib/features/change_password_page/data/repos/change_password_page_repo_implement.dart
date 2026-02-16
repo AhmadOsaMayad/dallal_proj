@@ -1,6 +1,6 @@
 import 'package:dallal_proj/core/errors/error_handler.dart';
 import 'package:dallal_proj/core/errors/failure.dart';
-import 'package:dallal_proj/core/utils/rsp_auth.dart';
+import 'package:dallal_proj/core/common/models/rsp_auth.dart';
 import 'package:dallal_proj/features/change_password_page/data/data_source/change_password_remote_data_source.dart';
 import 'package:dallal_proj/features/change_password_page/data/models/change_pass_req_model.dart';
 import 'package:dallal_proj/features/change_password_page/domain/repos/change_password_page_repo.dart';

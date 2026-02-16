@@ -4,7 +4,7 @@ import 'package:dallal_proj/core/errors/failure.dart';
 import 'package:dallal_proj/core/utils/api.dart';
 import 'package:dallal_proj/core/utils/functions/get_all_advs_list.dart';
 import 'package:dallal_proj/core/utils/functions/get_featured_advs_list.dart';
-import 'package:dallal_proj/core/utils/rsp_auth.dart';
+import 'package:dallal_proj/core/common/models/rsp_auth.dart';
 import 'package:dallal_proj/features/details_page/domain/entities/show_details_entity.dart';
 import 'package:dallal_proj/features/home_page/data/models/banners_model/banners_model.dart';
 import 'package:dallal_proj/features/home_page/data/models/fetch_advs_list_rsp_model.dart';

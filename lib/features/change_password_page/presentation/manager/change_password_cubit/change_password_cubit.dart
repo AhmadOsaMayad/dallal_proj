@@ -1,5 +1,5 @@
 import 'package:dallal_proj/core/utils/functions/is_success.dart';
-import 'package:dallal_proj/core/utils/rsp_auth.dart';
+import 'package:dallal_proj/core/common/models/rsp_auth.dart';
 import 'package:dallal_proj/features/change_password_page/data/models/change_pass_req_model.dart';
 import 'package:dallal_proj/features/change_password_page/domain/use_cases/change_password_use_case.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

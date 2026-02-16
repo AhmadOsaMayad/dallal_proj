@@ -1,6 +1,6 @@
 import 'package:dallal_proj/core/errors/failure.dart';
 import 'package:dallal_proj/core/utils/api.dart';
-import 'package:dallal_proj/core/utils/rsp_auth.dart';
+import 'package:dallal_proj/core/common/models/rsp_auth.dart';
 import 'package:dallal_proj/features/verify_msg_page/data/models/get_otp_resp_model.dart';
 import 'package:dallal_proj/features/verify_msg_page/data/models/verify_model.dart';
 

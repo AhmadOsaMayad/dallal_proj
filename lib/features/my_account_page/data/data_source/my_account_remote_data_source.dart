@@ -1,6 +1,6 @@
 import 'package:dallal_proj/core/errors/failure.dart';
 import 'package:dallal_proj/core/utils/api.dart';
-import 'package:dallal_proj/core/utils/rsp_auth.dart';
+import 'package:dallal_proj/core/common/models/rsp_auth.dart';
 import 'package:dallal_proj/features/my_account_page/data/models/delete_adv_req_model.dart';
 
 abstract class MyAccountRemoteDataSource {

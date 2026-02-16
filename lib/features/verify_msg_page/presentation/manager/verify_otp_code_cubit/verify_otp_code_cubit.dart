@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/utils/rsp_auth.dart';
+import 'package:dallal_proj/core/common/models/rsp_auth.dart';
 import 'package:dallal_proj/features/verify_msg_page/data/models/verify_model.dart';
 import 'package:dallal_proj/features/verify_msg_page/domain/use_cases/verify_otp_msg_use_case.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

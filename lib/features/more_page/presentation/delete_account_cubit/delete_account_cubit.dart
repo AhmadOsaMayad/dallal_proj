@@ -1,5 +1,5 @@
 import 'package:dallal_proj/core/utils/functions/is_success.dart';
-import 'package:dallal_proj/core/utils/rsp_auth.dart';
+import 'package:dallal_proj/core/common/models/rsp_auth.dart';
 import 'package:dallal_proj/features/more_page/domain/use_cases/delete_accout_use_case.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
