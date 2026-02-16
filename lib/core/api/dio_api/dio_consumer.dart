@@ -1,6 +1,6 @@
 import 'package:dallal_proj/core/api/api_consumer.dart';
-import 'package:dallal_proj/core/api/dio_interceptor.dart';
-import 'package:dallal_proj/core/constants/app_texts.dart';
+import 'package:dallal_proj/core/api/dio_api/dio_interceptor.dart';
+import 'package:dallal_proj/core/api/end_points.dart';
 import 'package:dallal_proj/core/errors/dio_xcept.dart';
 import 'package:dio/dio.dart';
 
@@ -8,7 +8,7 @@ class DioConsumer extends ApiConsumer {
   final Dio dio;
 
   DioConsumer({required this.dio}) {
-    dio.options.baseUrl = kBaseURL;
+    dio.options.baseUrl = EndPoints.baseUrl;
     dio.interceptors.add(DioInterceptor());
     dio.interceptors.add(
       LogInterceptor(
