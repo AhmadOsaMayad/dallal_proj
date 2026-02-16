@@ -1,6 +1,7 @@
 class EndPoints {
-  static String baseUrl = "https://dalal.ghassanalmoqbeli.com/api-app/api/";
-  static String token = "token";
+  static String baseUrl = 'https://dalal.ghassanalmoqbeli.com/api-app/api/';
+  static String token = 'token';
+  static String login = 'user/login.php';
 }
 
 class HttpKeys {
