@@ -12,4 +12,7 @@ class HttpKeys {
   static String reqFailedWithStatus = 'Request failed with StatusCode';
 }
 
-class DioKeys {}
+class DioKeys {
+  static String status = 'status';
+  static String errMsg = 'errorMessage';
+}
