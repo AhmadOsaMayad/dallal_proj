@@ -1,3 +1,4 @@
+import 'package:dallal_proj/core/api/dio_api/dio_consumer.dart';
 import 'package:dallal_proj/core/utils/api.dart';
 import 'package:dallal_proj/features/ai_price_prediction/data/data_source/ai_api_service.dart';
 import 'package:dallal_proj/features/ai_price_prediction/data/data_source/ai_prediction_remote_data_source.dart';
@@ -40,12 +41,14 @@ import 'package:dallal_proj/features/verification_page/data/data_resources/verif
 import 'package:dallal_proj/features/verification_page/data/repos/verification_page_repo_implement.dart';
 import 'package:dallal_proj/features/verify_msg_page/data/data_resources/verify_msg_remote_data_source.dart';
 import 'package:dallal_proj/features/verify_msg_page/data/repos/verify_msg_page_repo_implement.dart';
+import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
 final getIt = GetIt.instance;
 
 void setupServiceLocator() {
   getIt.registerSingleton<Api>(Api());
+  getIt.registerSingleton<DioConsumer>(DioConsumer(dio: Dio()));
 
   // AI Price Prediction Service Registration
   getIt.registerSingleton<AiApiService>(AiApiService());
@@ -75,7 +78,9 @@ void setupServiceLocator() {
   );
   getIt.registerSingleton<LoginPageRepoImplement>(
     LoginPageRepoImplement(
-      remoteDataSource: LoginRemoteDataSourceImplement(getIt.get<Api>()),
+      remoteDataSource: LoginRemoteDataSourceImplement(
+        getIt.get<DioConsumer>(),
+      ),
       localDataSource: LoginLocalDataSourceImplement(),
     ),
   );
