@@ -1,3 +1,4 @@
+const kBaseURL = "https://dalal.ghassanalmoqbeli.com/api-app/api/";
 const kImgP = 'assets/imgs/';
 const kIcoP = 'assets/icons/';
 const kMeDataBox = 'me_data_box';

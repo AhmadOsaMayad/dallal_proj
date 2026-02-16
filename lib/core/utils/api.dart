@@ -142,9 +142,6 @@ class Api {
   Future<dynamic> delete({required String url, @required String? token}) async {
     Map<String, String> headers = {};
     headers.addAll({'Content-Type': 'application/x-www-form-urlencoded'});
-    // if (url == 'null') {
-    //   url = '';
-    // }
     if (token != null && token != 'null') {
       headers.addAll({'Authorization': 'Bearer $token'});
     }
