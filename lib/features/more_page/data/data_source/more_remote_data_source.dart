@@ -1,3 +1,4 @@
+import 'package:dallal_proj/core/api/end_points.dart';
 import 'package:dallal_proj/core/errors/failure.dart';
 import 'package:dallal_proj/core/utils/api.dart';
 import 'package:dallal_proj/core/utils/functions/get_me_data.dart';
@@ -16,16 +17,16 @@ class MoreRemoteDataSourceImplement extends MoreRemoteDataSource {
     try {
       var user = getMeData();
       var data = await api.post(
-        url: 'user/request_delete_account.php',
+        url: EndPoints.deleteAcc,
         body: null,
         token: user!.uToken!,
       );
       RspAuth response = RspAuth.fromJson(data);
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 }

@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 
+import 'package:dallal_proj/core/api/end_points.dart';
 import 'package:dallal_proj/core/errors/failure.dart';
 import 'package:dallal_proj/core/utils/api.dart';
 import 'package:dallal_proj/features/notifications_page/data/models/fetch_notifications_req_model.dart';
@@ -42,15 +43,15 @@ class NotificationsRemoteDataSourceImplement
   ) async {
     try {
       var data = await api.get(
-        url: 'notification/get_notifications.php?${reqModel.toQueryParams()}',
+        url: '${EndPoints.fetchNotifications}${reqModel.toQueryParams()}',
         token: reqModel.token,
       );
       NotificationsResponse response = NotificationsResponse.fromJson(data);
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 
@@ -58,15 +59,15 @@ class NotificationsRemoteDataSourceImplement
   Future<UnreadCountResponse> getUnreadCount(String token) async {
     try {
       var data = await api.get(
-        url: 'notification/unread_count.php',
+        url: EndPoints.getUnreadNotifications,
         token: token,
       );
       UnreadCountResponse response = UnreadCountResponse.fromJson(data);
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 
@@ -74,16 +75,16 @@ class NotificationsRemoteDataSourceImplement
   Future<MarkAsReadResponse> markAsRead(MarkAsReadReqModel reqModel) async {
     try {
       var data = await api.put(
-        url: 'notification/mark_as_read.php',
+        url: EndPoints.markAsRead,
         body: reqModel.toJson(),
         token: reqModel.token,
       );
       MarkAsReadResponse response = MarkAsReadResponse.fromJson(data);
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 

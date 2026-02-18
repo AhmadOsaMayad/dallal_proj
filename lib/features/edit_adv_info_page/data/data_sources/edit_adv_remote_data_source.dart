@@ -1,3 +1,4 @@
+import 'package:dallal_proj/core/api/end_points.dart';
 import 'package:dallal_proj/core/errors/failure.dart';
 import 'package:dallal_proj/core/utils/api.dart';
 import 'package:dallal_proj/core/common/models/rsp_auth.dart';
@@ -25,7 +26,7 @@ class EditAdvRemoteDataSourceImplement extends EditAdvRemoteDataSource {
   ) async {
     try {
       var data = await api.patch(
-        url: 'ad/update_ad.php',
+        url: EndPoints.updateAdv,
         body: editAdvReqModel.toJson(),
         token: editAdvReqModel.userToken,
       );
@@ -34,9 +35,9 @@ class EditAdvRemoteDataSourceImplement extends EditAdvRemoteDataSource {
       );
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 
@@ -44,16 +45,16 @@ class EditAdvRemoteDataSourceImplement extends EditAdvRemoteDataSource {
   Future<RspAuth> updateMedia(MediaReqModel mediaReqModel) async {
     try {
       var data = await api.post(
-        url: 'ad/create_ad_media.php',
+        url: EndPoints.createMedia,
         body: mediaReqModel.toJson(),
         token: mediaReqModel.token,
       );
       RspAuth response = RspAuth.fromJson(data);
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 
@@ -61,15 +62,15 @@ class EditAdvRemoteDataSourceImplement extends EditAdvRemoteDataSource {
   Future<RspAuth> deleteMedia(DeleteMediaParams deleteMediaParams) async {
     try {
       var data = await api.delete(
-        url: 'ad/delete_ad_media.php?media_id=${deleteMediaParams.mediaId}',
+        url: '${EndPoints.deleteMedia}${deleteMediaParams.mediaId}',
         token: deleteMediaParams.token,
       );
       RspAuth response = RspAuth.fromJson(data);
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 }

@@ -1,3 +1,4 @@
+import 'package:dallal_proj/core/api/end_points.dart';
 import 'package:dallal_proj/core/errors/failure.dart';
 import 'package:dallal_proj/core/utils/api.dart';
 import 'package:dallal_proj/core/common/models/rsp_auth.dart';
@@ -22,7 +23,7 @@ class CreateAdvRemoteDataSourceImplement extends CreateAdvRemoteDataSource {
   ) async {
     try {
       var data = await api.post(
-        url: 'ad/create_ad.php',
+        url: EndPoints.createAdv,
         body: crAdvReqModel.toJson(),
         token: crAdvReqModel.userToken,
       );
@@ -31,9 +32,9 @@ class CreateAdvRemoteDataSourceImplement extends CreateAdvRemoteDataSource {
       );
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 
@@ -48,9 +49,9 @@ class CreateAdvRemoteDataSourceImplement extends CreateAdvRemoteDataSource {
       RspAuth response = RspAuth.fromJson(data);
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 }

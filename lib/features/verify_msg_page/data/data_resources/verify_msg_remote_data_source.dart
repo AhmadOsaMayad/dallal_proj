@@ -1,3 +1,4 @@
+import 'package:dallal_proj/core/api/end_points.dart';
 import 'package:dallal_proj/core/errors/failure.dart';
 import 'package:dallal_proj/core/utils/api.dart';
 import 'package:dallal_proj/core/common/models/rsp_auth.dart';
@@ -18,16 +19,16 @@ class VerifyMsgRemoteDataSourceImplement extends VerifyMsgRemoteDataSource {
   Future<GetOtpRespModel> getMsg(String phone) async {
     try {
       var data = await api.post(
-        url: "user/get_otp.php",
-        body: {"phone": phone},
+        url: EndPoints.getMsg,
+        body: {MutualKeys.phone: phone},
         token: null,
       );
       GetOtpRespModel response = GetOtpRespModel.fromJson(data);
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
 
     // throw UnimplementedError();
@@ -37,16 +38,16 @@ class VerifyMsgRemoteDataSourceImplement extends VerifyMsgRemoteDataSource {
   Future<RspAuth> resendMsg(String phone) async {
     try {
       var data = await api.post(
-        url: "user/resend_otp_code.php",
-        body: {"phone": phone},
+        url: EndPoints.resendMsg,
+        body: {MutualKeys.phone: phone},
         token: null,
       );
       RspAuth response = RspAuth.fromJson(data);
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 
@@ -54,16 +55,16 @@ class VerifyMsgRemoteDataSourceImplement extends VerifyMsgRemoteDataSource {
   Future<RspAuth> verifyMsg(VerifyModel verifyModel) async {
     try {
       var data = await api.post(
-        url: "user/verify_otp.php",
+        url: EndPoints.verifyMsg,
         body: verifyModel.toJson(),
         token: null,
       );
       RspAuth response = RspAuth.fromJson(data);
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 }

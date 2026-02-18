@@ -51,8 +51,10 @@ class LoginRemoteDataSourceImplement extends LoginRemoteDataSource {
       return response;
     } on DioException catch (e) {
       throw handleDioExceptions(e);
+    } on FormatException catch (e) {
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 }
