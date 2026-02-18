@@ -1,3 +1,4 @@
+import 'package:dallal_proj/core/api/end_points.dart';
 import 'package:dallal_proj/core/errors/failure.dart';
 import 'package:dallal_proj/core/utils/api.dart';
 import 'package:dallal_proj/core/common/models/rsp_auth.dart';
@@ -15,15 +16,15 @@ class MyAccountRemoteDataSourceImplement extends MyAccountRemoteDataSource {
   Future<RspAuth> deleteAdv(DeleteAdvReqModel deleteAdvReqModel) async {
     try {
       var data = await api.delete(
-        url: 'ad/delete_ad.php?id=${deleteAdvReqModel.adID}',
+        url: '${EndPoints.deleteAdv}${deleteAdvReqModel.adID}',
         token: deleteAdvReqModel.token,
       );
       RspAuth response = RspAuth.fromJson(data);
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 }

@@ -1,3 +1,4 @@
+import 'package:dallal_proj/core/api/end_points.dart';
 import 'package:dallal_proj/core/errors/failure.dart';
 import 'package:dallal_proj/core/utils/api.dart';
 import 'package:dallal_proj/core/common/models/rsp_auth.dart';
@@ -16,16 +17,16 @@ class RegisterRemoteDataSourceImplement extends RegisterRemoteDataSource {
   Future<RspAuth> registerUser(RegisterModel registerModel) async {
     try {
       var data = await api.post(
-        url: "user/register.php",
+        url: EndPoints.register,
         body: registerModel.toJson(),
         token: null,
       );
       RspAuth response = RspAuth.fromJson(data);
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON format: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson} format: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
 
     // throw UnimplementedError();

@@ -1,3 +1,4 @@
+import 'package:dallal_proj/core/api/end_points.dart';
 import 'package:dallal_proj/core/errors/failure.dart';
 import 'package:dallal_proj/core/utils/api.dart';
 import 'package:dallal_proj/features/featuring_adv_page/data/models/feature_adv_response_model.dart';
@@ -20,7 +21,7 @@ class PackageDetailsRemoteDataSourceImplement
   ) async {
     try {
       var data = await api.get(
-        url: 'package/check_package_expiry.php?ad_id=${idTokenModel.adID}',
+        url: '${EndPoints.getPkgInfo}${idTokenModel.adID}',
         token: idTokenModel.token,
       );
       PackageActivationResponse response = PackageActivationResponse.fromJson(
@@ -28,9 +29,9 @@ class PackageDetailsRemoteDataSourceImplement
       );
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 }

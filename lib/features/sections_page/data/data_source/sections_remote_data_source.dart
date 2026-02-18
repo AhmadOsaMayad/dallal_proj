@@ -1,3 +1,4 @@
+import 'package:dallal_proj/core/api/end_points.dart';
 import 'package:dallal_proj/core/errors/failure.dart';
 import 'package:dallal_proj/core/utils/api.dart';
 import 'package:dallal_proj/features/sections_page/data/models/filter_model/filter_model.dart';
@@ -18,65 +19,52 @@ class SectionsRemoteDataSourceImplement extends SectionsRemoteDataSource {
   @override
   Future<FilterModel> fetchAptsList(String? token) async {
     try {
-      var data = await api.get(
-        url:
-            "search_and_filter/search_and_filter_ads.php?property_type=apartment",
-        token: token,
-      );
+      var data = await api.get(url: EndPoints.fetchApts, token: token);
       FilterModel response = FilterModel.fromJson(data);
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 
   @override
   Future<FilterModel> fetchHousesList(String? token) async {
     try {
-      var data = await api.get(
-        url: "search_and_filter/search_and_filter_ads.php?property_type=house",
-        token: token,
-      );
+      var data = await api.get(url: EndPoints.fetchHouses, token: token);
       FilterModel response = FilterModel.fromJson(data);
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 
   @override
   Future<FilterModel> fetchLandsList(String? token) async {
     try {
-      var data = await api.get(
-        url: "search_and_filter/search_and_filter_ads.php?property_type=land",
-        token: token,
-      );
+      var data = await api.get(url: EndPoints.fetchLands, token: token);
       FilterModel response = FilterModel.fromJson(data);
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 
   @override
   Future<FilterModel> fetchShopsList(String? token) async {
     try {
-      var data = await api.get(
-        url: "search_and_filter/search_and_filter_ads.php?property_type=shop",
-        token: token,
-      );
+      var data = await api.get(url: EndPoints.fetchShops, token: token);
       FilterModel response = FilterModel.fromJson(data);
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 
@@ -85,15 +73,15 @@ class SectionsRemoteDataSourceImplement extends SectionsRemoteDataSource {
     try {
       final params = filterReqModel.toQueryParams();
       var data = await api.get(
-        url: "search_and_filter/search_and_filter_ads.php?$params",
+        url: "${EndPoints.searchFilter}$params",
         token: filterReqModel.token,
       );
       FilterModel response = FilterModel.fromJson(data);
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 }

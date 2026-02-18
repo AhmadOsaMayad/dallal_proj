@@ -1,3 +1,4 @@
+import 'package:dallal_proj/core/api/end_points.dart';
 import 'package:dallal_proj/core/errors/failure.dart';
 import 'package:dallal_proj/core/utils/api.dart';
 import 'package:dallal_proj/features/featuring_adv_page/data/models/feature_adv_model.dart';
@@ -18,7 +19,7 @@ class FeaturingAdvRemoteDataSourceImplement
   ) async {
     try {
       var data = await api.post(
-        url: 'package/activate_package.php',
+        url: EndPoints.activatePkg,
         body: featureAdv.toJson(),
         token: featureAdv.token,
       );
@@ -27,9 +28,9 @@ class FeaturingAdvRemoteDataSourceImplement
       );
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 }

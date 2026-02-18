@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:dallal_proj/core/api/end_points.dart';
 import 'package:dallal_proj/core/errors/failure.dart';
 import 'package:dallal_proj/core/utils/api.dart';
 import 'package:dallal_proj/core/utils/functions/get_all_advs_list.dart';
@@ -31,7 +32,7 @@ class HomeRemoteDataSourceImplement extends HomeRemoteDataSource {
       if (token == 'null') {
         token = null;
       }
-      var data = await api.get(url: "ad/list_all_ads.php", token: token);
+      var data = await api.get(url: EndPoints.fetchAllAdvs, token: token);
       RspAuth response = RspAuth.fromJson(data);
       List<ShowDetailsEntity> allAdvs = getAllAdvsList(data);
       // saveAdvsList(allAdvs, kAllAdvBox);
@@ -43,16 +44,16 @@ class HomeRemoteDataSourceImplement extends HomeRemoteDataSource {
       );
       // return allAdvs;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 
   @override
   Future<FetchAdvsListRspModel> fetchFeaturedAdvs(String? token) async {
     try {
-      var data = await api.get(url: "ad/list_featured_ads.php", token: token);
+      var data = await api.get(url: EndPoints.fetchFeaturedAdvs, token: token);
       RspAuth response = RspAuth.fromJson(data);
 
       List<ShowDetailsEntity> featuredAdvs = getFeaturedAdvsList(data);
@@ -64,22 +65,22 @@ class HomeRemoteDataSourceImplement extends HomeRemoteDataSource {
       );
       // return featuredAdvs;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 
   @override
   Future<BannersRspEntity> fetchAllBans() async {
     try {
-      var data = await api.get(url: "banner/get_banners.php", token: null);
+      var data = await api.get(url: EndPoints.fetchAllBanners, token: null);
       BannersRspEntity response = BannersModel.fromJson(data);
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 
@@ -87,7 +88,7 @@ class HomeRemoteDataSourceImplement extends HomeRemoteDataSource {
   Future<RspAuth> faveAdv(InteractionReqModel interAct) async {
     try {
       var data = await api.post(
-        url: "ad/add_favorite.php",
+        url: EndPoints.faveAdv,
         token: interAct.token,
         body: interAct.toJson(),
       );
@@ -95,9 +96,9 @@ class HomeRemoteDataSourceImplement extends HomeRemoteDataSource {
       RspAuth response = RspAuth.fromJson(data);
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 
@@ -105,16 +106,16 @@ class HomeRemoteDataSourceImplement extends HomeRemoteDataSource {
   Future<RspAuth> unfaveAdv(InteractionReqModel interAct) async {
     try {
       var data = await api.delete(
-        url: "ad/remove_favorite.php?ad_id=${interAct.advID}",
+        url: "${EndPoints.unfaveAdv}${interAct.advID}",
         token: interAct.token,
         // body: interAct.advID,
       );
       RspAuth response = RspAuth.fromJson(data);
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 
@@ -122,16 +123,16 @@ class HomeRemoteDataSourceImplement extends HomeRemoteDataSource {
   Future<RspAuth> likeAdv(InteractionReqModel interAct) async {
     try {
       var data = await api.post(
-        url: "ad/like_ad.php",
+        url: EndPoints.likeAdv,
         token: interAct.token,
         body: interAct.toJson(),
       );
       RspAuth response = RspAuth.fromJson(data);
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 
@@ -139,15 +140,15 @@ class HomeRemoteDataSourceImplement extends HomeRemoteDataSource {
   Future<RspAuth> unlikeAdv(InteractionReqModel interAct) async {
     try {
       var data = await api.delete(
-        url: "ad/unlike_ad.php?ad_id=${interAct.advID}",
+        url: "${EndPoints.unlikeAdv}${interAct.advID}",
         token: interAct.token,
       );
       RspAuth response = RspAuth.fromJson(data);
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 }

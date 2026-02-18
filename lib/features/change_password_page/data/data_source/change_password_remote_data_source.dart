@@ -1,3 +1,4 @@
+import 'package:dallal_proj/core/api/end_points.dart';
 import 'package:dallal_proj/core/errors/failure.dart';
 import 'package:dallal_proj/core/utils/api.dart';
 import 'package:dallal_proj/core/common/models/rsp_auth.dart';
@@ -16,16 +17,16 @@ class ChangePasswordRemoteDataSourceImplement
   Future<RspAuth> changePassword(ChangePassReqModel changePassModel) async {
     try {
       var data = await api.put(
-        url: 'user_profile/change_password.php',
+        url: EndPoints.changePass,
         body: changePassModel.toJson(),
         token: changePassModel.token,
       );
       RspAuth responseRemote = RspAuth.fromJson(data);
       return responseRemote;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 }

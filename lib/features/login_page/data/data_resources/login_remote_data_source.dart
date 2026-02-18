@@ -1,3 +1,4 @@
+import 'package:dallal_proj/core/api/end_points.dart';
 import 'package:dallal_proj/core/errors/failure.dart';
 import 'package:dallal_proj/core/utils/api.dart';
 import 'package:dallal_proj/core/utils/functions/save_user_data.dart';
@@ -16,7 +17,7 @@ class LoginRemoteDataSourceImplement extends LoginRemoteDataSource {
   Future<LoginRspModel> loginUser(LoginReqModel loginModel) async {
     try {
       var data = await api.post(
-        url: 'user/login.php',
+        url: EndPoints.login,
         body: loginModel.toJson(),
         token: null,
       );
@@ -24,9 +25,9 @@ class LoginRemoteDataSourceImplement extends LoginRemoteDataSource {
       saveUserData(response.userData);
       return response;
     } on FormatException catch (e) {
-      throw ParsingFailure("Invalid JSON: ${e.message}");
+      throw ParsingFailure("${HttpKeys.invalidJson}: ${e.message}");
     } on Exception catch (e) {
-      throw ServerFailure("Server error: ${e.toString()}");
+      throw ServerFailure("${HttpKeys.serverErr} ${e.toString()}");
     }
   }
 }
