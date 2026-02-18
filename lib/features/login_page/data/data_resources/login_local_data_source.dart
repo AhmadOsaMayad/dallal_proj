@@ -13,15 +13,3 @@ class LoginLocalDataSourceImplement extends LoginLocalDataSource {
     return getMeData();
   }
 }
-
-// final Api api;
-// LoginRemoteDataSourceImplement(this.api);
-// var data = await api.post(
-//   url: 'user/login.php',
-//   body: loginModel.toJson(),
-//   token: null,
-// );
-// LoginRspModel response = LoginRspModel.fromJson(data);
-// saveUserData(response);
-// return response;
-// throw UnimplementedError();

@@ -17,8 +17,8 @@ class PackageActivationResponse {
 
   factory PackageActivationResponse.fromJson(Map<String, dynamic> json) {
     return PackageActivationResponse(
-      status: json[MutualKeys.status] as String,
-      message: json[MutualKeys.errMsg] as String?,
+      status: json[ApiKeys.status] as String,
+      message: json[ApiKeys.errMsg] as String?,
       data: PackageActivationData.fromJson(json['data']),
     );
   }

@@ -1,6 +1,5 @@
 class EndPoints {
   static String baseUrl = 'https://dalal.ghassanalmoqbeli.com/api-app/api/';
-  static String token = 'token';
   static String login = 'user/login.php';
   static String register = 'user/register.php';
   static String changePass = 'user_profile/change_password.php';
@@ -27,10 +26,10 @@ class EndPoints {
   static String getPkgInfo = 'package/check_package_expiry.php?ad_id=';
   static String resetPass = 'user/forgot_password.php';
   static String searchFilter = 'search_and_filter/search_and_filter_ads.php?';
-  static String fetchApts = '${MutualKeys.propType}${searchFilter}apartment';
-  static String fetchHouses = '${MutualKeys.propType}${searchFilter}house';
-  static String fetchLands = '${MutualKeys.propType}${searchFilter}land';
-  static String fetchShops = '${MutualKeys.propType}${searchFilter}shop';
+  static String fetchApts = '${ApiKeys.propType}${searchFilter}apartment';
+  static String fetchHouses = '${ApiKeys.propType}${searchFilter}house';
+  static String fetchLands = '${ApiKeys.propType}${searchFilter}land';
+  static String fetchShops = '${ApiKeys.propType}${searchFilter}shop';
   static String resendMsg = 'user/resend_otp_code.php';
   static String getMsg = 'user/get_otp.php';
   static String verifyMsg = 'user/verify_otp.php';
@@ -45,22 +44,27 @@ class HttpKeys {
   static String invalidJson = "Invalid Json format";
   static String serverErr = "Server Error";
   static String reqFailedWithStatus = 'Request failed with StatusCode';
-  static String status = MutualKeys.status;
-  static String errMsg = MutualKeys.errMsg;
+  static String status = ApiKeys.status;
+  static String errMsg = ApiKeys.errMsg;
 }
 
-class MutualKeys {
+class ApiKeys {
+  static String token = 'token';
+  static String userId = 'user_id';
   static String status = 'status';
   static String errMsg = 'message';
+  static String data = 'data';
   static String pfpImg = 'profile_image';
+  static String createdAt = 'created_at';
   static String name = 'name';
   static String phone = 'phone';
   static String whatsapp = 'whatsapp';
-  static String dataImg64 = 'data:image/jpg;base64,';
+  static String dataImg64 = '$data:image/jpg;base64,';
   static String propType = 'property_type=';
+  static String needVerf = 'need_verification';
 }
 
 class DioKeys {
-  static String status = MutualKeys.status;
-  static String errMsg = MutualKeys.errMsg;
+  static String status = ApiKeys.status;
+  static String errMsg = ApiKeys.errMsg;
 }

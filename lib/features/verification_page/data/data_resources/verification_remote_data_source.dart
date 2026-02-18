@@ -18,7 +18,7 @@ class VerificationRemoteDataSourceImplement
     try {
       var data = await api.post(
         url: EndPoints.resendMsg,
-        body: {MutualKeys.phone: phone},
+        body: {ApiKeys.phone: phone},
         token: null,
       );
       RspAuth response = RspAuth.fromJson(data);

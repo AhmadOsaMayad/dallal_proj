@@ -8,6 +8,7 @@ import 'package:dallal_proj/core/utils/functions/save_user_data.dart';
 import 'package:dallal_proj/features/login_page/data/models/login_req_model.dart';
 import 'package:dallal_proj/features/login_page/data/models/login_response_model/login_rsp_model.dart';
 import 'package:dio/dio.dart';
+import 'package:jwt_decoder/jwt_decoder.dart';
 
 abstract class LoginRemoteDataSource {
   Future<LoginRspModel> loginUser(LoginReqModel loginModel);
@@ -47,6 +48,8 @@ class LoginRemoteDataSourceImplement extends LoginRemoteDataSource {
         token: null,
       );
       LoginRspModel response = LoginRspModel.fromJson(data);
+      // final decodedToken = JwtDecoder.decode(response.userData!.uToken!);
+      // decodedToken; //this line is just to turn the warning line off
       saveUserData(response.userData);
       return response;
     } on DioException catch (e) {

@@ -1,3 +1,6 @@
+const kUserProfsPath = '/api-app/api/media/get_media.php?type=user_profiles';
+const kUserProfsNfilePath =
+    '/api-app/api/media/get_media.php?type=user_profiles&file=';
 const kImgP = 'assets/imgs/';
 const kIcoP = 'assets/icons/';
 const kMeDataBox = 'me_data_box';
