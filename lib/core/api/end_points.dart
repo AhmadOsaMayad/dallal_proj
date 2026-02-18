@@ -11,9 +11,16 @@ class HttpKeys {
   static String bearer = 'Bearer';
   static String respIsntJson = 'Response is not valid JSON:';
   static String reqFailedWithStatus = 'Request failed with StatusCode';
+  static String status = MutualKeys.status;
+  static String errMsg = MutualKeys.errMsg;
+}
+
+class MutualKeys {
+  static String status = 'status';
+  static String errMsg = 'message';
 }
 
 class DioKeys {
-  static String status = 'status';
-  static String errMsg = 'errorMessage';
+  static String status = MutualKeys.status;
+  static String errMsg = MutualKeys.errMsg;
 }
