@@ -6,7 +6,6 @@ import 'package:dallal_proj/core/components/app_bottom_sheets/filter_b_s/filter_
 import 'package:dallal_proj/core/widgets/helpers/widgets_helper.dart';
 import 'package:dallal_proj/core/widgets/text_widgets/r_text.dart';
 import 'package:dallal_proj/core/widgets/two_item_widgets/two_itm_row.dart';
-import 'package:dallal_proj/temp_try.dart';
 import 'package:flutter/material.dart';
 
 class CheckboxRow extends StatelessWidget {

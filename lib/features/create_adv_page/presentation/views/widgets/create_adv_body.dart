@@ -1,6 +1,7 @@
 import 'package:dallal_proj/core/components/app_bottom_sheets/bottom_sheet_holder.dart';
 import 'package:dallal_proj/core/components/app_bottom_sheets/filter_b_s/filter_funcs.dart';
 import 'package:dallal_proj/core/components/app_bottom_sheets/log_required_b_s/show_log_required_b_s.dart';
+import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:dallal_proj/core/widgets/loadable_body.dart';
 import 'package:dallal_proj/features/ai_price_prediction/presentation/views/widgets/dynamic_ai_form.dart';
 import 'package:dallal_proj/features/create_adv_page/data/models/cr_adv_req_model.dart';
@@ -75,8 +76,8 @@ class _CrAdvBodyState extends State<CrAdvBody> {
       _selectedImagesBase64 = base64Images;
     });
 
-    // Here you can:
-    // 1. Store in your request model
+    // Here we can:
+    // 1. Store in our request model
     // 2. Validate if needed
     // 3. Prepare for API submission
 
@@ -95,7 +96,7 @@ class _CrAdvBodyState extends State<CrAdvBody> {
       parsedFloors = int.tryParse(_floors);
     }
 
-    final isNegotiable = selectedOptB.value == 'نعم';
+    final isNegotiable = selectedOptB.value == kYes;
 
     // Create the model
     return AdvertisementRequestModel(
@@ -320,7 +321,7 @@ class _CrAdvBodyState extends State<CrAdvBody> {
                                 );
                                 return;
                               }
-                              // Now you have _selectedImagesBase64 ready for your API
+                              // Now here we have _selectedImagesBase64 ready for our API
                               log(
                                 'Posting with ${_selectedImagesBase64.length} images',
                               );

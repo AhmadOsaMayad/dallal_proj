@@ -2,7 +2,6 @@ import 'package:dallal_proj/core/common/entities/options_list_entity.dart';
 import 'package:dallal_proj/core/theme/app_font_styles.dart';
 import 'package:dallal_proj/core/components/radio_components/radio_btns/rbit/h_title_rbit.dart';
 import 'package:dallal_proj/core/widgets/helpers/widgets_helper.dart';
-import 'package:dallal_proj/temp_try.dart';
 import 'package:flutter/material.dart';
 
 class HRadioForm extends StatelessWidget {
@@ -27,8 +26,8 @@ class HRadioForm extends StatelessWidget {
     return HTitleRbit(
       onTapped: (value) {
         selectedOpt.value = value;
-        onChanged?.call(); // Call onChanged
-      }, //onTapped,
+        onChanged?.call();
+      },
       selectedOpt: selectedOpt,
       olModel: olModel,
       titleStyle: titleStyle ?? FStyles.s14W5,

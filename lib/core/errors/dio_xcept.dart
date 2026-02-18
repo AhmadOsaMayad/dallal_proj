@@ -51,7 +51,10 @@ ServerException handleDioExceptions(DioException e) {
           );
         default:
           return ServerException(
-            errModel: ErrorModel(status: 000, errorMessage: "Unknown Error"),
+            errModel: ErrorModel(
+              status: 000,
+              errorMessage: "Unknown Error: ${e.message}",
+            ),
           );
       }
   }

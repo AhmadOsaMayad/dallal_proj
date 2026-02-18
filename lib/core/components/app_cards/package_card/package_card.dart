@@ -3,7 +3,6 @@ import 'package:dallal_proj/core/components/app_cards/package_card/entities/pack
 import 'package:dallal_proj/core/components/app_cards/package_card/multi_package_card_items.dart';
 import 'package:dallal_proj/core/components/app_cards/package_card/items/package_card_box.dart';
 import 'package:dallal_proj/core/components/app_cards/package_card/single_package_card_items.dart';
-import 'package:dallal_proj/temp_try.dart';
 import 'package:flutter/material.dart';
 
 class PckgCard extends StatelessWidget {
@@ -26,22 +25,10 @@ class PckgCard extends StatelessWidget {
       onTap: onTap,
       padding: cardType.padding,
       cWidth: cWidth,
-      child: Row(
-        children: [
-          Expanded(
-            child:
-                isSingle
-                    ? SinglePckgCardItems(
-                      pckgModel: pckgModel,
-                      cardType: cardType,
-                    )
-                    : MultiPckgCardItems(
-                      pckgModel: pckgModel,
-                      cardType: cardType,
-                    ),
-          ),
-        ],
-      ),
+      child:
+          isSingle
+              ? SinglePckgCardItems(pckgModel: pckgModel, cardType: cardType)
+              : MultiPckgCardItems(pckgModel: pckgModel, cardType: cardType),
     );
   }
 }

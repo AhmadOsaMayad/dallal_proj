@@ -6,7 +6,6 @@ import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:dallal_proj/core/widgets/helpers/widgets_helper.dart';
 import 'package:dallal_proj/core/widgets/text_widgets/body_text.dart';
 import 'package:dallal_proj/core/widgets/text_widgets/r_text.dart';
-import 'package:dallal_proj/temp_try.dart';
 import 'package:flutter/material.dart';
 
 class SinglePckgCardItems extends StatelessWidget {

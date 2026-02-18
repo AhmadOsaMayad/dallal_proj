@@ -3,7 +3,6 @@ import 'package:dallal_proj/core/widgets/text_widgets/r_text.dart';
 import 'package:dallal_proj/core/widgets/symmetric_pads/h_p_item.dart';
 import 'package:dallal_proj/core/widgets/two_item_widgets/two_itm_row.dart';
 import 'package:dallal_proj/core/components/radio_components/radio_btns/rbit/rbit_l_b.dart';
-import 'package:dallal_proj/temp_try.dart';
 import 'package:flutter/material.dart';
 
 class HTitleRbit extends StatelessWidget {

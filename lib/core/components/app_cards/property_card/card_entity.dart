@@ -2,7 +2,6 @@ import 'package:dallal_proj/core/common/entities/user_entity.dart';
 import 'package:dallal_proj/core/components/app_cards/package_card/entities/package_entity.dart';
 import 'package:dallal_proj/core/constants/mock_models.dart';
 import 'package:dallal_proj/core/utils/assets_data.dart';
-import 'package:dallal_proj/temp_try.dart';
 
 class CardEntity {
   final PckgInfEntity? package;
@@ -10,7 +9,6 @@ class CardEntity {
   final DateTime? date;
   final UserEntity advOwner;
   final String title;
-  // final String seller;
   final String location;
   final String price;
   final String section;
@@ -34,13 +32,13 @@ class CardEntity {
     this.isMine,
     this.advOwner = kUserModel,
     this.date,
-    this.area = '200',
+    this.area = '0',
     this.mapImg = AssetsData.mapImg,
-    this.flrCount = '3',
-    this.romCount = '12',
-    this.halCount = '2',
-    this.bthCount = '12',
-    this.kchCount = '10',
+    this.flrCount = '0',
+    this.romCount = '0',
+    this.halCount = '0',
+    this.bthCount = '0',
+    this.kchCount = '0',
     required this.section,
     this.status,
     required this.isLiked,

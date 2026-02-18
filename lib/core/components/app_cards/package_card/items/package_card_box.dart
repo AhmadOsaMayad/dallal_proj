@@ -17,19 +17,25 @@ class PckgCardBox extends StatelessWidget {
   final Function()? onTap;
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        height: 225,
-        width: cWidth,
-        padding: EdgeInsets.all(padding),
-        decoration: Themer.genShape(
-          color: kWhiteT6,
-          rad: 12,
-          shadows: [Shads.shadow4],
+    return Row(
+      children: [
+        Expanded(
+          child: GestureDetector(
+            onTap: onTap,
+            child: Container(
+              height: 225,
+              width: cWidth,
+              padding: EdgeInsets.all(padding),
+              decoration: Themer.genShape(
+                color: kWhiteT6,
+                rad: 12,
+                shadows: [Shads.shadow4],
+              ),
+              child: child,
+            ),
+          ),
         ),
-        child: child,
-      ),
+      ],
     );
   }
 }

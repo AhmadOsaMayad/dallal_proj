@@ -4,7 +4,6 @@ import 'package:dallal_proj/core/widgets/symmetric_pads/v_p_item.dart';
 import 'package:dallal_proj/core/widgets/text_widgets/v_p_text.dart';
 import 'package:dallal_proj/core/widgets/two_item_widgets/two_itm_col.dart';
 import 'package:dallal_proj/core/components/radio_components/radio_btns/rbit/rbit_l_b.dart';
-import 'package:dallal_proj/temp_try.dart';
 import 'package:flutter/material.dart';
 
 class VTitleRbit extends StatelessWidget {
@@ -28,10 +27,9 @@ class VTitleRbit extends StatelessWidget {
         bSpc: 10,
         child: RbitLB(
           selectedValueNotifier: selectedOpt,
-          // onTapped: (value) => selectedOpt.value = value,
           onTapped: (value) {
             selectedOpt.value = value;
-            onChanged?.call(); // Call onChanged
+            onChanged?.call();
           },
           width: width ?? 4,
           options: oLModel.options,

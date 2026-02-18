@@ -7,7 +7,6 @@ import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:dallal_proj/core/constants/str_lists.dart';
 import 'package:dallal_proj/core/utils/app_router.dart';
 import 'package:dallal_proj/core/utils/assets_data.dart';
-import 'package:dallal_proj/temp_try.dart';
 
 const kUserModel = UserEntity();
 
@@ -40,11 +39,11 @@ const List<String> kTFModelTitles = [
   kRoomsCount,
 ];
 
-// const TFModel kPropSectVM = TFModel(widthF: widthF, codeLength: codeLength, controllers: controllers, titles: titles, fNodes: fNodes)
 const kIsNegot = OptionsListEntity(
   title: '$kNegotiatable؟   ',
   options: CLstr.isOnlyPremOpts,
 );
+
 const kOfferCkbModel = OptionsListEntity(
   title: kOfferType,
   options: CLstr.offerType,

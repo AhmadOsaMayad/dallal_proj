@@ -1,7 +1,7 @@
+import 'package:dallal_proj/core/api/end_points.dart';
 import 'package:dallal_proj/core/components/app_cards/package_card/entities/package_entity.dart';
 import 'package:dallal_proj/core/components/app_cards/package_card/entities/package_type.dart';
 import 'package:dallal_proj/core/widgets/helpers/widgets_helper.dart';
-import 'package:dallal_proj/temp_try.dart';
 import 'package:intl/intl.dart';
 
 class PackageActivationResponse {
@@ -17,8 +17,8 @@ class PackageActivationResponse {
 
   factory PackageActivationResponse.fromJson(Map<String, dynamic> json) {
     return PackageActivationResponse(
-      status: json['status'] as String,
-      message: json['message'] as String?,
+      status: json[MutualKeys.status] as String,
+      message: json[MutualKeys.errMsg] as String?,
       data: PackageActivationData.fromJson(json['data']),
     );
   }

@@ -4,7 +4,6 @@ import 'package:dallal_proj/core/components/app_cards/package_card/items/frame_i
 import 'package:dallal_proj/core/components/app_cards/package_card/items/price_ico_line.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:dallal_proj/core/widgets/text_widgets/r_text.dart';
-import 'package:dallal_proj/temp_try.dart';
 import 'package:flutter/material.dart';
 
 class MultiPckgCardItems extends StatelessWidget {
