@@ -25,8 +25,10 @@ class Fltr {
 
   static double btnWidth(bool isMinSize, BuildContext context) {
     return isMinSize
-        ? Funcs.respWidth(fract: 0.17, context: context)
-        : Funcs.respWidth(fract: 0.9, context: context);
+        ? context.respWidth(fract: 0.17)
+        //Funcs.respWidth(fract: 0.17, context: context)
+        : context.respWidth(fract: 0.9);
+    //Funcs.respWidth(fract: 0.9, context: context);
   }
 
   static Widget filterTitle(String title) {

@@ -21,7 +21,9 @@ class CheckboxRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: Funcs.respWidth(fract: 0.9, context: context),
+      width: context.respWidth(
+        fract: 0.9,
+      ), //Funcs.respWidth(fract: 0.9, context: context),
       child: TwoItmRow(
         leftChild: McCheckbox(
           options: oLModel.options,

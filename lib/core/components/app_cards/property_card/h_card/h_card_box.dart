@@ -10,10 +10,11 @@ class HCardBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: Funcs.frwGetter(200, context),
+      width: context.frwGetter(200),
+      // Funcs.frwGetter(200, context),
       child: AspectRatio(
-        aspectRatio:
-            Funcs.frwGetter(193.3407, context) / Funcs.frhGetter(289, context),
+        aspectRatio: context.frwGetter(193.3407) / context.frhGetter(289),
+        // Funcs.frwGetter(193.3407, context) / Funcs.frhGetter(289, context),
         child: Container(
           padding: PCardH.hItemPadding(),
           decoration: Themer.bard(null, radius: 12),

@@ -55,7 +55,8 @@ class PersonalInfoHolder2 extends StatelessWidget {
       textDirection: WidH.trd,
       child: Container(
         height: 31,
-        width: Funcs.respWidth(fract: 0.75, context: context),
+        width: context.respWidth(fract: 0.75),
+        // Funcs.respWidth(fract: 0.75, context: context),
         decoration: ShapeDecoration(
           color: kWhiteF6,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(3)),

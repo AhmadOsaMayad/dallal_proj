@@ -22,12 +22,14 @@ class HCardListBlocBuilder extends StatelessWidget {
             return HCardList(advsList: state.featuredAdvsList);
           } else if (state is FeaturedAdvsFailure) {
             return SizedBox(
-              height: Funcs.respHieght(fract: 0.39, context: context),
+              height: context.respHieght(fract: 39),
+              // Funcs.respHieght(fract: 0.39, context: context),
               child: Text(state.errMsg),
             );
           }
           return SizedBox(
-            height: Funcs.respHieght(fract: 0.39, context: context),
+            height: context.respHieght(fract: 39),
+            // Funcs.respHieght(fract: 0.39, context: context),
             child: const Center(
               child: CircularProgressIndicator(color: kPrimColG),
             ),

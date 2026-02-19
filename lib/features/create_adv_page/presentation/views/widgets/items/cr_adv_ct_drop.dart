@@ -15,7 +15,8 @@ class CrAdvCtDrop extends StatelessWidget {
       style: FStyles.s16w4,
       title: kCity,
       child: CtDropMenu(
-        respFW: Funcs.respInfWp(32, context),
+        respFW: context.respInfWp(32),
+        // Funcs.respInfWp(32, context),
         onSelected: onSelected,
       ),
     );

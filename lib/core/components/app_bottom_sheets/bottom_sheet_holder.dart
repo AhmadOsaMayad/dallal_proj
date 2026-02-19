@@ -16,7 +16,8 @@ class BSFormHolder extends StatelessWidget {
       color: kTransP,
       child: SingleChildScrollView(
         child: SizedBox(
-          width: Funcs.respWidth(fract: 0.88334, context: context),
+          width: context.respWidth(fract: 0.88334),
+          //Funcs.respWidth(fract: 0.88334, context: context),
           child: form,
         ),
       ),

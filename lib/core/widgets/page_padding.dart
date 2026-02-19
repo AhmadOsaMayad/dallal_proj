@@ -9,9 +9,11 @@ class PagePadding extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(
-        horizontal: Funcs.respWidth(fract: fract, context: context),
+        horizontal: context.respWidth(fract: fract),
       ),
       child: child,
     );
   }
 }
+
+// Funcs.respWidth(fract: fract, context: context),

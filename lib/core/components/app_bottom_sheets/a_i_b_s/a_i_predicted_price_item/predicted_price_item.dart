@@ -15,7 +15,8 @@ class PredictedPriceItem extends StatelessWidget {
       bSpc: 20,
       child: Container(
         height: 136,
-        width: Funcs.frwGetter(368, context),
+        width: context.frwGetter(368),
+        //Funcs.frwGetter(368, context),
         padding: const EdgeInsets.only(right: 16, bottom: 20, left: 36),
         decoration: Themer.aiBtn(kPredictedPriceItemColors, 32),
         child: const Center(child: AIPriceTF(price: '0')),

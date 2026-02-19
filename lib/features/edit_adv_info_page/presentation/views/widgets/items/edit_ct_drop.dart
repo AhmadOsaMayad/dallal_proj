@@ -18,7 +18,8 @@ class EditCtDrop extends StatelessWidget {
       title: kCity,
       child: EditCtDropMenu(
         initialCity: initialCity,
-        respFW: Funcs.respInfWp(32, context),
+        respFW: context.respInfWp(32),
+        // Funcs.respInfWp(32, context),
         onSelected: onSelected,
       ),
     );

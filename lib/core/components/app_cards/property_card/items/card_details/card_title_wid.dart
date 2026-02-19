@@ -12,7 +12,8 @@ class CardTitleWid extends StatelessWidget {
     return HPItem(
       rSpc: 5,
       child: SizedBox(
-        width: Funcs.frwGetter(150, context),
+        width: context.frwGetter(150),
+        // Funcs.frwGetter(150, context),
         child: Directionality(
           textDirection: TextDirection.rtl,
           child: Text(

@@ -15,7 +15,8 @@ class BinaryCell extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           topCell,
-          SizedBox(height: Funcs.respHieght(fract: 0.025, context: context)),
+          SizedBox(height: context.respHieght(fract: 0.025)),
+          // SizedBox(height: Funcs.respHieght(fract: 0.025, context: context)),
           bottomCell,
         ],
       ),

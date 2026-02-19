@@ -199,9 +199,12 @@ class _EditAdvBodyState extends State<EditAdvBody> {
 
   @override
   Widget build(BuildContext context) {
-    final double textFwidth = (Funcs.respInfWp(50, context) / 2);
-    final double adrFwidth = Funcs.respInfWp(40, context);
-    final double sectFwidth = (Funcs.respInfWp(70, context) / 4);
+    final double textFwidth = (context.respInfWp(50) / 2);
+    // final double textFwidth = (Funcs.respInfWp(50, context) / 2);
+    final double adrFwidth = context.respInfWp(40);
+    // final double adrFwidth = Funcs.respInfWp(40, context);
+    final double sectFwidth = (context.respInfWp(70) / 4);
+    // final double sectFwidth = (Funcs.respInfWp(70, context) / 4);
 
     return CustomScrollView(
       slivers: [

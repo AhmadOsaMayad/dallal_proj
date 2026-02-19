@@ -15,7 +15,8 @@ class MorePage extends StatelessWidget {
       appBar: const CustomAppBar(title: kMoreP, showBackButton: false),
       body: Padding(
         padding: EdgeInsets.symmetric(
-          horizontal: Funcs.respWidth(fract: 0.06, context: context),
+          horizontal: context.respWidth(fract: 0.06),
+          // Funcs.respWidth(fract: 0.06, context: context),
         ),
         child: const MoreLoadableBodyBuilder(),
       ),

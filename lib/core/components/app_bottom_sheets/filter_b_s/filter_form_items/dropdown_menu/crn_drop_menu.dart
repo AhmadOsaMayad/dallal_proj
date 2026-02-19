@@ -30,7 +30,8 @@ class CrnDropMenu extends StatelessWidget {
             iconColor: kWhite,
           ),
           dropdownMenuEntries: CLwid.cddmList(isFltr: isFltr),
-          width: Funcs.respWidth(fract: 0.25, context: context),
+          width: context.respWidth(fract: 0.25),
+          //Funcs.respWidth(fract: 0.25, context: context),
         ),
       ),
     );

@@ -17,7 +17,8 @@ class AdvRefusedBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: SizedBox(
-        height: Funcs.respHieght(fract: 0.85, context: context),
+        height: context.respHieght(fract: 0.85),
+        // Funcs.respHieght(fract: 0.85, context: context),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,

@@ -8,7 +8,8 @@ class DeskMapImg extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: Funcs.respWidth(fract: 0.17, context: context),
+      height: context.respWidth(fract: 0.17),
+      // Funcs.respWidth(fract: 0.17, context: context),
       child: ClipRRect(
         borderRadius: const BorderRadius.all(Radius.circular(8)),
         child: AspectRatio(

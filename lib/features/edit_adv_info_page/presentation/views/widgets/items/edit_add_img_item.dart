@@ -158,7 +158,8 @@ class _EditAddImgItemState extends State<EditAddImgItem> {
   Widget build(BuildContext context) {
     return FilterFormItem(
       style: FStyles.s16w4,
-      height: Funcs.respWidth(fract: 0.534759, context: context),
+      height: context.respWidth(fract: 0.534759),
+      // Funcs.respWidth(fract: 0.534759, context: context),
       title: kAddImgVid,
       child: Column(
         children: [
@@ -172,7 +173,8 @@ class _EditAddImgItemState extends State<EditAddImgItem> {
   }
 
   Widget _buildPlaceholder() {
-    final height = Funcs.respWidth(fract: 0.534759, context: context);
+    final height = context.respWidth(fract: 0.534759);
+    // Funcs.respWidth(fract: 0.534759, context: context);
     return GestureDetector(
       onTap: _pickNewImages,
       child: Container(
@@ -183,7 +185,8 @@ class _EditAddImgItemState extends State<EditAddImgItem> {
           side: Themer.brdSide(color: kWhiteF0),
         ),
         child: AspectRatio(
-          aspectRatio: Funcs.aspInfWth(exWidth: 32, context: context) / 206,
+          aspectRatio: context.aspInfWth(exWidth: 32) / 206,
+          // Funcs.aspInfWth(exWidth: 32, context: context) / 206,
           child: const Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -204,8 +207,10 @@ class _EditAddImgItemState extends State<EditAddImgItem> {
   }
 
   Widget _buildImageCarousel() {
-    final aspectRatio = Funcs.aspInfWth(exWidth: 32, context: context) / 206;
-    final height = Funcs.respWidth(fract: 0.534759, context: context);
+    final aspectRatio = context.aspInfWth(exWidth: 32) / 206;
+    // Funcs.aspInfWth(exWidth: 32, context: context) / 206;
+    final height = context.respWidth(fract: 0.534759);
+    // Funcs.respWidth(fract: 0.534759, context: context);
 
     return Container(
       margin: const EdgeInsets.only(top: 10),

@@ -31,7 +31,6 @@ class WidH {
   }
 
   static CustSeperator respSep(BuildContext context, {double? fract}) =>
-      CustSeperator(
-        width: Funcs.respWidth(fract: fract ?? 0.8, context: context),
-      );
+      CustSeperator(width: context.respWidth(fract: fract ?? 0.8));
+  // Funcs.respWidth(fract: fract ?? 0.8, context: context),
 }

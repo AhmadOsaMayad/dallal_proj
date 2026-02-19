@@ -15,7 +15,8 @@ class MoreBodyItemHolder extends StatelessWidget {
               children: [
                 Padding(
                   padding: EdgeInsets.only(
-                    left: Funcs.respWidth(fract: 0.036, context: context),
+                    left: context.respWidth(fract: 0.036),
+                    // Funcs.respWidth(fract: 0.036, context: context),
                   ),
                   child: child,
                 ),

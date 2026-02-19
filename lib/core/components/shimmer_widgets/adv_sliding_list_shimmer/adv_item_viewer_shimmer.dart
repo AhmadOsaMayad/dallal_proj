@@ -8,9 +8,10 @@ class AdvItemViewerShimmer extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustImgHolderShimmer(
       radius: 12,
-      aspect:
-          Funcs.respWidth(fract: 0.85, context: context) /
-          Funcs.respWidth(fract: 0.16, context: context),
+      aspect: context.respWidth(fract: 0.85) / context.respWidth(fract: 0.16),
     );
   }
 }
+
+          // Funcs.respWidth(fract: 0.85, context: context) /
+          // Funcs.respWidth(fract: 0.16, context: context),

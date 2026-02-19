@@ -18,7 +18,8 @@ class CLwid {
         crossAxisCount: 2,
         mainAxisSpacing: 15,
         crossAxisSpacing: 10,
-        childAspectRatio: Funcs.respFMQ(itmFract: 0.29246, context: context),
+        childAspectRatio: context.respFMQ(itmFract: 0.29246),
+        //Funcs.respFMQ(itmFract: 0.29246, context: context),
         //: 189 / 320,
       );
 

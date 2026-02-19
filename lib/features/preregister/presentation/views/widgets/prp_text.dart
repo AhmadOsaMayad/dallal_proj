@@ -13,7 +13,8 @@ class PrpText extends StatelessWidget {
       txt: kPrpTxt,
       txtAlign: TextAlign.right,
       style: FStyles.s16w6h175,
-      hPadding: Funcs.respWidth(fract: 0.007, context: context),
+      hPadding: context.respWidth(fract: 0.007),
+      // Funcs.respWidth(fract: 0.007, context: context),
     );
   }
 }

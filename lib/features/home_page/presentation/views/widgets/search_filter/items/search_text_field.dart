@@ -20,7 +20,8 @@ class SearchTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: Funcs.respWidth(fract: 0.64, context: context),
+      width: context.respWidth(fract: 0.64),
+      // Funcs.respWidth(fract: 0.64, context: context),
       height: 44,
       child: BTextInput(
         controller: controller,

@@ -10,7 +10,8 @@ class CustSeperator extends StatelessWidget {
     return Center(
       child: Container(
         height: 1.0,
-        width: width ?? Funcs.respWidth(fract: 0.379, context: context),
+        width: width ?? context.respWidth(fract: 0.379),
+        // Funcs.respWidth(fract: 0.379, context: context),
         color: kWhite2E,
       ),
     );

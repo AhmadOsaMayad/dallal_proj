@@ -3,14 +3,16 @@ import 'package:flutter/material.dart';
 
 class SBx {
   static SizedBox rHsbx(double fract, BuildContext context) =>
-      SizedBox(height: Funcs.frhGetter(fract, context));
+      SizedBox(height: context.frhGetter(fract));
+  // SizedBox(height: Funcs.frhGetter(fract, context));
 
-  static SizedBox rWsbx(double fract, BuildContext context) => SizedBox(
-    width: Funcs.frwGetter(
-      Funcs.respWidth(fract: fract, context: context),
-      context,
-    ),
-  );
+  static SizedBox rWsbx(double fract, BuildContext context) =>
+      SizedBox(width: context.frwGetter(context.respWidth(fract: fract)));
+  // Funcs.frwGetter(
+  //   Funcs.respWidth(fract: fract, context: context),
+  //   context,
+  // ),
+
   static var h05 = const SizedBox(height: 5);
   static var h10 = const SizedBox(height: 10);
   static var h15 = const SizedBox(height: 15);

@@ -25,7 +25,10 @@ class HCardBtnsSwitcher extends StatelessWidget {
           moreBtnSize: const XBSize(width: 83.5429, height: 29),
           likeBtnSize: const XBSize(width: 83, height: 29),
           detailsEntity: detailsEntity,
-          onTapDetails: () => Funcs.pushToAdv(context, detailsEntity),
+          onTapDetails:
+              () => context.navToAdv(
+                detailsEntity,
+              ), //Funcs.pushToAdv(context, detailsEntity),
           onTapLikes: () {},
           isLikedNotifier: isLikedNotifier,
         );

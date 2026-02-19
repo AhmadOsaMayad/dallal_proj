@@ -11,7 +11,8 @@ class HCardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: Funcs.respHieght(fract: 0.39, context: context),
+      height: context.respHieght(fract: 39),
+      // Funcs.respHieght(fract: 0.39, context: context),
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         physics: const BouncingScrollPhysics(),

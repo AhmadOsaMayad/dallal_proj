@@ -29,7 +29,8 @@ class EditCtDropMenu extends StatelessWidget {
           textAlign: WidH.tra,
           inputDecorationTheme: Themer.menuTheme(),
           dropdownMenuEntries: CLwid.ddmList(),
-          width: Funcs.respWidth(fract: respFW ?? 0.880, context: context),
+          width: context.respWidth(fract: respFW ?? 0.880),
+          // Funcs.respWidth(fract: respFW ?? 0.880, context: context),
         ),
       ),
     );

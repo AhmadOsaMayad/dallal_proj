@@ -17,7 +17,8 @@ class FeaturingAdvBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double cSize = ((Funcs.respWidth(fract: 0.9, context: context)) / 3);
+    final double cSize = ((0.9) / 3);
+    // final double cSize = ((Funcs.respWidth(fract: 0.9, context: context)) / 3);
     return Column(
       children: [
         const Spacer(flex: 2),

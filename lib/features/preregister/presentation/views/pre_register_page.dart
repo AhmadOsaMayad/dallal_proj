@@ -10,7 +10,8 @@ class PreRegisterPage extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.symmetric(
-          horizontal: Funcs.respWidth(fract: 0.072, context: context),
+          horizontal: context.respWidth(fract: 0.027),
+          // Funcs.respWidth(fract: 0.072, context: context),
         ),
         child: const PreRegisterBody(),
       ),

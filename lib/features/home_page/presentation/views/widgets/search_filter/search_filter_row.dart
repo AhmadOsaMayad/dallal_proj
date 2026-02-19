@@ -44,7 +44,9 @@ class _SearchFilterRowState extends State<SearchFilterRow> {
       currency: model.currency,
       minArea: model.minArea,
       maxArea: model.maxArea,
-      sortBy: FilterSheetValues.apiToDisplaySortBy(model.sortBy), // Convert API to display
+      sortBy: FilterSheetValues.apiToDisplaySortBy(
+        model.sortBy,
+      ), // Convert API to display
       featuredOnly: model.featuredOnly ?? 0,
     );
   }
@@ -109,7 +111,8 @@ class _SearchFilterRowState extends State<SearchFilterRow> {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(
-        horizontal: Funcs.respWidth(fract: 0.03, context: context),
+        horizontal: context.respWidth(fract: 0.03),
+        // Funcs.respWidth(fract: 0.03, context: context),
       ),
       child: TwoItmRow(
         mXAlign: MainAxisAlignment.spaceAround,

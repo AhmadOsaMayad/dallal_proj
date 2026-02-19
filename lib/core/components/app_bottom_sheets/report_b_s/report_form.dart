@@ -66,8 +66,10 @@ class _ReportFormState extends State<ReportForm> {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(
-        right: Funcs.frwGetter(23, context),
-        left: Funcs.frwGetter(23, context),
+        right: context.frwGetter(23),
+        // Funcs.frwGetter(23, context),
+        left: context.frwGetter(23),
+        // Funcs.frwGetter(23, context),
         bottom: MediaQuery.of(context).viewInsets.bottom,
       ),
       child: SingleChildScrollView(

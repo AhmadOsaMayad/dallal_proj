@@ -11,8 +11,11 @@ class AllPropsTextHolder extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        right: Funcs.respWidth(fract: 0.0545, context: context),
-        bottom: Funcs.respHieght(fract: 0.0177, context: context),
+        right: context.respWidth(
+          fract: 0.0545,
+        ), //Funcs.respWidth(fract: 0.0545, context: context),
+        bottom: context.respHieght(fract: 0.0177),
+        // Funcs.respHieght(fract: 0.0177, context: context),
       ),
       child: Text(kAllProps, style: FsC.htStyle(FStyles.s18w6, 1.3)),
     );

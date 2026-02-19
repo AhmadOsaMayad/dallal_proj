@@ -22,9 +22,11 @@ class CvpItem extends StatelessWidget {
       mainAxisSize: mXSize,
       crossAxisAlignment: cXAlign,
       children: [
-        SizedBox(height: Funcs.respHieght(fract: tFract, context: context)),
+        SizedBox(height: context.respHieght(fract: tFract)),
+        // SizedBox(height: Funcs.respHieght(fract: tFract, context: context)),
         child,
-        SizedBox(height: Funcs.respHieght(fract: bFract, context: context)),
+        SizedBox(height: context.respHieght(fract: bFract)),
+        // SizedBox(height: Funcs.respHieght(fract: bFract, context: context)),
       ],
       // [SizedBox(height: tSpc), child, SizedBox(height: bSpc)],
     );

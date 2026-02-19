@@ -81,7 +81,8 @@ class _LoginBodyState extends State<LoginBody> {
       builder: (context, state) {
         if (state is LoginUserLoading) {
           return SizedBox(
-            height: Funcs.respHieght(fract: 0.39, context: context),
+            height: context.respHieght(fract: 39),
+            // Funcs.respHieght(fract: 0.39, context: context),
             child: const Center(
               child: CircularProgressIndicator(color: kPrimColG),
             ),

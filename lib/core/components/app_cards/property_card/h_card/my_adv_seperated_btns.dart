@@ -68,7 +68,8 @@ class MyAdvSeperatedBtns extends StatelessWidget {
       children:
           (detailsEntity.advStatus == true)
               ? PCardH.normalAdvBtns(
-                () => Funcs.pushToAdv(context, detailsEntity),
+                () => context.navToAdv(detailsEntity),
+                //Funcs.pushToAdv(context, detailsEntity),
                 () async {
                   var confirm = await showConfBS(
                     context,
@@ -93,17 +94,22 @@ class MyAdvSeperatedBtns extends StatelessWidget {
               : (detailsEntity.advStatus == null)
               ? [
                 PendingBtn(
-                  onTap: () => Funcs.pushToAdv(context, detailsEntity),
+                  onTap: () => context.navToAdv(detailsEntity),
+                  //Funcs.pushToAdv(context, detailsEntity),
                 ),
               ]
               : [
                 RefusedBtn(
                   onTap: () async {
-                    var result = await Funcs.pushToAdv(
-                      context,
+                    var result = await context.navTo(
+                      AppRouter.kAdvRefusedPage,
                       detailsEntity,
-                      to: AppRouter.kAdvRefusedPage,
                     );
+                    // await Funcs.pushToAdv(
+                    //   context,
+                    //   detailsEntity,
+                    //   to: AppRouter.kAdvRefusedPage,
+                    // );
                     await editHandler(
                       result,
                       deleteAdv,

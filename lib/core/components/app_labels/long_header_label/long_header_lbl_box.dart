@@ -20,7 +20,8 @@ class LongHeaderLblBox extends StatelessWidget {
       child: GestureDetector(
         onTap: onTap,
         child: Container(
-          width: Funcs.respWidth(fract: 0.911, context: context),
+          width: context.respWidth(fract: 0.911),
+          // Funcs.respWidth(fract: 0.911, context: context),
           height: 50,
           padding: const EdgeInsets.only(left: 4, bottom: 3),
           margin: const EdgeInsets.only(bottom: 10),

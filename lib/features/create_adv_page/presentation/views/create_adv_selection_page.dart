@@ -14,7 +14,8 @@ class CreateAdvSelectionPage extends StatelessWidget {
       appBar: const CustomAppBar(title: kCreateAdv, showBackButton: false),
       body: Center(
         child: SizedBox(
-          width: Funcs.respWidth(fract: 0.88, context: context),
+          width: context.respWidth(fract: 0.88),
+          // Funcs.respWidth(fract: 0.88, context: context),
           child: const CreateAdvSelectionBody(
             topLCell: kCrAdvCardHouse,
             topRCell: kCrAdvCardApt,

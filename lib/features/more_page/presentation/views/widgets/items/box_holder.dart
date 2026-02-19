@@ -14,7 +14,8 @@ class BoxHolder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: Funcs.respHieght(fract: fixedSizeFraction, context: context),
+      height: context.respHieght(fract: fixedSizeFraction),
+      // Funcs.respHieght(fract: fixedSizeFraction, context: context),
       decoration: BoxDecoration(
         color: kWhite,
         borderRadius: BorderRadius.circular(11.0),

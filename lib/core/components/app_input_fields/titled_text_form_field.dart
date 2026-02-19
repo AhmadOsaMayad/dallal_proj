@@ -61,7 +61,9 @@ class TitledTextFormField extends StatelessWidget {
       titleStyle: titleStyle ?? FStyles.s16w4,
       child: SizedBox(
         height: height,
-        width: Funcs.respWidth(fract: inputFwidth ?? 1, context: context),
+        width: context.respWidth(
+          fract: inputFwidth ?? 1,
+        ), //Funcs.respWidth(fract: inputFwidth ?? 1, context: context),
         child: BTextFormInput(
           validator: validator,
           index: index,

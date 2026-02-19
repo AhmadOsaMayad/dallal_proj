@@ -15,7 +15,8 @@ class PackageDetailsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double cSize = Funcs.respWidth(fract: 0.75, context: context);
+    final double cSize = context.respWidth(fract: 0.75);
+    // final double cSize = Funcs.respWidth(fract: 0.75, context: context);
     return Column(
       children: [
         const Spacer(flex: 2),

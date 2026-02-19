@@ -26,9 +26,11 @@ class BtnFlexBox extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: SizedBox(
-        width: Funcs.frwGetter(btnSize.width, context),
+        width: context.frwGetter(btnSize.width),
+        // Funcs.frwGetter(btnSize.width, context),
         child: AspectRatio(
-          aspectRatio: Funcs.aspGetter(btnSize),
+          aspectRatio: btnSize.aspGetter(),
+          // Funcs.aspGetter(btnSize),
           child: Container(
             decoration:
                 deco ??

@@ -13,7 +13,8 @@ class SectionsPage extends StatelessWidget {
       appBar: const CustomAppBar(title: 'الأقسام', showBackButton: false),
       body: Center(
         child: SizedBox(
-          width: Funcs.respWidth(fract: 0.88, context: context),
+          width: context.respWidth(fract: 0.88),
+          // Funcs.respWidth(fract: 0.88, context: context),
           child: const SectionsBody(
             topLCell: kSectCardHouses,
             topRCell: kSectCardApts,

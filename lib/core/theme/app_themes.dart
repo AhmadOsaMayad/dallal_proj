@@ -61,9 +61,8 @@ class Themer {
 
   static MenuStyle menuStyle(BuildContext context) => MenuStyle(
     backgroundColor: const WidgetStatePropertyAll(kGrite),
-    fixedSize: WidgetStatePropertyAll(
-      Size(Funcs.respWidth(fract: 0.0, context: context), 208),
-    ),
+    fixedSize: WidgetStatePropertyAll(Size(context.respWidth(fract: 0), 208)),
+    // Size(Funcs.respWidth(fract: 0.0, context: context), 208),
   );
 
   static InputDecoration txtInput({
