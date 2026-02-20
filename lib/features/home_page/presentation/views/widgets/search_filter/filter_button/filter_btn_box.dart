@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/components/app_bottom_sheets/filter_b_s/filter_funcs.dart';
+import 'package:dallal_proj/core/shared/components/app_bottom_sheets/filter_b_s/filter_funcs.dart';
 import 'package:dallal_proj/features/home_page/presentation/views/widgets/search_filter/filter_button/filter_btn_holder.dart';
 import 'package:flutter/material.dart';
 

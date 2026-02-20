@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/utils/app_funcs.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
 import 'package:dallal_proj/features/my_account_page/presentation/views/widgets/personal_info_holder.dart';
 import 'package:flutter/material.dart';
 

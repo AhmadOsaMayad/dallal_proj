@@ -1,6 +1,6 @@
-import 'package:dallal_proj/core/components/app_cards/property_card/items/card_details/card_date_txt.dart';
+import 'package:dallal_proj/core/shared/components/app_cards/property_card/items/card_details/card_date_txt.dart';
 import 'package:dallal_proj/core/theme/app_colors.dart';
-import 'package:dallal_proj/core/widgets/two_item_widgets/two_itm_col.dart';
+import 'package:dallal_proj/core/shared/widgets/two_item_widgets/two_itm_col.dart';
 import 'package:dallal_proj/features/notifications_page/data/models/notification_model.dart';
 import 'package:dallal_proj/features/notifications_page/presentation/views/widgets/notific_out_line.dart';
 import 'package:dallal_proj/features/notifications_page/presentation/views/widgets/notific_text_holder.dart';

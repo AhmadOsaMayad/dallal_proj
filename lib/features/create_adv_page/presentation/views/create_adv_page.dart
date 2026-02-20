@@ -1,5 +1,5 @@
-import 'package:dallal_proj/core/widgets/custom_app_bar.dart';
-import 'package:dallal_proj/core/widgets/unfocus_ontap.dart';
+import 'package:dallal_proj/core/shared/widgets/custom_app_bar.dart';
+import 'package:dallal_proj/core/shared/widgets/unfocus_ontap.dart';
 import 'package:dallal_proj/features/create_adv_page/presentation/views/widgets/create_adv_body.dart';
 import 'package:flutter/material.dart';
 

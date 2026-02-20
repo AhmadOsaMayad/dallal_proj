@@ -1,5 +1,5 @@
-import 'package:dallal_proj/core/components/app_cards/property_card/h_card/h_card_item_builder.dart';
-import 'package:dallal_proj/core/utils/app_funcs.dart';
+import 'package:dallal_proj/core/shared/components/app_cards/property_card/h_card/h_card_item_builder.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
 import 'package:dallal_proj/features/details_page/domain/entities/show_details_entity.dart';
 import 'package:flutter/material.dart';
 

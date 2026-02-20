@@ -2,7 +2,7 @@ import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:dallal_proj/core/theme/app_font_styles_colorer.dart';
 import 'package:dallal_proj/core/utils/assets_data.dart';
 import 'package:dallal_proj/core/theme/app_font_styles.dart';
-import 'package:dallal_proj/core/widgets/svg_ico.dart';
+import 'package:dallal_proj/core/shared/widgets/svg_ico.dart';
 import 'package:flutter/material.dart';
 
 class FilterBtnHolder extends StatelessWidget {

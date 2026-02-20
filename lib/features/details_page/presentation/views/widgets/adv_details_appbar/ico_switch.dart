@@ -1,9 +1,9 @@
 import 'package:dallal_proj/core/common/models/report_sheet_values.dart';
-import 'package:dallal_proj/core/components/app_bottom_sheets/log_required_b_s/show_log_required_b_s.dart';
+import 'package:dallal_proj/core/shared/components/app_bottom_sheets/log_required_b_s/show_log_required_b_s.dart';
 import 'package:dallal_proj/core/utils/assets_data.dart';
-import 'package:dallal_proj/core/components/app_bottom_sheets/filter_b_s/filter_funcs.dart';
-import 'package:dallal_proj/core/components/app_btns/svg_btn.dart';
-import 'package:dallal_proj/core/components/app_bottom_sheets/report_b_s/report_form.dart';
+import 'package:dallal_proj/core/shared/components/app_bottom_sheets/filter_b_s/filter_funcs.dart';
+import 'package:dallal_proj/core/shared/components/app_btns/svg_btn.dart';
+import 'package:dallal_proj/core/shared/components/app_bottom_sheets/report_b_s/report_form.dart';
 import 'package:dallal_proj/core/utils/functions/is_accessible_user.dart';
 import 'package:flutter/material.dart';
 

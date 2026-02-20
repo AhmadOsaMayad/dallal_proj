@@ -1,5 +1,5 @@
-import 'package:dallal_proj/core/components/app_input_fields/titled_text_form_field.dart';
-import 'package:dallal_proj/core/entities/media_entity/media_entity.dart';
+import 'package:dallal_proj/core/shared/components/app_input_fields/titled_text_form_field.dart';
+import 'package:dallal_proj/core/common/entities/media_entity.dart';
 import 'package:dallal_proj/features/create_adv_page/presentation/views/widgets/cr_adv_helper.dart';
 import 'package:dallal_proj/features/edit_adv_info_page/presentation/views/widgets/items/edit_add_img_item.dart';
 import 'package:dallal_proj/features/edit_adv_info_page/presentation/views/widgets/items/edit_adress_text_form_field.dart';
@@ -9,7 +9,7 @@ import 'package:dallal_proj/features/edit_adv_info_page/presentation/views/widge
 import 'package:dallal_proj/features/edit_adv_info_page/presentation/views/widgets/items/edit_loc_map_text_form_fields.dart';
 import 'package:dallal_proj/features/edit_adv_info_page/presentation/views/widgets/items/edit_parts_of_prop_text_form_fields.dart';
 import 'package:dallal_proj/features/edit_adv_info_page/presentation/views/widgets/items/edit_price_t_f_f.dart';
-import 'package:dallal_proj/core/widgets/symmetric_pads/v_p_item.dart';
+import 'package:dallal_proj/core/shared/widgets/symmetric_pads/v_p_item.dart';
 import 'package:dallal_proj/core/constants/mock_models.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:flutter/material.dart';

@@ -1,11 +1,11 @@
-import 'package:dallal_proj/core/components/app_cards/package_card/entities/package_cards_display_type.dart';
-import 'package:dallal_proj/core/components/app_cards/package_card/entities/package_entity.dart';
-import 'package:dallal_proj/core/components/app_cards/package_card/package_card.dart';
+import 'package:dallal_proj/core/shared/components/app_cards/package_card/entities/package_cards_display_type.dart';
+import 'package:dallal_proj/core/shared/components/app_cards/package_card/entities/package_entity.dart';
+import 'package:dallal_proj/core/shared/components/app_cards/package_card/package_card.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
-import 'package:dallal_proj/core/utils/app_funcs.dart';
-import 'package:dallal_proj/core/widgets/helpers/widgets_helper.dart';
-import 'package:dallal_proj/core/widgets/text_widgets/body_text.dart';
-import 'package:dallal_proj/core/widgets/text_widgets/right_main_title.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/widgets_helper.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/body_text.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/right_main_title.dart';
 import 'package:dallal_proj/temp_try.dart';
 import 'package:flutter/cupertino.dart';
 

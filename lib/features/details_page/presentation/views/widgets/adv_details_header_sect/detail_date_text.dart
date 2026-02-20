@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/components/app_cards/property_card/items/card_details/card_date_txt.dart';
+import 'package:dallal_proj/core/shared/components/app_cards/property_card/items/card_details/card_date_txt.dart';
 import 'package:flutter/material.dart';
 
 class DetailDateText extends StatelessWidget {

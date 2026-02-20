@@ -1,5 +1,5 @@
 import 'package:dallal_proj/core/errors/failure.dart';
-import 'package:dallal_proj/core/use_cases/use_case.dart';
+import 'package:dallal_proj/core/common/use_cases/use_case.dart';
 import 'package:dallal_proj/features/notifications_page/data/models/unread_count_response.dart';
 import 'package:dallal_proj/features/notifications_page/domain/repos/notifications_page_repo.dart';
 import 'package:dartz/dartz.dart';

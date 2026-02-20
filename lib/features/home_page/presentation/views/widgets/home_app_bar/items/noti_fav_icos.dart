@@ -1,5 +1,5 @@
 import 'package:dallal_proj/core/utils/assets_data.dart';
-import 'package:dallal_proj/core/widgets/two_item_widgets/two_itm_row.dart';
+import 'package:dallal_proj/core/shared/widgets/two_item_widgets/two_itm_row.dart';
 import 'package:dallal_proj/features/home_page/presentation/views/widgets/home_app_bar/items/home_app_bar_icon.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +24,8 @@ class NotiFavIcos extends StatelessWidget {
         onPressed: favOnPressed,
       ),
       rightChild: HomeAppBarIcon(
-        ico: hasUnread ? AssetsData.unreadNotificSvg : AssetsData.readNotificSvg,
+        ico:
+            hasUnread ? AssetsData.unreadNotificSvg : AssetsData.readNotificSvg,
         onPressed: notifOnPressed,
       ),
     );

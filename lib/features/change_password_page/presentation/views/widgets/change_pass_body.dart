@@ -1,18 +1,18 @@
 import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:dallal_proj/core/utils/functions/get_me_data.dart';
-import 'package:dallal_proj/core/widgets/text_widgets/text_link.dart';
-import 'package:dallal_proj/core/components/app_btns/col_btn.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/text_link.dart';
+import 'package:dallal_proj/core/shared/components/app_btns/col_btn.dart';
 import 'package:dallal_proj/features/change_password_page/data/models/change_pass_req_model.dart';
 import 'package:dallal_proj/features/change_password_page/presentation/manager/change_password_cubit/change_password_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:dallal_proj/core/widgets/inf_comp.dart';
+import 'package:dallal_proj/core/shared/widgets/inf_comp.dart';
 import 'package:dallal_proj/core/utils/app_router.dart';
-import 'package:dallal_proj/core/widgets/text_widgets/body_text.dart';
-import 'package:dallal_proj/core/widgets/text_widgets/right_main_title.dart';
-import 'package:dallal_proj/core/components/app_input_fields/pass_fields/pass_field.dart';
-import 'package:dallal_proj/core/components/app_input_fields/pass_fields/confirm_pass_field.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/body_text.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/right_main_title.dart';
+import 'package:dallal_proj/core/shared/components/app_input_fields/pass_fields/pass_field.dart';
+import 'package:dallal_proj/core/shared/components/app_input_fields/pass_fields/confirm_pass_field.dart';
 
 class ChangePassBody extends StatefulWidget {
   const ChangePassBody({super.key});

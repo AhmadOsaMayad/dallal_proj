@@ -1,7 +1,7 @@
-import 'package:dallal_proj/core/widgets/helpers/widgets_helper.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/widgets_helper.dart';
 import 'package:dallal_proj/core/constants/wid_lists.dart';
 import 'package:dallal_proj/core/theme/app_themes.dart';
-import 'package:dallal_proj/core/utils/app_funcs.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
 import 'package:flutter/material.dart';
 
 class EditCtDropMenu extends StatelessWidget {

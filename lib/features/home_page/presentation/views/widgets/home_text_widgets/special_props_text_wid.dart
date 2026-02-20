@@ -1,6 +1,6 @@
 import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:dallal_proj/core/theme/app_font_styles_colorer.dart';
-import 'package:dallal_proj/core/utils/app_funcs.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
 import 'package:dallal_proj/core/theme/app_font_styles.dart';
 import 'package:flutter/material.dart';
 

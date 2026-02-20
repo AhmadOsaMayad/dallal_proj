@@ -1,6 +1,6 @@
-import 'package:dallal_proj/core/components/app_cards/selection_cards/create_adv_selection_cards/cr_adv_cell_card.dart';
-import 'package:dallal_proj/core/components/app_cards/selection_cards/items/body_cell_cards.dart';
-import 'package:dallal_proj/core/components/app_cards/selection_cards/section_card_entity.dart';
+import 'package:dallal_proj/core/shared/components/app_cards/selection_cards/create_adv_selection_cards/cr_adv_cell_card.dart';
+import 'package:dallal_proj/core/shared/components/app_cards/selection_cards/items/body_cell_cards.dart';
+import 'package:dallal_proj/core/shared/components/app_cards/selection_cards/section_card_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

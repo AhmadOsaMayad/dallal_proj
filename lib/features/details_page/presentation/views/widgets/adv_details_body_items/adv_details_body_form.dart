@@ -8,11 +8,11 @@ import 'package:dallal_proj/features/details_page/presentation/views/widgets/adv
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/adv_details_body_items/f_advice_box.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/desc_holder_items/f_desc_box.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/user_contacts_items/f_contacts_box.dart';
-import 'package:dallal_proj/core/components/app_btns/models/x_b_size.dart';
-import 'package:dallal_proj/core/widgets/symmetric_pads/v_p_item.dart';
-import 'package:dallal_proj/core/widgets/helpers/widgets_helper.dart';
+import 'package:dallal_proj/core/shared/components/app_btns/models/x_b_size.dart';
+import 'package:dallal_proj/core/shared/widgets/symmetric_pads/v_p_item.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/widgets_helper.dart';
 import 'package:dallal_proj/core/constants/mock_models.dart';
-import 'package:dallal_proj/core/widgets/helpers/s_bx.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/s_bx.dart';
 import 'package:dallal_proj/temp_try.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';

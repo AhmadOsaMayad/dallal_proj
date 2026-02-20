@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 import 'package:dallal_proj/core/theme/app_colors.dart';
-import 'package:dallal_proj/core/widgets/helpers/s_bx.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/s_bx.dart';
 import 'package:dallal_proj/features/login_page/presentation/views/add_profile_item.dart.dart';
 import 'package:dallal_proj/features/my_account_page/presentation/views/widgets/personal_info_form.dart';
 import 'package:flutter/material.dart';

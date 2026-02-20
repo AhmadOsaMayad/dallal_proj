@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/components/app_input_fields/bases/base_text_input.dart';
+import 'package:dallal_proj/core/shared/components/app_input_fields/bases/base_text_input.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/comment_section_items/helper/com_helper.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/comment_section_items/comments_input_field/post_btn.dart';
 import 'package:flutter/material.dart';

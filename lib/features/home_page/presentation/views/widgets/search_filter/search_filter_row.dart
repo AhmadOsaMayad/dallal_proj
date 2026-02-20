@@ -1,9 +1,9 @@
 import 'package:dallal_proj/core/common/models/filter_sheet_values.dart';
-import 'package:dallal_proj/core/components/app_bottom_sheets/bottom_sheet_holder.dart';
-import 'package:dallal_proj/core/components/app_bottom_sheets/filter_b_s/filter_form.dart';
+import 'package:dallal_proj/core/shared/components/app_bottom_sheets/bottom_sheet_holder.dart';
+import 'package:dallal_proj/core/shared/components/app_bottom_sheets/filter_b_s/filter_form.dart';
 import 'package:dallal_proj/core/theme/app_colors.dart';
-import 'package:dallal_proj/core/utils/app_funcs.dart';
-import 'package:dallal_proj/core/widgets/two_item_widgets/two_itm_row.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
+import 'package:dallal_proj/core/shared/widgets/two_item_widgets/two_itm_row.dart';
 import 'package:dallal_proj/features/home_page/presentation/views/widgets/search_filter/filter_button/filter_btn.dart';
 import 'package:dallal_proj/features/home_page/presentation/views/widgets/search_filter/items/search_text_field.dart';
 import 'package:dallal_proj/features/sections_page/data/models/filter_req_model.dart';

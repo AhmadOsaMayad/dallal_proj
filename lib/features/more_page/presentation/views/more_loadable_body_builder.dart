@@ -1,8 +1,8 @@
 import 'package:dallal_proj/core/theme/app_colors.dart';
 import 'package:dallal_proj/core/utils/app_router.dart';
 import 'package:dallal_proj/core/utils/functions/delete_user_login_data.dart';
-import 'package:dallal_proj/core/widgets/helpers/show_snack_bar.dart';
-import 'package:dallal_proj/core/widgets/loadable_body.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/show_snack_bar.dart';
+import 'package:dallal_proj/core/shared/widgets/loadable_body.dart';
 import 'package:dallal_proj/features/more_page/presentation/delete_account_cubit/delete_account_cubit.dart';
 import 'package:dallal_proj/features/more_page/presentation/views/widgets/more_body.dart';
 import 'package:flutter/material.dart';

@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/utils/app_funcs.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
 import 'package:dallal_proj/features/more_page/presentation/views/widgets/items/large_form.dart';
 import 'package:dallal_proj/features/more_page/presentation/views/widgets/items/small_form.dart';
 import 'package:flutter/material.dart';

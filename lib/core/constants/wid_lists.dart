@@ -1,6 +1,6 @@
-import 'package:dallal_proj/core/components/app_bottom_sheets/filter_b_s/filter_funcs.dart';
+import 'package:dallal_proj/core/shared/components/app_bottom_sheets/filter_b_s/filter_funcs.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
-import 'package:dallal_proj/core/utils/app_funcs.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
 import 'package:flutter/material.dart';
 
 class CLwid {

@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/widgets/cust_img_holder.dart';
+import 'package:dallal_proj/core/shared/widgets/cust_img_holder.dart';
 import 'package:flutter/material.dart';
 
 class AdvDetailsImg extends StatelessWidget {

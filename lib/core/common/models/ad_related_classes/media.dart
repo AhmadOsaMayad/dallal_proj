@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/entities/media_entity/media_entity.dart';
+import 'package:dallal_proj/core/common/entities/media_entity.dart';
 
 class Media extends MediaEntity {
   String? id;

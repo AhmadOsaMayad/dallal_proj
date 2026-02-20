@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/utils/service_locator.dart';
+import 'package:dallal_proj/core/di/service_locator.dart';
 import 'package:dallal_proj/features/change_password_page/data/repos/change_password_page_repo_implement.dart';
 import 'package:dallal_proj/features/change_password_page/domain/use_cases/change_password_use_case.dart';
 import 'package:dallal_proj/features/change_password_page/presentation/manager/change_password_cubit/change_password_cubit.dart';

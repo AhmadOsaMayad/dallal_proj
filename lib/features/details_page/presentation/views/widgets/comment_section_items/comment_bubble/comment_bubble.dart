@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/widgets/symmetric_pads/v_p_item.dart';
+import 'package:dallal_proj/core/shared/widgets/symmetric_pads/v_p_item.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/comment_section_items/comment_bubble/comment_bubble_header.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/comment_section_items/model/comment_model.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/comment_section_items/comment_bubble/user_comment_widget.dart';

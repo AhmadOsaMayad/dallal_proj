@@ -1,5 +1,5 @@
 import 'package:dallal_proj/core/theme/app_colors.dart';
-import 'package:dallal_proj/core/utils/app_funcs.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
 import 'package:flutter/material.dart';
 
 class BoxHolder extends StatelessWidget {

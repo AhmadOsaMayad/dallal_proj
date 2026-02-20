@@ -3,10 +3,10 @@ import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:dallal_proj/core/theme/app_font_styles_colorer.dart';
 import 'package:dallal_proj/core/utils/assets_data.dart';
 import 'package:dallal_proj/core/theme/app_font_styles.dart';
-import 'package:dallal_proj/core/components/app_btns/tcon_btn.dart';
-import 'package:dallal_proj/core/widgets/svg_ico.dart';
-import 'package:dallal_proj/core/components/app_btns/models/x_b_colors.dart';
-import 'package:dallal_proj/core/components/app_btns/models/x_b_size.dart';
+import 'package:dallal_proj/core/shared/components/app_btns/tcon_btn.dart';
+import 'package:dallal_proj/core/shared/widgets/svg_ico.dart';
+import 'package:dallal_proj/core/shared/components/app_btns/models/x_b_colors.dart';
+import 'package:dallal_proj/core/shared/components/app_btns/models/x_b_size.dart';
 import 'package:flutter/material.dart';
 
 class CardShareBtn extends StatelessWidget {

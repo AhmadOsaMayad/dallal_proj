@@ -1,18 +1,18 @@
-import 'package:dallal_proj/core/components/app_btns/col_btn.dart';
+import 'package:dallal_proj/core/shared/components/app_btns/col_btn.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:dallal_proj/core/theme/app_colors.dart';
-import 'package:dallal_proj/core/widgets/helpers/show_snack_bar.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/show_snack_bar.dart';
 import 'package:dallal_proj/features/login_page/data/models/login_req_model.dart';
 import 'package:dallal_proj/features/reset_password_page/presentation/manager/reset_password_cubit/reset_password_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:dallal_proj/core/widgets/inf_comp.dart';
+import 'package:dallal_proj/core/shared/widgets/inf_comp.dart';
 import 'package:dallal_proj/core/utils/app_router.dart';
-import 'package:dallal_proj/core/widgets/text_widgets/body_text.dart';
-import 'package:dallal_proj/core/widgets/text_widgets/right_main_title.dart';
-import 'package:dallal_proj/core/components/app_input_fields/pass_fields/pass_field.dart';
-import 'package:dallal_proj/core/components/app_input_fields/pass_fields/confirm_pass_field.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/body_text.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/right_main_title.dart';
+import 'package:dallal_proj/core/shared/components/app_input_fields/pass_fields/pass_field.dart';
+import 'package:dallal_proj/core/shared/components/app_input_fields/pass_fields/confirm_pass_field.dart';
 
 class ResetPasswordBody extends StatefulWidget {
   const ResetPasswordBody({super.key, required this.phone});

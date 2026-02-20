@@ -1,12 +1,12 @@
 import 'package:dallal_proj/features/more_page/presentation/views/constants.dart';
-import 'package:dallal_proj/core/components/app_bottom_sheets/log_required_b_s/show_log_required_b_s.dart';
+import 'package:dallal_proj/core/shared/components/app_bottom_sheets/log_required_b_s/show_log_required_b_s.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:dallal_proj/core/utils/app_router.dart';
 import 'package:dallal_proj/core/utils/functions/delete_user_login_data.dart';
 import 'package:dallal_proj/core/utils/functions/get_me_data.dart';
 import 'package:dallal_proj/core/utils/functions/is_loggedin.dart';
 import 'package:dallal_proj/core/utils/functions/save_advs_list.dart';
-import 'package:dallal_proj/core/widgets/helpers/widgets_helper.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/widgets_helper.dart';
 import 'package:dallal_proj/features/more_page/presentation/delete_account_cubit/delete_account_cubit.dart';
 import 'package:dallal_proj/features/more_page/presentation/views/widgets/items/box_holder.dart';
 import 'package:dallal_proj/features/more_page/presentation/views/widgets/items/form_bars.dart';

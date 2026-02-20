@@ -1,8 +1,8 @@
-import 'package:dallal_proj/core/components/app_input_fields/titled_text_form_field.dart';
-import 'package:dallal_proj/core/widgets/symmetric_pads/v_p_item.dart';
+import 'package:dallal_proj/core/shared/components/app_input_fields/titled_text_form_field.dart';
+import 'package:dallal_proj/core/shared/widgets/symmetric_pads/v_p_item.dart';
 import 'package:dallal_proj/core/theme/app_font_styles.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
-import 'package:dallal_proj/core/widgets/inf_comp.dart';
+import 'package:dallal_proj/core/shared/widgets/inf_comp.dart';
 import 'package:flutter/material.dart';
 
 class EditPartsOfPropTextFormFields extends StatefulWidget {

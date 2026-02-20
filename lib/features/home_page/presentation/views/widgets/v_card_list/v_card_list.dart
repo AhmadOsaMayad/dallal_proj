@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/components/app_cards/property_card/v_card/v_card_item_builder.dart';
+import 'package:dallal_proj/core/shared/components/app_cards/property_card/v_card/v_card_item_builder.dart';
 import 'package:dallal_proj/features/details_page/domain/entities/show_details_entity.dart';
 import 'package:dallal_proj/features/sections_page/domain/entities/filter_list_entity.dart';
 import 'package:flutter/material.dart';

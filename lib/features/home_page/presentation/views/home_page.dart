@@ -1,8 +1,8 @@
-import 'package:dallal_proj/core/components/app_bottom_sheets/log_required_b_s/show_log_required_b_s.dart';
+import 'package:dallal_proj/core/shared/components/app_bottom_sheets/log_required_b_s/show_log_required_b_s.dart';
 import 'package:dallal_proj/features/home_page/presentation/views/widgets/home_body.dart';
 import 'package:dallal_proj/features/home_page/presentation/views/widgets/home_app_bar/home_app_bar.dart';
 import 'package:dallal_proj/core/utils/functions/get_me_data.dart';
-import 'package:dallal_proj/core/widgets/unfocus_ontap.dart';
+import 'package:dallal_proj/core/shared/widgets/unfocus_ontap.dart';
 import 'package:dallal_proj/core/utils/app_router.dart';
 import 'package:dallal_proj/features/notifications_page/presentation/manager/unread_count_cubit/unread_count_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

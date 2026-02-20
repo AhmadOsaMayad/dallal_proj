@@ -1,5 +1,5 @@
 import 'package:dallal_proj/core/errors/failure.dart';
-import 'package:dallal_proj/core/use_cases/use_case2.dart';
+import 'package:dallal_proj/core/common/use_cases/use_case2.dart';
 import 'package:dallal_proj/features/featuring_adv_page/data/models/feature_adv_model.dart';
 import 'package:dallal_proj/features/featuring_adv_page/data/models/feature_adv_response_model.dart';
 import 'package:dallal_proj/features/featuring_adv_page/domain/repos/featuring_adv_page_repo.dart';

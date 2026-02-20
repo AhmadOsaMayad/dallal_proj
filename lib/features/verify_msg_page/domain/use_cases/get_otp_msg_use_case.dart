@@ -1,5 +1,5 @@
 import 'package:dallal_proj/core/errors/failure.dart';
-import 'package:dallal_proj/core/use_cases/use_case.dart';
+import 'package:dallal_proj/core/common/use_cases/use_case.dart';
 import 'package:dallal_proj/features/verify_msg_page/data/models/get_otp_resp_model.dart';
 import 'package:dallal_proj/features/verify_msg_page/domain/repos/verify_msg_page_repo.dart';
 import 'package:dartz/dartz.dart';

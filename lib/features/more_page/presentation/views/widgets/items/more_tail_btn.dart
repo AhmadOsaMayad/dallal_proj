@@ -1,7 +1,7 @@
 import 'package:dallal_proj/core/common/entities/svg_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:dallal_proj/temp_try.dart';
-import 'package:dallal_proj/core/widgets/svg_ico.dart';
+import 'package:dallal_proj/core/shared/widgets/svg_ico.dart';
 
 class MoreTailBtn extends StatelessWidget {
   const MoreTailBtn({

@@ -1,7 +1,7 @@
 import 'package:dallal_proj/core/theme/app_colors.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/user_contacts_items/mini_named_avatar.dart';
 import 'package:flutter/material.dart';
-import 'package:dallal_proj/core/widgets/helpers/s_bx.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/s_bx.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/user_contacts_items/contacts_btns.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/desc_holder_items/details_desc_box.dart';
 

@@ -1,5 +1,5 @@
 import 'package:dallal_proj/core/errors/failure.dart';
-import 'package:dallal_proj/core/use_cases/use_case2.dart';
+import 'package:dallal_proj/core/common/use_cases/use_case2.dart';
 import 'package:dallal_proj/features/ai_price_prediction/domain/entities/price_prediction_request_entity.dart';
 import 'package:dallal_proj/features/ai_price_prediction/domain/entities/price_prediction_response_entity.dart';
 import 'package:dallal_proj/features/ai_price_prediction/domain/repos/ai_prediction_repo.dart';

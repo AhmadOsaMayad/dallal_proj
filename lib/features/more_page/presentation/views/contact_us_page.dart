@@ -1,6 +1,6 @@
 import 'package:dallal_proj/core/utils/assets_data.dart';
-import 'package:dallal_proj/core/widgets/custom_app_bar.dart';
-import 'package:dallal_proj/core/widgets/symmetric_pads/v_p_item.dart';
+import 'package:dallal_proj/core/shared/widgets/custom_app_bar.dart';
+import 'package:dallal_proj/core/shared/widgets/symmetric_pads/v_p_item.dart';
 import 'package:dallal_proj/features/my_account_page/presentation/views/widgets/personal_info_card.dart';
 import 'package:flutter/material.dart';
 

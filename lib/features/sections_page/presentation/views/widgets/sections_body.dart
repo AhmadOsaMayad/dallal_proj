@@ -1,6 +1,6 @@
-import 'package:dallal_proj/core/components/app_cards/selection_cards/items/body_cell_cards.dart';
-import 'package:dallal_proj/core/components/app_cards/selection_cards/sect_selection_cards/section_cell_card.dart';
-import 'package:dallal_proj/core/components/app_cards/selection_cards/section_card_entity.dart';
+import 'package:dallal_proj/core/shared/components/app_cards/selection_cards/items/body_cell_cards.dart';
+import 'package:dallal_proj/core/shared/components/app_cards/selection_cards/sect_selection_cards/section_cell_card.dart';
+import 'package:dallal_proj/core/shared/components/app_cards/selection_cards/section_card_entity.dart';
 import 'package:dallal_proj/features/sections_page/presentation/manager/fetch_apt_list_cubit/fetch_apt_list_cubit.dart';
 import 'package:dallal_proj/features/sections_page/presentation/manager/fetch_house_list_cubit/fetch_house_list_cubit.dart';
 import 'package:dallal_proj/features/sections_page/presentation/manager/fetch_land_list_cubit/fetch_land_list_cubit.dart';

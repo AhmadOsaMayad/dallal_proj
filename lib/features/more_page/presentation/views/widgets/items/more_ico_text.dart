@@ -1,6 +1,6 @@
-import 'package:dallal_proj/core/widgets/svg_ico.dart';
-import 'package:dallal_proj/core/widgets/symmetric_pads/h_p_item.dart';
-import 'package:dallal_proj/core/widgets/two_item_widgets/two_itm_row.dart';
+import 'package:dallal_proj/core/shared/widgets/svg_ico.dart';
+import 'package:dallal_proj/core/shared/widgets/symmetric_pads/h_p_item.dart';
+import 'package:dallal_proj/core/shared/widgets/two_item_widgets/two_itm_row.dart';
 import 'package:flutter/material.dart';
 
 class MoreIcoText extends StatelessWidget {

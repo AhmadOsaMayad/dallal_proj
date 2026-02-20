@@ -1,6 +1,6 @@
 import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:dallal_proj/core/theme/app_font_styles.dart';
-import 'package:dallal_proj/core/widgets/text_widgets/link_text_span.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/link_text_span.dart';
 import 'package:flutter/material.dart';
 
 class ResendTextWidget extends StatelessWidget {

@@ -1,5 +1,5 @@
-import 'package:dallal_proj/core/components/shimmer_widgets/adv_sliding_list_shimmer/adv_sliding_list_shimmer.dart';
-import 'package:dallal_proj/core/widgets/symmetric_pads/cvp_item.dart';
+import 'package:dallal_proj/core/shared/components/shimmer_widgets/adv_sliding_list_shimmer/adv_sliding_list_shimmer.dart';
+import 'package:dallal_proj/core/shared/widgets/symmetric_pads/cvp_item.dart';
 import 'package:dallal_proj/features/home_page/presentation/manager/all_banners_cubit/all_banners_cubit.dart';
 import 'package:dallal_proj/features/home_page/presentation/views/widgets/adv_list/adv_sliding_list.dart';
 import 'package:flutter/widgets.dart';

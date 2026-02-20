@@ -2,7 +2,7 @@ import 'package:dallal_proj/core/constants/app_defs.dart';
 import 'package:dallal_proj/core/theme/app_colors.dart';
 import 'package:dallal_proj/core/utils/app_router.dart';
 import 'package:dallal_proj/core/utils/functions/get_me_data.dart';
-import 'package:dallal_proj/core/widgets/symmetric_pads/v_p_item.dart';
+import 'package:dallal_proj/core/shared/widgets/symmetric_pads/v_p_item.dart';
 import 'package:dallal_proj/features/details_page/domain/entities/show_details_entity.dart';
 import 'package:dallal_proj/features/login_page/domain/entities/loggedin_user_entity.dart';
 import 'package:dallal_proj/features/my_account_page/data/models/user_profile/user_profile.dart';

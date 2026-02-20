@@ -1,8 +1,8 @@
-import 'package:dallal_proj/core/widgets/symmetric_pads/h_p_item.dart';
-import 'package:dallal_proj/core/widgets/symmetric_pads/v_p_item.dart';
-import 'package:dallal_proj/core/widgets/two_item_widgets/two_itm_col.dart';
-import 'package:dallal_proj/core/widgets/two_item_widgets/two_itm_row.dart';
-import 'package:dallal_proj/core/components/app_btns/models/x_b_size.dart';
+import 'package:dallal_proj/core/shared/widgets/symmetric_pads/h_p_item.dart';
+import 'package:dallal_proj/core/shared/widgets/symmetric_pads/v_p_item.dart';
+import 'package:dallal_proj/core/shared/widgets/two_item_widgets/two_itm_col.dart';
+import 'package:dallal_proj/core/shared/widgets/two_item_widgets/two_itm_row.dart';
+import 'package:dallal_proj/core/shared/components/app_btns/models/x_b_size.dart';
 import 'package:dallal_proj/features/preregister/presentation/views/widgets/guest_btn.dart';
 import 'package:dallal_proj/features/preregister/presentation/views/widgets/login_btn.dart';
 import 'package:dallal_proj/features/preregister/presentation/views/widgets/register_btn.dart';

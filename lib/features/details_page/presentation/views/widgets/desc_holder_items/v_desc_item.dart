@@ -1,7 +1,7 @@
 import 'package:dallal_proj/core/theme/app_font_styles.dart';
-import 'package:dallal_proj/core/widgets/text_widgets/r_text.dart';
-import 'package:dallal_proj/core/widgets/symmetric_pads/v_p_item.dart';
-import 'package:dallal_proj/core/widgets/text_widgets/v_p_text.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/r_text.dart';
+import 'package:dallal_proj/core/shared/widgets/symmetric_pads/v_p_item.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/v_p_text.dart';
 import 'package:flutter/material.dart';
 
 class VDescItem extends StatelessWidget {

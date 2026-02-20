@@ -1,7 +1,7 @@
 import 'package:dallal_proj/core/theme/app_colors.dart';
 import 'package:dallal_proj/core/utils/functions/get_me_data.dart';
-import 'package:dallal_proj/core/widgets/helpers/show_snack_bar.dart';
-import 'package:dallal_proj/core/widgets/loadable_body.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/show_snack_bar.dart';
+import 'package:dallal_proj/core/shared/widgets/loadable_body.dart';
 import 'package:dallal_proj/features/my_account_page/data/models/user_profile/user_profile.dart';
 import 'package:dallal_proj/features/my_account_page/presentation/manager/delete_adv_cubit/delete_adv_cubit.dart';
 import 'package:dallal_proj/features/my_account_page/presentation/manager/user_profile_cubit/user_profile_cubit.dart';

@@ -5,8 +5,8 @@ import 'package:dallal_proj/features/details_page/presentation/views/widgets/adv
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/adv_refused_body_items/text_clarify.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/bottom_sheet_btns.dart';
 import 'package:dallal_proj/core/utils/assets_data.dart';
-import 'package:dallal_proj/core/utils/app_funcs.dart';
-import 'package:dallal_proj/core/widgets/svg_ico.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
+import 'package:dallal_proj/core/shared/widgets/svg_ico.dart';
 import 'package:flutter/material.dart';
 
 class AdvRefusedBody extends StatelessWidget {

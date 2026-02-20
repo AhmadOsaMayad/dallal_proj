@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/components/app_btns/white_btn.dart';
+import 'package:dallal_proj/core/shared/components/app_btns/white_btn.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:flutter/material.dart';
 

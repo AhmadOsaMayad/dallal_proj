@@ -1,8 +1,8 @@
-import 'package:dallal_proj/core/components/app_bottom_sheets/bottom_sheet_holder.dart';
-import 'package:dallal_proj/core/components/app_bottom_sheets/filter_b_s/filter_funcs.dart';
-import 'package:dallal_proj/core/components/app_bottom_sheets/log_required_b_s/show_log_required_b_s.dart';
+import 'package:dallal_proj/core/shared/components/app_bottom_sheets/bottom_sheet_holder.dart';
+import 'package:dallal_proj/core/shared/components/app_bottom_sheets/filter_b_s/filter_funcs.dart';
+import 'package:dallal_proj/core/shared/components/app_bottom_sheets/log_required_b_s/show_log_required_b_s.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
-import 'package:dallal_proj/core/widgets/loadable_body.dart';
+import 'package:dallal_proj/core/shared/widgets/loadable_body.dart';
 import 'package:dallal_proj/features/ai_price_prediction/presentation/views/widgets/dynamic_ai_form.dart';
 import 'package:dallal_proj/features/create_adv_page/data/models/cr_adv_req_model.dart';
 import 'package:dallal_proj/features/create_adv_page/presentation/manager/create_ad_orcstr/create_ad_orcstr_cubit.dart';
@@ -10,12 +10,12 @@ import 'package:dallal_proj/features/create_adv_page/presentation/views/widgets/
 import 'package:dallal_proj/features/create_adv_page/presentation/views/widgets/items/cr_adv_body_form.dart';
 import 'package:dallal_proj/core/utils/functions/is_accessible_user.dart';
 import 'package:dallal_proj/core/utils/functions/get_city_value.dart';
-import 'package:dallal_proj/core/widgets/helpers/show_snack_bar.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/show_snack_bar.dart';
 import 'package:dallal_proj/core/utils/functions/get_me_data.dart';
 import 'package:dallal_proj/core/constants/app_defs.dart';
 import 'package:dallal_proj/core/utils/app_router.dart';
 import 'package:dallal_proj/core/theme/app_colors.dart';
-import 'package:dallal_proj/core/utils/app_funcs.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';

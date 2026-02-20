@@ -1,5 +1,5 @@
 import 'package:dallal_proj/core/utils/functions/get_me_data.dart';
-import 'package:dallal_proj/core/utils/service_locator.dart';
+import 'package:dallal_proj/core/di/service_locator.dart';
 import 'package:dallal_proj/features/main_page/data/repos/main_page_repo_implement.dart';
 import 'package:dallal_proj/features/main_page/domain/use_cases/fetch_user_profile_use_case.dart';
 import 'package:dallal_proj/features/more_page/data/repos/more_page_repo_implement.dart';

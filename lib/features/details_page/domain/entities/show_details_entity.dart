@@ -1,5 +1,5 @@
-import 'package:dallal_proj/core/entities/adv_card_entity/adv_card_entity.dart';
-import 'package:dallal_proj/core/entities/media_entity/media_entity.dart';
+import 'package:dallal_proj/core/common/entities/adv_card_entity/adv_card_entity.dart';
+import 'package:dallal_proj/core/common/entities/media_entity.dart';
 
 class ShowDetailsEntity extends AdvCardEntity {
   final String advId;

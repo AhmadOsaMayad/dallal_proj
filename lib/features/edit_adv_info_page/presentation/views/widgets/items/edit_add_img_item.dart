@@ -1,13 +1,13 @@
-import 'package:dallal_proj/core/components/app_bottom_sheets/filter_b_s/filter_form_items/filter_form_item.dart';
+import 'package:dallal_proj/core/shared/components/app_bottom_sheets/filter_b_s/filter_form_items/filter_form_item.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
-import 'package:dallal_proj/core/entities/media_entity/media_entity.dart';
+import 'package:dallal_proj/core/common/entities/media_entity.dart';
 import 'package:dallal_proj/core/theme/app_colors.dart';
 import 'package:dallal_proj/core/theme/app_font_styles.dart';
 import 'package:dallal_proj/core/theme/app_themes.dart';
-import 'package:dallal_proj/core/utils/app_funcs.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
 import 'package:dallal_proj/core/utils/assets_data.dart';
 import 'package:dallal_proj/core/utils/functions/get_safe_image_url.dart';
-import 'package:dallal_proj/core/widgets/svg_ico.dart';
+import 'package:dallal_proj/core/shared/widgets/svg_ico.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';

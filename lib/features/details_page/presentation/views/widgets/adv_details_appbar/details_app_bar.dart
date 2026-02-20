@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:dallal_proj/core/widgets/back_app_bar_btn.dart';
-import 'package:dallal_proj/core/widgets/two_item_widgets/two_itm_row.dart';
+import 'package:dallal_proj/core/shared/widgets/back_app_bar_btn.dart';
+import 'package:dallal_proj/core/shared/widgets/two_item_widgets/two_itm_row.dart';
 
 class DetailsAppBar extends StatelessWidget implements PreferredSizeWidget {
   const DetailsAppBar({super.key, required this.svgIco});

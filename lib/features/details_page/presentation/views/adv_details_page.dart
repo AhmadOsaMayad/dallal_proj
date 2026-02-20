@@ -3,11 +3,11 @@ import 'package:dallal_proj/features/details_page/presentation/manager/report_ad
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/adv_details_appbar/details_app_bar.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/adv_details_appbar/ico_switch.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/adv_details_body.dart';
-import 'package:dallal_proj/core/widgets/helpers/show_snack_bar.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/show_snack_bar.dart';
 import 'package:dallal_proj/core/utils/functions/get_me_data.dart';
-import 'package:dallal_proj/core/widgets/loadable_body.dart';
-import 'package:dallal_proj/core/widgets/unfocus_ontap.dart';
-import 'package:dallal_proj/core/widgets/page_padding.dart';
+import 'package:dallal_proj/core/shared/widgets/loadable_body.dart';
+import 'package:dallal_proj/core/shared/widgets/unfocus_ontap.dart';
+import 'package:dallal_proj/core/shared/widgets/page_padding.dart';
 import 'package:dallal_proj/core/theme/app_colors.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';

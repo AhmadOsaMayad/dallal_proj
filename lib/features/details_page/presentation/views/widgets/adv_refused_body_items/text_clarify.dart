@@ -1,5 +1,5 @@
 import 'package:dallal_proj/core/theme/app_font_styles.dart';
-import 'package:dallal_proj/core/widgets/text_widgets/r_text.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/r_text.dart';
 import 'package:flutter/material.dart';
 
 class TextClarify extends StatelessWidget {
