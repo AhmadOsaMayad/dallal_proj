@@ -1,8 +1,14 @@
 const kUserProfsPath = '/api-app/api/media/get_media.php?type=user_profiles';
 const kUserProfsNfilePath =
     '/api-app/api/media/get_media.php?type=user_profiles&file=';
-const kImgP = 'assets/imgs/';
+const kImgs = 'assets/images/';
+const kImgJpg = '${kImgs}jpg/';
+const kImgJpeg = '${kImgs}jpeg/';
+const kImgPng = '${kImgs}png/';
+const kImgGif = '${kImgs}gif/';
 const kIcoP = 'assets/icons/';
+const kIcoSvg = '${kIcoP}svg/';
+const kIcoPng = '${kIcoP}png/';
 const kMeDataBox = 'me_data_box';
 const kFeaturedAdvBox = 'featured_advs_box';
 const kAllAdvBox = 'all_advs_box';
