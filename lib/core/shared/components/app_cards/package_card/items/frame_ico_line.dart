@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/shared/components/app_cards/package_card/entities/package_type.dart';
+import 'package:dallal_proj/core/enums/package_type.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:dallal_proj/core/theme/app_font_styles.dart';
 import 'package:dallal_proj/core/theme/app_font_styles_colorer.dart';

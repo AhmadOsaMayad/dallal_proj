@@ -6,7 +6,7 @@ import 'package:dallal_proj/core/shared/widgets/helpers/show_snack_bar.dart';
 import 'package:dallal_proj/features/verification_page/presentation/views/widgets/resend_text_widget.dart';
 import 'package:dallal_proj/features/verify_msg_page/data/models/verify_model.dart';
 import 'package:dallal_proj/features/verify_msg_page/domain/entities/verify_msg_entity.dart';
-import 'package:dallal_proj/features/verify_msg_page/domain/entities/verify_msg_type.dart';
+import 'package:dallal_proj/core/enums/verify_msg_type.dart';
 import 'package:dallal_proj/features/verify_msg_page/presentation/manager/get_otp_code_cubit/get_otp_code_cubit.dart';
 import 'package:dallal_proj/features/verify_msg_page/presentation/manager/resend_otp_code_cubit/resend_otp_code_cubit.dart';
 import 'package:dallal_proj/features/verify_msg_page/presentation/manager/verify_otp_code_cubit/verify_otp_code_cubit.dart';

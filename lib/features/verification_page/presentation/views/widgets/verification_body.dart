@@ -9,7 +9,7 @@ import 'package:dallal_proj/core/shared/widgets/text_widgets/right_main_title.da
 import 'package:dallal_proj/core/shared/components/app_btns/col_btn.dart';
 import 'package:dallal_proj/features/verification_page/presentation/manager/send_otp_code_cubit/send_otp_code_cubit.dart';
 import 'package:dallal_proj/features/verify_msg_page/domain/entities/verify_msg_entity.dart';
-import 'package:dallal_proj/features/verify_msg_page/domain/entities/verify_msg_type.dart';
+import 'package:dallal_proj/core/enums/verify_msg_type.dart';
 import 'package:dallal_proj/temp_try.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

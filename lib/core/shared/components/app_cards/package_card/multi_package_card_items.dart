@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/shared/components/app_cards/package_card/entities/package_cards_display_type.dart';
+import 'package:dallal_proj/core/enums/package_cards_display_type.dart';
 import 'package:dallal_proj/core/shared/components/app_cards/package_card/entities/package_entity.dart';
 import 'package:dallal_proj/core/shared/components/app_cards/package_card/items/frame_ico_line.dart';
 import 'package:dallal_proj/core/shared/components/app_cards/package_card/items/price_ico_line.dart';

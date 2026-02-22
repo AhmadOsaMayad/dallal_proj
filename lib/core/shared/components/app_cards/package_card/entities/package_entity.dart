@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/shared/components/app_cards/package_card/entities/package_type.dart';
+import 'package:dallal_proj/core/enums/package_type.dart';
 import 'package:dallal_proj/core/constants/app_defs.dart';
 import 'package:dallal_proj/core/shared/widgets/helpers/widgets_helper.dart';
 import 'package:intl/intl.dart';
