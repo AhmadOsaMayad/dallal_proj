@@ -1,3 +1,4 @@
+import 'package:dallal_proj/core/enums/verify_msg_type.dart';
 import 'package:dallal_proj/core/theme/app_colors.dart';
 import 'package:dallal_proj/core/extensions/escalator.dart';
 import 'package:dallal_proj/core/utils/functions/is_success.dart';
@@ -5,8 +6,6 @@ import 'package:dallal_proj/core/shared/widgets/helpers/show_snack_bar.dart';
 import 'package:dallal_proj/features/login_page/data/models/login_req_model.dart';
 import 'package:dallal_proj/features/login_page/presentation/manager/login_user_cubit/login_user_cubit.dart';
 import 'package:dallal_proj/features/verify_msg_page/domain/entities/verify_msg_entity.dart';
-import 'package:dallal_proj/features/verify_msg_page/domain/entities/verify_msg_type.dart';
-import 'package:dallal_proj/temp_try.dart';
 import 'package:flutter/material.dart';
 import 'package:dallal_proj/features/login_page/presentation/views/widgets/login_body_form.dart';
 import 'package:dallal_proj/core/utils/app_router.dart';
