@@ -1,8 +1,9 @@
 import 'package:dallal_proj/core/common/entities/svg_entity.dart';
-import 'package:dallal_proj/core/utils/assets_data.dart';
+
 import 'package:dallal_proj/features/more_page/presentation/views/widgets/items/more_body_item_holder.dart';
 import 'package:dallal_proj/features/more_page/presentation/views/widgets/items/more_ico_text.dart';
 import 'package:dallal_proj/features/more_page/presentation/views/widgets/items/more_tail_btn.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
 import 'package:dallal_proj/temp_try.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +22,11 @@ class MoreBodyItem extends StatelessWidget {
     return MoreBodyItemHolder(
       child: MoreTailBtn(
         onTap: onTap,
-        svgModel: const SvgEntity(AssetsData.kMoreArrow, 21.46, 21.185),
+        svgModel: SvgEntity(
+          Assets.icons.svg.morearrow21o46x21o185,
+          21.46,
+          21.185,
+        ),
         textWidget: MoreIcoText(text: text, img: img),
         // icoText,
       ),

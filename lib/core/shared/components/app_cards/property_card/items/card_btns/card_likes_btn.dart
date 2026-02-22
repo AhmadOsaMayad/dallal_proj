@@ -1,6 +1,6 @@
 import 'package:dallal_proj/core/shared/components/app_bottom_sheets/log_required_b_s/show_log_required_b_s.dart';
 import 'package:dallal_proj/core/theme/app_colors.dart';
-import 'package:dallal_proj/core/utils/assets_data.dart';
+
 import 'package:dallal_proj/core/utils/functions/get_me_data.dart';
 import 'package:dallal_proj/features/details_page/domain/entities/show_details_entity.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/adv_details_header_sect/i_v_ico.dart';
@@ -9,6 +9,7 @@ import 'package:dallal_proj/core/shared/components/app_btns/tcon_btn.dart';
 import 'package:dallal_proj/core/shared/components/app_btns/models/x_b_size.dart';
 import 'package:dallal_proj/features/home_page/data/models/interaction_req_model.dart';
 import 'package:dallal_proj/features/home_page/presentation/manager/like_cubit/like_cubit.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -75,8 +76,8 @@ class CardLikesBtn extends StatelessWidget {
               radius: radius,
               leftChild: IVIco(
                 isActv: isVLiked,
-                ico: AssetsData.likeSvg,
-                icoActv: AssetsData.likeFilled,
+                ico: Assets.icons.svg.like20,
+                icoActv: Assets.icons.svg.likefilledb,
               ),
               rightChild: ValueListenableBuilder<String>(
                 valueListenable: likesCountNotifier,

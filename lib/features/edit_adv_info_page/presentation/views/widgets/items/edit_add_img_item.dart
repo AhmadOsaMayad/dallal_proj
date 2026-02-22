@@ -5,9 +5,10 @@ import 'package:dallal_proj/core/theme/app_colors.dart';
 import 'package:dallal_proj/core/theme/app_font_styles.dart';
 import 'package:dallal_proj/core/theme/app_themes.dart';
 import 'package:dallal_proj/core/extensions/escalator.dart';
-import 'package:dallal_proj/core/utils/assets_data.dart';
+
 import 'package:dallal_proj/core/utils/functions/get_safe_image_url.dart';
 import 'package:dallal_proj/core/shared/widgets/svg_ico.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -187,13 +188,13 @@ class _EditAddImgItemState extends State<EditAddImgItem> {
         child: AspectRatio(
           aspectRatio: context.aspInfWth(exWidth: 32) / 206,
           // Funcs.aspInfWth(exWidth: 32, context: context) / 206,
-          child: const Center(
+          child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SvgIco(ico: AssetsData.crAdvAddImg, ht: 60, wth: 60),
-                SizedBox(height: 8),
-                Text(
+                SvgIco(ico: Assets.icons.svg.galleryadd18x16, ht: 60, wth: 60),
+                const SizedBox(height: 8),
+                const Text(
                   'اضغط لإضافة صور\n(الحد الأقصى 10 صور)',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 12, color: Colors.grey),

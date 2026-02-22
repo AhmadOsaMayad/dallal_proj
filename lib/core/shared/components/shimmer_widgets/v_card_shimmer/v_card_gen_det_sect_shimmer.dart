@@ -3,8 +3,9 @@ import 'package:dallal_proj/core/shared/components/shimmer_widgets/property_card
 import 'package:dallal_proj/core/shared/components/shimmer_widgets/property_card_items/card_seperated_btns_shimmer.dart';
 import 'package:dallal_proj/core/shared/components/shimmer_widgets/property_card_items/card_title_wid_shimmer.dart';
 import 'package:dallal_proj/core/shared/components/shimmer_widgets/property_card_items/right_ico_line_shimmer.dart';
-import 'package:dallal_proj/core/utils/assets_data.dart';
+
 import 'package:dallal_proj/core/shared/widgets/symmetric_pads/v_p_item.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
 import 'package:flutter/material.dart';
 
 class VCardGenDetSectShimmer extends StatelessWidget {
@@ -12,22 +13,22 @@ class VCardGenDetSectShimmer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        CardDateTxtShimmer(),
-        Spacer(flex: 3),
-        CardTitleWidShimmer(),
-        Spacer(flex: 3),
-        RightIcoLineShimmer(icoPath: AssetsData.locationSvg),
+        const CardDateTxtShimmer(),
+        const Spacer(flex: 3),
+        const CardTitleWidShimmer(),
+        const Spacer(flex: 3),
+        RightIcoLineShimmer(icoPath: Assets.icons.svg.location13),
         VPItem(
           tSpc: 3,
           bSpc: 3,
-          child: RightIcoLineShimmer(icoPath: AssetsData.buildingSvg),
+          child: RightIcoLineShimmer(icoPath: Assets.icons.svg.building13),
         ),
-        RightIcoLineShimmer(icoPath: AssetsData.tagSvg),
-        Spacer(flex: 2),
-        CardSeperatedBtnsShimmer(
+        RightIcoLineShimmer(icoPath: Assets.icons.svg.tag13),
+        const Spacer(flex: 2),
+        const CardSeperatedBtnsShimmer(
           moreBtnSize: XBSize(width: 83.5429, height: 29),
           sepWidth: 177,
           isLiked: false,

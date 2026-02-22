@@ -9,6 +9,12 @@ const kImgGif = '${kImgs}gif/';
 const kIcoP = 'assets/icons/';
 const kIcoSvg = '${kIcoP}svg/';
 const kIcoPng = '${kIcoP}png/';
+
+const kPfpJack = '${kImgs}jpg/pfpJack';
+const kGrDiamond = '${kImgPng}grdiamond.png';
+const kBlDiamond = '${kImgPng}bldiamond.png';
+const kOrDiamond = '${kImgPng}oradiamond.png';
+
 const kMeDataBox = 'me_data_box';
 const kFeaturedAdvBox = 'featured_advs_box';
 const kAllAdvBox = 'all_advs_box';

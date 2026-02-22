@@ -9,8 +9,9 @@ import 'package:dallal_proj/core/shared/components/app_btns/models/x_b_size.dart
 import 'package:dallal_proj/core/shared/widgets/helpers/show_snack_bar.dart';
 import 'package:dallal_proj/core/shared/components/app_btns/tcon_btn.dart';
 import 'package:dallal_proj/core/utils/functions/get_me_data.dart';
-import 'package:dallal_proj/core/utils/assets_data.dart';
+
 import 'package:dallal_proj/core/theme/app_colors.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 
@@ -85,8 +86,8 @@ class DetLikesBtn extends StatelessWidget {
               radius: radius,
               leftChild: IVIco(
                 isActv: isVLiked,
-                ico: AssetsData.likeSvg,
-                icoActv: AssetsData.likeFilled,
+                ico: Assets.icons.svg.like20,
+                icoActv: Assets.icons.svg.likefilledb,
               ),
               rightChild: IVText(
                 txt: likesCountNotifier.value,

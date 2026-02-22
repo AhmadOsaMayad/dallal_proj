@@ -1,8 +1,9 @@
 import 'package:dallal_proj/core/theme/app_colors.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:dallal_proj/core/theme/app_font_styles_colorer.dart';
-import 'package:dallal_proj/core/utils/assets_data.dart';
+
 import 'package:dallal_proj/core/theme/app_font_styles.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
 import 'package:flutter/material.dart';
 
 class NamedLogo extends StatelessWidget {
@@ -18,7 +19,9 @@ class NamedLogo extends StatelessWidget {
           Positioned(
             top: 0,
             child: Image.asset(
-              isBlack ? AssetsData.bLogo : AssetsData.wLogo,
+              isBlack
+                  ? Assets.icons.png.bLogo.path
+                  : Assets.icons.png.wLogo.path,
               width: 236,
               height: 236,
             ),

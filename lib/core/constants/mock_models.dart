@@ -6,7 +6,7 @@ import 'package:dallal_proj/core/shared/components/app_cards/selection_cards/sec
 import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:dallal_proj/core/constants/str_lists.dart';
 import 'package:dallal_proj/core/utils/app_router.dart';
-import 'package:dallal_proj/core/utils/assets_data.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
 
 const kUserModel = UserEntity();
 
@@ -66,54 +66,56 @@ const kOnlyPremOptModel = OptionsListEntity(
   options: CLstr.isOnlyPremOpts,
 );
 
-const kCrAdvCardHouse = SectCardEntity(
-  name: kHouse,
-  pTitle: '$kCreateAdv - $kHouse',
-  img: AssetsData.crAdvHouse,
-  routePath: AppRouter.kCrAdvPage,
-);
+class MockModels {
+  static SectCardEntity kCrAdvCardHouse = SectCardEntity(
+    name: kHouse,
+    pTitle: '$kCreateAdv - $kHouse',
+    img: Assets.icons.svg.cradvhouses,
+    routePath: AppRouter.kCrAdvPage,
+  );
 
-const kCrAdvCardApt = SectCardEntity(
-  name: kApt,
-  pTitle: '$kCreateAdv - $kApt',
-  img: AssetsData.crAdvApt,
-  routePath: AppRouter.kCrAdvPage,
-);
+  static SectCardEntity kCrAdvCardApt = SectCardEntity(
+    name: kApt,
+    pTitle: '$kCreateAdv - $kApt',
+    img: Assets.icons.svg.cradvapts180,
+    routePath: AppRouter.kCrAdvPage,
+  );
 
-const kCrAdvCardStore = SectCardEntity(
-  name: kStore,
-  pTitle: '$kCreateAdv - $kStore',
-  img: AssetsData.crAdvStore,
-  routePath: AppRouter.kCrAdvPage,
-);
+  static SectCardEntity kCrAdvCardStore = SectCardEntity(
+    name: kStore,
+    pTitle: '$kCreateAdv - $kStore',
+    img: Assets.icons.svg.cradvstores,
+    routePath: AppRouter.kCrAdvPage,
+  );
 
-const kCrAdvCardGrnd = SectCardEntity(
-  name: kGround,
-  pTitle: '$kCreateAdv - $kGround',
-  img: AssetsData.crAdvGround,
-  routePath: AppRouter.kCrAdvPage,
-);
+  static SectCardEntity kCrAdvCardGrnd = SectCardEntity(
+    name: kGround,
+    pTitle: '$kCreateAdv - $kGround',
+    img: Assets.icons.svg.cradvgrounds,
+    routePath: AppRouter.kCrAdvPage,
+  );
 
-const kSectCardHouses = SectCardEntity(
-  name: kHouses,
-  img: AssetsData.housesSvg,
-  routePath: AppRouter.kSelectedSectPage,
-);
+  static SectCardEntity kSectCardHouses = SectCardEntity(
+    name: kHouses,
+    img: Assets.icons.svg.houses180,
+    routePath: AppRouter.kSelectedSectPage,
+  );
 
-const kSectCardApts = SectCardEntity(
-  name: kApts,
-  img: AssetsData.appartmentsSvg,
-  routePath: AppRouter.kSelectedSectPage,
-);
+  static SectCardEntity kSectCardApts = SectCardEntity(
+    name: kApts,
+    img: Assets.icons.svg.appartments180,
+    routePath: AppRouter.kSelectedSectPage,
+  );
 
-const kSectCardStores = SectCardEntity(
-  name: kStores,
-  img: AssetsData.storesSvg,
-  routePath: AppRouter.kSelectedSectPage,
-);
+  static SectCardEntity kSectCardStores = SectCardEntity(
+    name: kStores,
+    img: Assets.icons.svg.stores180,
+    routePath: AppRouter.kSelectedSectPage,
+  );
 
-const kSectCardGrnds = SectCardEntity(
-  name: kGrounds,
-  img: AssetsData.groundsSvg,
-  routePath: AppRouter.kSelectedSectPage,
-);
+  static SectCardEntity kSectCardGrnds = SectCardEntity(
+    name: kGrounds,
+    img: Assets.icons.svg.grounds180,
+    routePath: AppRouter.kSelectedSectPage,
+  );
+}

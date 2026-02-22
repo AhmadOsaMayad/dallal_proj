@@ -62,6 +62,7 @@ flutter_launcher_icons:
 
 dev_dependencies:
   build_runner: 2.5.4
+  flutter_gen_runner: ^5.10.0
   flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
@@ -131,3 +132,32 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+
+# At the VERY END of your pubspec.yaml (after flutter section closes)
+# flutter_gen:
+#   output: lib/gen/assets/
+#   line_length: 120
+  
+#   # Asset configuration
+#   assets:
+#     enabled: true
+#     style: camel-case
+  
+#   # Font configuration - SIMPLIFIED
+#   fonts:
+#     enabled: true
+#     # NO style parameter here!
+#     # Optionally specify output file:
+#     # outputs:
+#     #   - fonts/fonts.gen.dart
+  
+#   # SVG support
+#   integrations:
+#     flutter_svg: true
+
+flutter_gen:
+  output: lib/gen/assets/
+  assets:
+    enabled: true
+  fonts:
+    enabled: true

@@ -3,9 +3,10 @@ import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:dallal_proj/core/theme/app_font_styles_colorer.dart';
 import 'package:dallal_proj/core/theme/app_shadows.dart';
 import 'package:dallal_proj/core/extensions/escalator.dart';
-import 'package:dallal_proj/core/utils/assets_data.dart';
+
 import 'package:dallal_proj/core/theme/app_font_styles.dart';
 import 'package:dallal_proj/core/shared/widgets/helpers/widgets_helper.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
 import 'package:flutter/material.dart';
 
 class Themer {
@@ -96,9 +97,9 @@ class Themer {
     );
   }
 
-  static BoxDecoration wallPaper() => const BoxDecoration(
+  static BoxDecoration wallPaper() => BoxDecoration(
     image: DecorationImage(
-      image: AssetImage(AssetsData.bkgImg),
+      image: AssetImage(Assets.images.jpg.bkg.path),
       fit: BoxFit.cover,
       opacity: 0.4,
     ),

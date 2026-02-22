@@ -1,10 +1,11 @@
 import 'package:dallal_proj/core/utils/app_router.dart';
-import 'package:dallal_proj/core/utils/assets_data.dart';
+
 import 'package:dallal_proj/core/utils/functions/get_me_data.dart';
 import 'package:dallal_proj/core/utils/functions/is_loggedin.dart';
 import 'package:dallal_proj/core/shared/widgets/symmetric_pads/v_p_item.dart';
 import 'package:dallal_proj/core/shared/widgets/two_item_widgets/two_itm_col.dart';
 import 'package:dallal_proj/features/splash/presentation/views/widgets/sliding_text.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -34,7 +35,11 @@ class _SplashViewBodyState extends State<SplashViewBody>
       cXAlign: CrossAxisAlignment.stretch,
       topChild: VPItem(
         bSpc: 5,
-        child: Image.asset(AssetsData.bLogo, width: 236, height: 236),
+        child: Image.asset(
+          Assets.icons.png.bLogo.path,
+          width: 236,
+          height: 236,
+        ),
       ),
       btmChild: SlidingText(slidingAnimation: slidingAnimation),
     );

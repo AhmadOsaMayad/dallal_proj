@@ -1,7 +1,8 @@
 import 'package:dallal_proj/core/theme/app_colors.dart';
-import 'package:dallal_proj/core/utils/assets_data.dart';
+
 import 'package:dallal_proj/core/shared/widgets/svg_ico.dart';
 import 'package:dallal_proj/core/shared/widgets/symmetric_pads/h_p_item.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
 import 'package:flutter/material.dart';
 
 class EditIco extends StatelessWidget {
@@ -11,9 +12,14 @@ class EditIco extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: const HPItem(
+      child: HPItem(
         rSpc: 10,
-        child: SvgIco(ico: AssetsData.edit, wth: 18, ht: 18, color: kBlack),
+        child: SvgIco(
+          ico: Assets.icons.svg.edit18,
+          wth: 18,
+          ht: 18,
+          color: kBlack,
+        ),
       ),
     );
   }

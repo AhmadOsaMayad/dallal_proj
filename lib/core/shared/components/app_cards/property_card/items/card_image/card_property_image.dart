@@ -1,5 +1,5 @@
 import 'package:dallal_proj/core/shared/components/app_bottom_sheets/log_required_b_s/show_log_required_b_s.dart';
-import 'package:dallal_proj/core/utils/assets_data.dart';
+
 import 'package:dallal_proj/core/utils/functions/get_me_data.dart';
 import 'package:dallal_proj/core/shared/widgets/cust_img_holder.dart';
 import 'package:dallal_proj/core/shared/components/app_cards/property_card/items/card_image/premium_label.dart';
@@ -8,6 +8,7 @@ import 'package:dallal_proj/core/shared/widgets/helpers/show_snack_bar.dart';
 import 'package:dallal_proj/features/details_page/domain/entities/show_details_entity.dart';
 import 'package:dallal_proj/features/home_page/data/models/interaction_req_model.dart';
 import 'package:dallal_proj/features/home_page/presentation/manager/fav_cubit/fav_cubit.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -57,8 +58,8 @@ class CardPropertyImage extends StatelessWidget {
                   return PsndSvgBtn(
                     svg:
                         isFaved
-                            ? AssetsData.filledHeartSvg
-                            : AssetsData.heartSvg,
+                            ? Assets.icons.svg.favedfilledb
+                            : Assets.icons.svg.heart33,
                     onPressed: () {
                       final user = getMeData();
                       if (user != null) {

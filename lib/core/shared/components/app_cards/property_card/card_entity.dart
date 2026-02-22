@@ -1,7 +1,6 @@
 import 'package:dallal_proj/core/common/entities/user_entity.dart';
 import 'package:dallal_proj/core/shared/components/app_cards/package_card/entities/package_entity.dart';
 import 'package:dallal_proj/core/constants/mock_models.dart';
-import 'package:dallal_proj/core/utils/assets_data.dart';
 
 class CardEntity {
   final PckgInfEntity? package;
@@ -33,7 +32,7 @@ class CardEntity {
     this.advOwner = kUserModel,
     this.date,
     this.area = '0',
-    this.mapImg = AssetsData.mapImg,
+    this.mapImg,
     this.flrCount = '0',
     this.romCount = '0',
     this.halCount = '0',

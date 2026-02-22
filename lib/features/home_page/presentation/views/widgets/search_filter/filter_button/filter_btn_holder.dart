@@ -1,8 +1,9 @@
 import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:dallal_proj/core/theme/app_font_styles_colorer.dart';
-import 'package:dallal_proj/core/utils/assets_data.dart';
+
 import 'package:dallal_proj/core/theme/app_font_styles.dart';
 import 'package:dallal_proj/core/shared/widgets/svg_ico.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
 import 'package:flutter/material.dart';
 
 class FilterBtnHolder extends StatelessWidget {
@@ -22,7 +23,7 @@ class FilterBtnHolder extends StatelessWidget {
           style: FsC.colStW(isMinSize ? FStyles.s12w5 : FStyles.s16w5),
         ),
         if (!isMinSize) const Spacer(flex: 1) else const SizedBox(width: 5),
-        const SvgIco(ico: AssetsData.filterSvg, ht: 24, wth: 24),
+        SvgIco(ico: Assets.icons.svg.filter24, ht: 24, wth: 24),
       ],
     );
   }

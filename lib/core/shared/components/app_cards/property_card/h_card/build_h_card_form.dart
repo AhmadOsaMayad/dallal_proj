@@ -1,8 +1,9 @@
 import 'package:dallal_proj/core/theme/app_font_styles_colorer.dart';
 import 'package:dallal_proj/core/shared/widgets/helpers/widgets_helper.dart';
 import 'package:dallal_proj/features/details_page/domain/entities/show_details_entity.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
 import 'package:flutter/material.dart';
-import 'package:dallal_proj/core/utils/assets_data.dart';
+
 import 'package:dallal_proj/core/theme/app_font_styles.dart';
 import 'package:dallal_proj/core/shared/components/app_cards/property_card/items/card_details/card_date_txt.dart';
 import 'package:dallal_proj/core/shared/components/app_cards/property_card/items/card_image/card_property_image.dart';
@@ -27,19 +28,19 @@ List<Widget> buildHCardForm(
     const Spacer(flex: 6),
     CustomRightIcoLine(
       text: advsListItem.adress!,
-      icoPath: AssetsData.locationSvg,
+      icoPath: Assets.icons.svg.location13,
       style: FStyles.s10w5h1o6,
     ),
     const Spacer(flex: 1),
     CustomRightIcoLine(
       text: advsListItem.section!,
-      icoPath: AssetsData.buildingSvg,
+      icoPath: Assets.icons.svg.building13,
       style: FStyles.s10w5h1o6,
     ),
     const Spacer(flex: 1),
     CustomRightIcoLine(
       text: advsListItem.price!,
-      icoPath: AssetsData.tagSvg,
+      icoPath: Assets.icons.svg.tag13,
       style: FStyles.s10w5h1o6,
     ),
     const Spacer(flex: 6),

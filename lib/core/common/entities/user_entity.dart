@@ -1,7 +1,7 @@
 class UserEntity {
   const UserEntity({
     this.userId,
-    this.img, //= AssetsData.rUserAvatar,
+    this.img, //= Assets Data.rUserAvatar,
     this.fName = "Unknown",
     // required this.mName,
     // required this.lName,

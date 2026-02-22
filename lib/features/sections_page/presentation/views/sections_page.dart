@@ -15,11 +15,11 @@ class SectionsPage extends StatelessWidget {
         child: SizedBox(
           width: context.respWidth(fract: 0.88),
           // Funcs.respWidth(fract: 0.88, context: context),
-          child: const SectionsBody(
-            topLCell: kSectCardHouses,
-            topRCell: kSectCardApts,
-            btmLCell: kSectCardStores,
-            btmRCell: kSectCardGrnds,
+          child: SectionsBody(
+            topLCell: MockModels.kSectCardHouses,
+            topRCell: MockModels.kSectCardApts,
+            btmLCell: MockModels.kSectCardStores,
+            btmRCell: MockModels.kSectCardGrnds,
           ),
         ),
       ),

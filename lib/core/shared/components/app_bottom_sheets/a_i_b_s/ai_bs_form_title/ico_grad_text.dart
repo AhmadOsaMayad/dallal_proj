@@ -1,10 +1,11 @@
 import 'package:dallal_proj/core/theme/app_font_styles.dart';
-import 'package:dallal_proj/core/utils/assets_data.dart';
+
 import 'package:dallal_proj/core/shared/widgets/svg_ico.dart';
 import 'package:dallal_proj/core/shared/widgets/symmetric_pads/h_p_item.dart';
 import 'package:dallal_proj/core/shared/widgets/symmetric_pads/v_p_item.dart';
 import 'package:dallal_proj/core/shared/widgets/text_widgets/gradient_text.dart';
 import 'package:dallal_proj/core/shared/widgets/two_item_widgets/two_itm_row.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
 import 'package:flutter/material.dart';
 
 class IcoGradText extends StatelessWidget {
@@ -45,7 +46,7 @@ class IcoGradText extends StatelessWidget {
           ),
         ),
         leftChild: SvgIco(
-          ico: ico ?? AssetsData.aiIco,
+          ico: ico ?? Assets.icons.svg.mingcute24,
           ht: iHt ?? 24,
           wth: iWth ?? 24,
         ),

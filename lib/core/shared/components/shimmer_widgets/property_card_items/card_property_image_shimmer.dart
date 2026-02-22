@@ -1,7 +1,8 @@
 import 'package:dallal_proj/core/shared/components/app_cards/property_card/items/card_image/premium_label.dart';
 import 'package:dallal_proj/core/shared/components/app_cards/property_card/items/card_image/psnd_svg_btn.dart';
 import 'package:dallal_proj/core/shared/components/shimmer_widgets/property_card_items/cust_img_holder_shimmer.dart';
-import 'package:dallal_proj/core/utils/assets_data.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
+
 import 'package:flutter/material.dart';
 
 class CardPropertyImageShimmer extends StatelessWidget {
@@ -25,8 +26,8 @@ class CardPropertyImageShimmer extends StatelessWidget {
           PsndSvgBtn(
             svg:
                 (isFaved ?? false)
-                    ? AssetsData.filledHeartSvg
-                    : AssetsData.heartSvg,
+                    ? Assets.icons.svg.favedfilledb
+                    : Assets.icons.svg.heart33,
           ),
       ],
     );

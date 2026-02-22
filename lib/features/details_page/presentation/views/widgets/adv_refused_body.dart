@@ -4,9 +4,10 @@ import 'package:dallal_proj/features/details_page/presentation/views/widgets/adv
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/adv_refused_body_items/refusal_msg.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/adv_refused_body_items/text_clarify.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/bottom_sheet_btns.dart';
-import 'package:dallal_proj/core/utils/assets_data.dart';
+
 import 'package:dallal_proj/core/extensions/escalator.dart';
 import 'package:dallal_proj/core/shared/widgets/svg_ico.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
 import 'package:flutter/material.dart';
 
 class AdvRefusedBody extends StatelessWidget {
@@ -24,7 +25,7 @@ class AdvRefusedBody extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Spacer(flex: 2),
-            const SvgIco(ico: AssetsData.refusedSvg, wth: 126.6, ht: 126.6),
+            SvgIco(ico: Assets.icons.svg.refused131o25, wth: 126.6, ht: 126.6),
             const Spacer(flex: 1),
             const HeaderText(),
             const Spacer(flex: 2),

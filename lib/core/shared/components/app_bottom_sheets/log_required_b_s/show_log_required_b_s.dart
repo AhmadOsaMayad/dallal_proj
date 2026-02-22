@@ -4,10 +4,11 @@ import 'package:dallal_proj/core/shared/components/app_btns/col_btn.dart';
 import 'package:dallal_proj/core/shared/components/app_btns/white_btn.dart';
 import 'package:dallal_proj/core/theme/app_colors.dart';
 import 'package:dallal_proj/core/utils/app_router.dart';
-import 'package:dallal_proj/core/utils/assets_data.dart';
+
 import 'package:dallal_proj/core/shared/widgets/svg_ico.dart';
 import 'package:dallal_proj/core/shared/widgets/symmetric_pads/v_p_item.dart';
 import 'package:dallal_proj/core/shared/widgets/text_widgets/r_text.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -69,11 +70,11 @@ Future<bool?> showConfBS(
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 8.0),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
-                  children: [SvgIco(ico: AssetsData.confBadge)],
+                  children: [SvgIco(ico: Assets.icons.svg.confbadge40)],
                 ),
               ),
               Padding(

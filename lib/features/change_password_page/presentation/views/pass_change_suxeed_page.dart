@@ -4,9 +4,10 @@ import 'package:dallal_proj/core/shared/widgets/text_widgets/body_text.dart';
 import 'package:dallal_proj/core/shared/components/app_btns/col_btn.dart';
 import 'package:dallal_proj/core/shared/widgets/page_padding.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
-import 'package:dallal_proj/core/utils/assets_data.dart';
+
 import 'package:dallal_proj/core/utils/app_router.dart';
 import 'package:dallal_proj/core/shared/widgets/svg_ico.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ class PassChangeSuxeedPage extends StatelessWidget {
       body: PagePadding(
         child: Column(
           children: [
-            const SvgIco(ico: AssetsData.passChSux),
+            SvgIco(ico: Assets.icons.svg.housy),
             const Spacer(flex: 1),
             const RightMainTitle(text: kPassChangeSuxeed, isRight: false),
             const VPItem(tSpc: 20, child: BodyTxt(text: kPassHasBeenChanged)),

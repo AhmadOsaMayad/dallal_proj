@@ -16,11 +16,11 @@ class CreateAdvSelectionPage extends StatelessWidget {
         child: SizedBox(
           width: context.respWidth(fract: 0.88),
           // Funcs.respWidth(fract: 0.88, context: context),
-          child: const CreateAdvSelectionBody(
-            topLCell: kCrAdvCardHouse,
-            topRCell: kCrAdvCardApt,
-            btmLCell: kCrAdvCardStore,
-            btmRCell: kCrAdvCardGrnd,
+          child: CreateAdvSelectionBody(
+            topLCell: MockModels.kCrAdvCardHouse,
+            topRCell: MockModels.kCrAdvCardApt,
+            btmLCell: MockModels.kCrAdvCardStore,
+            btmRCell: MockModels.kCrAdvCardGrnd,
           ),
         ),
       ),
