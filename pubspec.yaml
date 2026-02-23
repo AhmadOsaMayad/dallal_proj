@@ -132,17 +132,14 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
-
 # At the VERY END of your pubspec.yaml (after flutter section closes)
 # flutter_gen:
 #   output: lib/gen/assets/
 #   line_length: 120
-  
 #   # Asset configuration
 #   assets:
 #     enabled: true
 #     style: camel-case
-  
 #   # Font configuration - SIMPLIFIED
 #   fonts:
 #     enabled: true
@@ -150,11 +147,9 @@ flutter:
 #     # Optionally specify output file:
 #     # outputs:
 #     #   - fonts/fonts.gen.dart
-  
 #   # SVG support
 #   integrations:
 #     flutter_svg: true
-
 flutter_gen:
   output: lib/gen/assets/
   assets:

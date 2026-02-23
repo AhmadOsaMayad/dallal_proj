@@ -13,7 +13,7 @@ class RegisterPageRepoImplement extends RegisterPageRepo {
   @override
   Future<Either<Failure, RspAuth>> registerUser(RegisterModel regUser) async {
     try {
-      var createAccount = await remoteDataSource.registerUser(regUser);
+      var createAccount = await remoteDataSource.registerUserHtCon(regUser);
       return right(createAccount);
     } catch (e) {
       return left(mapExceptionToFailure(e));

@@ -15,6 +15,9 @@ class HttpConsumer extends ApiConsumer {
       buildUri(path, queryParams),
       headers: buildHeaders(withContentType: true),
     );
+    if (response.statusCode == 200) {
+      return response;
+    }
     return handleResponse(response);
   }
 
@@ -28,8 +31,11 @@ class HttpConsumer extends ApiConsumer {
     final response = await http.post(
       buildUri(path, queryParams),
       body: isFormD(isFormData, data),
-      headers: buildHeaders(),
+      headers: buildHeaders(withContentType: true),
     );
+    if (response.statusCode == 200) {
+      return response;
+    }
     return handleResponse(response);
   }
 
@@ -46,6 +52,9 @@ class HttpConsumer extends ApiConsumer {
       headers: buildHeaders(withContentType: true),
     );
     debugPrint("PUT ${EndPoints.baseUrl}$path ::: BODY: $data");
+    if (response.statusCode == 200) {
+      return response;
+    }
     return handleResponse(response);
   }
 
@@ -62,7 +71,10 @@ class HttpConsumer extends ApiConsumer {
       headers: buildHeaders(withContentType: true),
     );
     debugPrint("PATCH ${EndPoints.baseUrl}$path ::: BODY: $data");
-    return handleResponse(response, allowNoContent: true);
+    if (response.statusCode == 200) {
+      return response;
+    }
+    return handleResponse(response);
   }
 
   @override
@@ -78,6 +90,9 @@ class HttpConsumer extends ApiConsumer {
       headers: buildHeaders(withContentType: true),
     );
     debugPrint("DELETE ${EndPoints.baseUrl}$path");
-    return handleResponse(response, allowNoContent: true);
+    if (response.statusCode == 200) {
+      return response;
+    }
+    return handleResponse(response);
   }
 }

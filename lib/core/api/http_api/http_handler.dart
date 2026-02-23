@@ -1,5 +1,7 @@
 import 'dart:convert';
 import 'package:dallal_proj/core/api/end_points.dart';
+import 'package:dallal_proj/core/utils/functions/get_me_data.dart';
+import 'package:dallal_proj/core/utils/functions/is_success.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -8,6 +10,10 @@ Map<String, String> buildHeaders({
   String? token,
   bool withContentType = false,
 }) {
+  final user = getMeData();
+  if (isntVNull(user)) {
+    token = user!.uToken;
+  }
   final headers = <String, String>{};
   if (withContentType) {
     headers[HttpKeys.contentTypeK] = HttpKeys.xwContentType;

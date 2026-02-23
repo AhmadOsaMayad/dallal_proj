@@ -6,7 +6,6 @@ import 'package:dallal_proj/core/extensions/escalator.dart';
 import 'package:dallal_proj/core/shared/widgets/helpers/widgets_helper.dart';
 import 'package:dallal_proj/core/shared/widgets/text_widgets/body_text.dart';
 import 'package:dallal_proj/core/shared/widgets/text_widgets/right_main_title.dart';
-import 'package:dallal_proj/temp_try.dart';
 import 'package:flutter/cupertino.dart';
 
 class PackageDetailsBody extends StatelessWidget {

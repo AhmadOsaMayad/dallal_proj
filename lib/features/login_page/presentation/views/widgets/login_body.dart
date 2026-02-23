@@ -1,3 +1,4 @@
+import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:dallal_proj/core/enums/verify_msg_type.dart';
 import 'package:dallal_proj/core/theme/app_colors.dart';
 import 'package:dallal_proj/core/extensions/escalator.dart';
@@ -49,7 +50,7 @@ class _LoginBodyState extends State<LoginBody> {
         if (state is LoginUserSuccess) {
           showAppSnackBar(
             context,
-            message: 'تم تسجيل الدخول بنجاح',
+            message: kLoggedNSxfl,
             backgroundColor: kPrimColG,
           );
           if (isntNull(state.loggedUserEntiy.uProfileImage)) {
@@ -81,7 +82,6 @@ class _LoginBodyState extends State<LoginBody> {
         if (state is LoginUserLoading) {
           return SizedBox(
             height: context.respHieght(fract: 39),
-            // Funcs.respHieght(fract: 0.39, context: context),
             child: const Center(
               child: CircularProgressIndicator(color: kPrimColG),
             ),

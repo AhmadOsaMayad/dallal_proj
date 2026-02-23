@@ -45,6 +45,8 @@ const kApply = 'تطبيق';
 const kGoBackToLogin = 'العودة إلى صفحة تسجيل الدخول';
 const kFillFieldFirst = 'يجب ملء هذا الحقل';
 
+const kLoggedNSxfl = 'تم تسجيل الدخول بنجاح';
+
 const kMainP = 'الرئيسية';
 const kSectsP = 'الأقسام';
 const kAdvP = 'إعلان';

@@ -1,6 +1,6 @@
 import 'package:dallal_proj/core/constants/app_texts.dart';
 
-const kDomainApp = "https://dalal.ghassanalmoqbeli.com";
+const kDomainApp = "http://192.168.1.7:1234/dallal-proj/api/";
 
 const kDefFontFam = 'Rubik';
 const kDefFilterOPtion = kNewestOPtion;

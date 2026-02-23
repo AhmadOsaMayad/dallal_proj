@@ -16,6 +16,10 @@ Failure mapExceptionToFailure(Object e) {
     return ServerFailure(
       'Server error: ${e.statusCode} . MSG: ::: MyErrorMsg: ${e.body}',
     );
+  } else if (e is ServerFailure) {
+    return ServerFailure(
+      'Server Failure error: ${e.error} . MSG: ::: MyErrorMsg: ${e.message}',
+    );
   } else if (e is FormatException) {
     return ParsingFailure('Data format error::: MyErrorMsg: ${e.message}');
   }

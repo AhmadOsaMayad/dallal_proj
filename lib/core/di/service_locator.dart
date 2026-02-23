@@ -64,7 +64,10 @@ void setupServiceLocator() {
 
   getIt.registerSingleton<RegisterPageRepoImplement>(
     RegisterPageRepoImplement(
-      remoteDataSource: RegisterRemoteDataSourceImplement(getIt.get<Api>()),
+      remoteDataSource: RegisterRemoteDataSourceImplement(
+        getIt.get<Api>(),
+        getIt.get<HttpConsumer>(),
+      ),
     ),
   );
 
