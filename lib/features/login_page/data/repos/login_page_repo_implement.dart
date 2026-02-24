@@ -28,7 +28,7 @@ class LoginPageRepoImplement extends LoginPageRepo {
       if (isLoggedin(loggedUser)) {
         deleteUserLoginData();
       }
-      var loginUser = await remoteDataSource.loginUser(loginModel);
+      var loginUser = await remoteDataSource.loginUserHtp(loginModel);
       return right(loginUser);
     } catch (e) {
       if (e is ServerException) {

@@ -20,6 +20,7 @@ import 'package:dallal_proj/features/home_page/data/repos/home_page_repo_impleme
 import 'package:dallal_proj/features/login_page/data/data_resources/login_local_data_source.dart';
 import 'package:dallal_proj/features/login_page/data/data_resources/login_remote_data_source.dart';
 import 'package:dallal_proj/features/login_page/data/data_resources/set_profile_remote_data_source.dart';
+import 'package:dallal_proj/features/login_page/data/data_resources/set_profile_remote_previous.dart';
 import 'package:dallal_proj/features/login_page/data/repos/login_page_repo_implement.dart';
 import 'package:dallal_proj/features/login_page/data/repos/set_profile_repo_implement.dart';
 import 'package:dallal_proj/features/main_page/data/data_source/main_remote_data_source.dart';
@@ -67,6 +68,7 @@ void setupServiceLocator() {
       remoteDataSource: RegisterRemoteDataSourceImplement(
         getIt.get<Api>(),
         getIt.get<HttpConsumer>(),
+        getIt.get<DioConsumer>(),
       ),
     ),
   );
@@ -177,6 +179,8 @@ void setupServiceLocator() {
     SetProfileRepoImplement(
       remoteDataSource: SetProfileRemoteDataSourceImplement(
         api: getIt.get<Api>(),
+        // apiDio: getIt.get<DioConsumer>(),
+        // apiHtp: getIt.get<HttpConsumer>(),
       ),
     ),
   );

@@ -16,10 +16,12 @@ Map<String, String> buildHeaders({
   }
   final headers = <String, String>{};
   if (withContentType) {
-    headers[HttpKeys.contentTypeK] = HttpKeys.xwContentType;
+    // headers[HttpKeys.contentTypeK] = HttpKeys.xwContentType;
+    headers.addAll({HttpKeys.contentTypeK: HttpKeys.xwContentType});
   }
   if (token != null && token.isNotEmpty && token != 'null') {
-    headers[HttpKeys.auth] = '${HttpKeys.bearer} $token';
+    headers.addAll({HttpKeys.auth: '${HttpKeys.bearer} $token'});
+    // headers[HttpKeys.auth] = '${HttpKeys.bearer} $token';
   }
   return headers;
 }
@@ -35,7 +37,10 @@ isFormD(bool isForm, dynamic data) {
 
 /// Build URI with query parameters
 Uri buildUri(String path, Map<String, dynamic>? queryParams) {
-  final uri = Uri.parse('${EndPoints.baseUrl}$path');
+  final uri = Uri.parse(
+    '${EndPoints.baseUrl}'
+    '$path',
+  );
   return queryParams != null ? uri.replace(queryParameters: queryParams) : uri;
 }
 

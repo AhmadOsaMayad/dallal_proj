@@ -11,7 +11,8 @@ import 'package:dio/dio.dart';
 // import 'package:jwt_decoder/jwt_decoder.dart';
 
 abstract class LoginRemoteDataSource {
-  Future<LoginRspModel> loginUser(LoginReqModel loginModel);
+  Future<LoginRspModel> loginUserDio(LoginReqModel loginModel);
+  Future<LoginRspModel> loginUserHtp(LoginReqModel loginModel);
   Future<LoginRspModel> loginUserAlt(LoginReqModel loginModel);
 }
 
@@ -26,9 +27,23 @@ class LoginRemoteDataSourceImplement extends LoginRemoteDataSource {
     required this.apiHttp,
   });
   @override
-  Future<LoginRspModel> loginUser(LoginReqModel loginModel) async {
+  Future<LoginRspModel> loginUserDio(LoginReqModel loginModel) async {
     try {
       var data = await apiDio.post(EndPoints.login, data: loginModel.toJson());
+      LoginRspModel response = LoginRspModel.fromJson(data);
+      saveUserData(response.userData);
+      return response;
+    } on DioException catch (e) {
+      throw handleDioExceptions(e);
+    } on Exception catch (e) {
+      throw ServerFailure("Server error: ${e.toString()}");
+    }
+  }
+
+  @override
+  Future<LoginRspModel> loginUserHtp(LoginReqModel loginModel) async {
+    try {
+      var data = await apiHttp.post(EndPoints.login, data: loginModel.toJson());
       LoginRspModel response = LoginRspModel.fromJson(data);
       saveUserData(response.userData);
       return response;
