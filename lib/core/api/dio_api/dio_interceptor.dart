@@ -9,7 +9,7 @@ class DioInterceptor extends Interceptor {
     var user = getMeData();
     options.contentType = HttpKeys.xwContentType;
     if (user != null && isntNull(user.uToken)) {
-      options.headers[ApiKeys.token] = user.uToken;
+      options.headers[HttpKeys.auth] = '${HttpKeys.bearer} ${user.uToken}';
     }
     super.onRequest(options, handler);
   }

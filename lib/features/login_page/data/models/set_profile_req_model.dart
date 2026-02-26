@@ -6,7 +6,6 @@ class UserProfileModel extends RspAuth {
   final String? name;
   final String? whatsapp;
   final String? profileImage;
-  final String? token;
 
   UserProfileModel({
     this.respStatus,
@@ -15,7 +14,6 @@ class UserProfileModel extends RspAuth {
     this.name,
     this.whatsapp,
     this.profileImage,
-    this.token,
   }) : super(status: respStatus, message: respMsg);
 
   /// Factory for parsing response JSON
@@ -27,7 +25,7 @@ class UserProfileModel extends RspAuth {
       name: json['name'] as String?,
       whatsapp: json['whatsapp'] as String?,
       profileImage: json['profile_image'] as String?,
-      token: json['token'] as String?,
+      // token: json['token'] as String?,
     );
   }
 

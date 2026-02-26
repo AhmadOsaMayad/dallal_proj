@@ -14,14 +14,16 @@ Map<String, String> buildHeaders({
   if (isntVNull(user)) {
     token = user!.uToken;
   }
-  final headers = <String, String>{};
+  final headers = <String, String>{
+    HttpKeys.contentTypeK: HttpKeys.xwContentType,
+  };
   if (withContentType) {
-    // headers[HttpKeys.contentTypeK] = HttpKeys.xwContentType;
-    headers.addAll({HttpKeys.contentTypeK: HttpKeys.xwContentType});
+    headers[HttpKeys.contentTypeK] = HttpKeys.xwContentType;
+    // headers.addAll({HttpKeys.contentTypeK: HttpKeys.xwContentType});
   }
   if (token != null && token.isNotEmpty && token != 'null') {
-    headers.addAll({HttpKeys.auth: '${HttpKeys.bearer} $token'});
-    // headers[HttpKeys.auth] = '${HttpKeys.bearer} $token';
+    // headers.addAll({HttpKeys.auth: '${HttpKeys.bearer} $token'});
+    headers[HttpKeys.auth] = '${HttpKeys.bearer} $token';
   }
   return headers;
 }

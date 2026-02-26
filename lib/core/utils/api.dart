@@ -133,7 +133,7 @@ class Api {
 
     if (response.statusCode == 200 || response.statusCode == 204) {
       // Some APIs return 204 (No Content) for successful PATCH
-      var resp = response.body.isNotEmpty ? jsonDecode(response.body) : {};
+      var resp = jsonDecode(response.body);
       return resp;
       // response.body.isNotEmpty ? jsonDecode(response.body) : {};
     } else {

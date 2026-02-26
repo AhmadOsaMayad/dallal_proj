@@ -87,7 +87,7 @@ class HttpConsumer extends ApiConsumer {
     final response = await http.patch(
       buildUri(path, queryParams),
       body: isFormD(isFormData, data),
-      headers: buildHeaders(withContentType: true, token: token),
+      headers: buildHeaders(withContentType: false, token: token),
     );
     debugPrint("PATCH ${EndPoints.baseUrl}$path ::: BODY: $data");
     if (response.statusCode == 200) {
