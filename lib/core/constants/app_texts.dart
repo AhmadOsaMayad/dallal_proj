@@ -1,6 +1,5 @@
-const kUserProfsPath = '/api-app/api/media/get_media.php?type=user_profiles';
-const kUserProfsNfilePath =
-    '/api-app/api/media/get_media.php?type=user_profiles&file=';
+const kUserProfsPath = '/api/media/get_media.php?type=user_profiles';
+const kUserProfsNfilePath = '/api/media/get_media.php?type=user_profiles&file=';
 const kImgs = 'assets/images/';
 const kImgJpg = '${kImgs}jpg/';
 const kImgJpeg = '${kImgs}jpeg/';

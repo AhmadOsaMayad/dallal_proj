@@ -36,8 +36,7 @@ class HttpConsumer extends ApiConsumer {
     Map<String, dynamic>? queryParams,
     bool isFormData = false,
   }) async {
-    final user = getMeData();
-    final token = getMeToken(user);
+    final token = getMeToken(getMeData());
     final response = await http.post(
       buildUri(path, queryParams),
       body: isFormD(isFormData, data),
