@@ -1,5 +1,7 @@
+import 'package:dallal_proj/core/constants/app_defs.dart';
+
 class EndPoints {
-  static String baseUrl = 'https://dalal.ghassanalmoqbeli.com/api-app/api/';
+  static String baseUrl = kDomainApp;
   static String token = 'token';
   static String login = 'user/login.php';
 }

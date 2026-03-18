@@ -1,10 +1,11 @@
 import 'dart:convert';
+import 'package:dallal_proj/core/constants/app_defs.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class Api {
   //Get Request Method
-  final baseURL = "https://dalal.ghassanalmoqbeli.com/api-app/api/";
+  final baseURL = kDomainApp;
 
   Future<dynamic> get({required String url, @required String? token}) async {
     Map<String, String> headers = {};
