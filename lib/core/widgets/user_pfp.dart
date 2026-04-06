@@ -11,23 +11,13 @@ class UserPfp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final immg =
-    //     '$kDomainApp'
-    //     '$imgPath';
     return CircleAvatar(
       radius: rad ?? 33,
       backgroundColor: kPrimColG,
       foregroundImage:
           (imgPath != null && imgPath!.isNotEmpty)
-              ? NetworkImage(getSafeImageUrl(imgPath)) //imgPath!)
+              ? NetworkImage(getSafeImageUrl(imgPath))
               : const AssetImage(AssetsData.rUserAvatar),
-      // child: CachedNetworkImage(
-      //   fit: BoxFit.fill,
-      //   imageUrl: immg,
-      //   placeholder:
-      //       (context, url) => const CustImgHolderShimmer(), //ErrorImage(),
-      //   errorWidget: (context, url, error) => const PlaceHolderImage(),
-      // ),
     );
   }
 }
@@ -40,23 +30,13 @@ class UserPfp2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final immg =
-    //     '$kDomainApp'
-    //     '$imgPath';
     return CircleAvatar(
       radius: rad ?? 33,
       backgroundColor: kPrimColG,
       foregroundImage:
           (imgPath != null && imgPath!.isNotEmpty)
-              ? NetworkImage(getSafeImageUrl(imgPath)) //imgPath!)
+              ? NetworkImage(getSafeImageUrl(imgPath))
               : const AssetImage(AssetsData.rUserAvatar),
-      // child: CachedNetworkImage(
-      //   fit: BoxFit.fill,
-      //   imageUrl: immg,
-      //   placeholder:
-      //       (context, url) => const CustImgHolderShimmer(), //ErrorImage(),
-      //   errorWidget: (context, url, error) => const PlaceHolderImage(),
-      // ),
     );
   }
 }

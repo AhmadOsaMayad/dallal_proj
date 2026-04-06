@@ -40,7 +40,6 @@ const List<String> kTFModelTitles = [
   kRoomsCount,
 ];
 
-// const TFModel kPropSectVM = TFModel(widthF: widthF, codeLength: codeLength, controllers: controllers, titles: titles, fNodes: fNodes)
 const kIsNegot = OptionsListEntity(
   title: '$kNegotiatable؟   ',
   options: CLstr.isOnlyPremOpts,

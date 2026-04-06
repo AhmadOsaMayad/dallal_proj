@@ -59,7 +59,7 @@ class MyAdvSeperatedBtns extends StatelessWidget {
           }
         }
       } else {
-        debugPrint(kNullResult);
+        // result is null; no action needed
       }
     }
 

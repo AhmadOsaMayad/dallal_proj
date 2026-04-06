@@ -21,17 +21,8 @@ class FeaturedAdvsCubit extends Cubit<FeaturedAdvsState> {
         emit(FeaturedAdvsFailure(errMsg: failure.message));
       },
       (advsListRsp) {
-        // if (advsListRsp.fetchStatus == 'local') {
-        //   emit(
-        //     FeaturedAdvsSuccessLocal(
-        //       localMsg: advsListRsp.fetchMessage ?? 'localism',
-        //       featuredAdvsList: advsListRsp.advList!,
-        //     ),
-        //   );
-        // }
         if (isSuxes(advsListRsp.fetchStatus)) {
           emit(FeaturedAdvsSuccess(featuredAdvsList: advsListRsp.advList!));
-          // emit(FeaturedAdvsLoading());
           return;
         }
         emit(
@@ -40,9 +31,6 @@ class FeaturedAdvsCubit extends Cubit<FeaturedAdvsState> {
           ),
         );
       },
-      // (advsList) {
-      //   emit(FeaturedAdvsSuccess(featuredAdvsList: advsList));
-      // },
     );
   }
 }

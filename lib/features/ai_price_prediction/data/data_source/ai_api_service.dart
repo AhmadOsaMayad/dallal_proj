@@ -54,9 +54,6 @@ class AiApiService {
   }) async {
     final url = Uri.parse('$baseUrl/predict');
 
-    debugPrint('🤖 AI API Request URL: $url');
-    debugPrint('🤖 AI API Request Body: ${jsonEncode(requestBody)}');
-
     try {
       final response = await http
           .post(
@@ -69,9 +66,6 @@ class AiApiService {
           )
           .timeout(_timeout);
 
-      debugPrint('🤖 AI API Response Status: ${response.statusCode}');
-      debugPrint('🤖 AI API Response Body: ${response.body}');
-
       if (response.statusCode == 200) {
         final Map<String, dynamic> data = jsonDecode(response.body);
         return data;
@@ -80,19 +74,16 @@ class AiApiService {
           'AI Server Error: Status ${response.statusCode} - ${response.body}',
         );
       }
-    } on SocketException catch (e) {
-      debugPrint('🤖 AI API Socket Error: $e');
+    } on SocketException {
       rethrow;
     } on http.ClientException catch (e) {
-      debugPrint('🤖 AI API Client Error: $e');
       throw SocketException('Connection failed: ${e.message}');
-    } on FormatException catch (e) {
-      debugPrint('🤖 AI API Format Error: $e');
+    } on FormatException {
       rethrow;
     }
   }
 
-  /// Test the connection to the AI server
+  /// Test the connection to the AI server.
   Future<bool> testConnection() async {
     try {
       final response = await http
@@ -101,7 +92,6 @@ class AiApiService {
       // Even if we get 404, it means the server is running
       return response.statusCode == 200 || response.statusCode == 404;
     } catch (e) {
-      debugPrint('🤖 AI Server connection test failed: $e');
       return false;
     }
   }

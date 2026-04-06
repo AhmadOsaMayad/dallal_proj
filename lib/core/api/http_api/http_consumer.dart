@@ -1,7 +1,5 @@
 import 'package:dallal_proj/core/api/api_consumer.dart';
-import 'package:dallal_proj/core/api/end_points.dart';
 import 'package:dallal_proj/core/api/http_api/http_handler.dart';
-import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class HttpConsumer extends ApiConsumer {
@@ -45,7 +43,6 @@ class HttpConsumer extends ApiConsumer {
       body: isFormD(isFormData, data),
       headers: buildHeaders(withContentType: true),
     );
-    debugPrint("PUT ${EndPoints.baseUrl}$path ::: BODY: $data");
     return handleResponse(response);
   }
 
@@ -61,7 +58,6 @@ class HttpConsumer extends ApiConsumer {
       body: isFormD(isFormData, data),
       headers: buildHeaders(withContentType: true),
     );
-    debugPrint("PATCH ${EndPoints.baseUrl}$path ::: BODY: $data");
     return handleResponse(response, allowNoContent: true);
   }
 
@@ -77,7 +73,6 @@ class HttpConsumer extends ApiConsumer {
       body: isFormD(isFormData, data),
       headers: buildHeaders(withContentType: true),
     );
-    debugPrint("DELETE ${EndPoints.baseUrl}$path");
     return handleResponse(response, allowNoContent: true);
   }
 }

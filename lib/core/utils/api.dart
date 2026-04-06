@@ -1,13 +1,12 @@
 import 'dart:convert';
 import 'package:dallal_proj/core/constants/app_defs.dart';
-import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class Api {
   //Get Request Method
   final baseURL = kDomainApp;
 
-  Future<dynamic> get({required String url, @required String? token}) async {
+  Future<dynamic> get({required String url, String? token}) async {
     Map<String, String> headers = {};
     if (url == 'null') {
       url = '';
@@ -36,8 +35,8 @@ class Api {
   //Post Request Method
   Future<dynamic> post({
     required String url,
-    @required dynamic body,
-    @required String? token,
+    dynamic body,
+    String? token,
   }) async {
     Map<String, String> headers = {};
     if (url == 'null') {
@@ -67,8 +66,8 @@ class Api {
 
   Future<dynamic> put({
     required String url,
-    @required dynamic body,
-    @required String? token,
+    dynamic body,
+    String? token,
   }) async {
     Map<String, String> headers = {};
     headers.addAll({'Content-Type': 'application/x-www-form-urlencoded'});
@@ -87,20 +86,10 @@ class Api {
       body: body,
       headers: headers,
     );
-    debugPrint(
-      'YOUR URL IS: '
-      '$baseURL'
-      '$url'
-      ' ::::  YOUR BODY IS: $body  ::::  YOUR TOKEN IS: $token',
-    );
     if (response.statusCode == 200) {
-      Map<String, dynamic> data = jsonDecode(response.body);
-      debugPrint('YOUR RESPONSE IS: $data');
+      final Map<String, dynamic> data = jsonDecode(response.body);
       return data;
     } else {
-      debugPrint(
-        "Error ${response.statusCode}: ${response.body}",
-      ); // ✅ Print full response
       throw Exception(
         "StatusCode ${response.statusCode} - Response might not be JSON.",
       );
@@ -109,8 +98,8 @@ class Api {
 
   Future<dynamic> patch({
     required String url,
-    @required dynamic body,
-    @required String? token,
+    dynamic body,
+    String? token,
   }) async {
     Map<String, String> headers = {};
     headers.addAll({'Content-Type': 'application/x-www-form-urlencoded'});
@@ -127,20 +116,16 @@ class Api {
       headers: headers,
     );
 
-    debugPrint('PATCH URL: $baseURL$url ::: BODY: $body ::: TOKEN: $token');
-
     if (response.statusCode == 200 || response.statusCode == 204) {
       // Some APIs return 204 (No Content) for successful PATCH
-      var resp = response.body.isNotEmpty ? jsonDecode(response.body) : {};
+      final resp = response.body.isNotEmpty ? jsonDecode(response.body) : {};
       return resp;
-      // response.body.isNotEmpty ? jsonDecode(response.body) : {};
     } else {
-      debugPrint("PATCH Error ${response.statusCode}: ${response.body}");
       throw Exception("PATCH failed with StatusCode ${response.statusCode}");
     }
   }
 
-  Future<dynamic> delete({required String url, @required String? token}) async {
+  Future<dynamic> delete({required String url, String? token}) async {
     Map<String, String> headers = {};
     headers.addAll({'Content-Type': 'application/x-www-form-urlencoded'});
     if (token != null && token != 'null') {
@@ -152,13 +137,10 @@ class Api {
       headers: headers,
     );
 
-    debugPrint('DELETE URL: $baseURL$url ::: TOKEN: $token');
-
     if (response.statusCode == 200 || response.statusCode == 204) {
       // 204 = No Content, so return empty map
       return response.body.isNotEmpty ? jsonDecode(response.body) : {};
     } else {
-      debugPrint("DELETE Error ${response.statusCode}: ${response.body}");
       throw Exception("DELETE failed with StatusCode ${response.statusCode}");
     }
   }

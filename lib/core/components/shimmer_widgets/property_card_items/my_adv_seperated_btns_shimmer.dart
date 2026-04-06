@@ -9,10 +9,7 @@ class MyAdvSeperatedBtnsShimmer extends StatelessWidget {
     super.key,
     this.sepWidth,
     this.status,
-    // required this.detailsEntity,
   });
-  // final ShowDetailsEntity detailsEntity;
-  // final NCardModel cardModel;
   final bool? status;
   final double? sepWidth;
   @override
@@ -21,32 +18,20 @@ class MyAdvSeperatedBtnsShimmer extends StatelessWidget {
       rMXAlign: MainAxisAlignment.center,
       children:
           (status == true)
-              // (cardModel.status == true)
               ? PCardH.normalAdvBtns(
-                () {}, //=> Funcs.pushToAdv(context, detailsEntity), // true, false),
-                // () => Funcs.pushToAdv(context, cardModel, true, false),
-                () {}, //editOnTap
-                () {}, //deleteOnTap
+                () {},
+                () {},
+                () {},
               )
               : (status == null)
-              // : (cardModel.status == null)
               ? [
                 PendingBtn(
-                  onTap: () {}, // => Funcs.pushToAdv(context, detailsEntity),
-                  // onTap: () => Funcs.pushToAdv(context, cardModel, true, true),
+                  onTap: () {},
                 ),
               ]
               : [
                 RefusedBtn(
                   onTap: () {},
-                  // => Funcs.pushToAdv(
-                  //   context,
-                  //   detailsEntity,
-                  //   // cardModel,
-                  //   // true,
-                  //   // false,
-                  //   to: AppRouter.kAdvRefusedPage,
-                  // ),
                 ),
               ],
     );

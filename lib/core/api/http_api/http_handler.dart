@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:dallal_proj/core/api/end_points.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 Map<String, String> buildHeaders({
@@ -46,7 +45,6 @@ dynamic handleResponse(http.Response response, {bool allowNoContent = false}) {
       throw Exception("${HttpKeys.respIsntJson} $body");
     }
   } else {
-    debugPrint("Error $statusCode: $body");
     throw Exception("${HttpKeys.reqFailedWithStatus} $statusCode");
   }
 }

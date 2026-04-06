@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:dallal_proj/core/utils/functions/is_success.dart';
 import 'package:dallal_proj/features/create_adv_page/data/models/media_req_model.dart';
 import 'package:dallal_proj/features/edit_adv_info_page/data/models/edit_advertisement_request_model.dart';
@@ -6,7 +5,6 @@ import 'package:dallal_proj/features/edit_adv_info_page/domain/use_cases/delete_
 import 'package:dallal_proj/features/edit_adv_info_page/domain/use_cases/delete_media_use_case.dart';
 import 'package:dallal_proj/features/edit_adv_info_page/domain/use_cases/update_adv_use_case.dart';
 import 'package:dallal_proj/features/edit_adv_info_page/domain/use_cases/update_media_use_case.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
 
@@ -73,9 +71,6 @@ class EditAdOrcstrCubit extends Cubit<EditAdOrcstrState> {
               deleteResult.fold(
                 (failure) {
                   failedDeleteMediaIds.add(mediaIdsToDelete[i]);
-                  debugPrint(
-                    'Failed to delete media ${mediaIdsToDelete[i]}: ${failure.message}',
-                  );
                 },
                 (response) {
                   deletedMediaIds.add(mediaIdsToDelete[i]);
@@ -108,9 +103,6 @@ class EditAdOrcstrCubit extends Cubit<EditAdOrcstrState> {
               mediaResult.fold(
                 (failure) {
                   failedNewMediaIds.add('${i + 1}');
-                  debugPrint(
-                    'Failed to upload new media ${i + 1}: ${failure.message}',
-                  );
                 },
                 (response) {
                   successfulNewMediaIds.add('${i + 1}');

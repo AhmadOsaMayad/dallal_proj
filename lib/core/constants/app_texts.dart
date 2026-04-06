@@ -35,10 +35,8 @@ const kSectsP = 'الأقسام';
 const kAdvP = 'إعلان';
 const kMyAccP = 'حسابي';
 const kMoreP = 'المزيد';
-///// everything about password Pages Text
-///////////////////////////////////////////
 
-const kPassword = /* */ 'كلمة المرور';
+const kPassword = 'كلمة المرور';
 const kPassTxtHnt = '•••••••••••••••';
 
 const kNewPass =
@@ -83,10 +81,9 @@ const kSabaPhone = '71';
 const kRegex = r'^[0-9]+$';
 
 const kPhoneNumHint = '77.. / 78.. / 73.. / 71.. / 70..';
-const kErrWrongYemNum = 'ادخل رقم هاتف يمني'; //'تأكد من صحة الرقم'
+const kErrWrongYemNum = 'ادخل رقم هاتف يمني';
 const kErrChangeCountry = 'جمالك أجنبي والمطلوب رقم يمني';
 const kErrCompletePhone = 'جيد ... قم بإكمال الرقم';
-//'شطوور وفيهن 9 ارقام.. يو كان دو ات';
 const kErrOnlyNumPls = 'ياخي قلنا أرقام فقط';
 
 const kFrom = 'من';

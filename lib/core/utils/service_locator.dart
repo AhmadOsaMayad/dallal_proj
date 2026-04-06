@@ -122,12 +122,6 @@ void setupServiceLocator() {
     ),
   );
 
-  // getIt.registerSingleton<EditAdvPageRepoImplement>(
-  //   EditAdvPageRepoImplement(
-  //     remoteDataSource: getIt.get<EditAdvRemoteDataSourceImplement>(),
-  //   ),
-  // );
-
   getIt.registerSingleton<MyAccountPageRepoImplement>(
     MyAccountPageRepoImplement(
       remoteDataSource: MyAccountRemoteDataSourceImplement(
@@ -175,12 +169,4 @@ void setupServiceLocator() {
       ),
     ),
   );
-  // getIt.registerSingleton(instance)
-  // Registering SimilarBooksCubit so it's globally available
-  // getIt.registerSingleton<SimilarBooksCubit>(
-  //   SimilarBooksCubit(getIt.get<HomeRepoImpl>()),
-  // );
-  // getIt.registerSingleton<SearchRepoImpl>(
-  //   SearchRepoImpl(getIt.get<ApiService>()),
-  // );
 }

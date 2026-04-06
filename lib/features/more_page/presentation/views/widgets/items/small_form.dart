@@ -78,26 +78,3 @@ class SmallForm extends StatelessWidget {
     );
   }
 }
-
-///for small form sizes recommendation:
-////////////////// (abMedium) Guess-Working Sizes
-///fixedSizeFraction:
-///          0.17, //aspect of form height to screen height mSFormHeight / mScRespHeight,
-///      aspect:
-///          mFormWidth / 143,
-///         //mFormWidth = 382
-//////////////////
-////////////////// (subMedium) standard
-///fixedSizeFraction:
-///          0.14925, //aspect of form height to screen height mSFormHeight / mScRespHeight,
-///      aspect:
-///          mFormWidth / 143,
-///         //mFormWidth = 410
-//////////////////
-
-// fixedSizeFraction:
-//     kMSFormFractMedium, //0.17, //0.14925, //0.17, //aspect of form height to screen height mSFormHeight / mScRespHeight,
-// aspect:
-//     //410ss /
-//     kMFormWidthMedium /
-//     kMSFormHeight, //mFormWidth / mSFormHeight, //aspect of form width to form height

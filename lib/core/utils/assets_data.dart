@@ -89,29 +89,3 @@ class AssetsData {
   static const pckgInfo = '${kIcoP}info24.svg';
   static const pckgTimeLeft = '${kIcoP}timeleft24.svg';
 }
-
-///Images Test///
-// static const land0 = '${kImgP}land0.jpg';
-// static const land1 = '${kImgP}land1.jpg';
-// static const land2 = '${kImgP}land2.jpg';
-// static const land3 = '${kImgP}land3.jpg';
-// static const land4 = '${kImgP}land4.jpg';
-// static const land5 = '${kImgP}land5.jpg';
-// static const store0 = '${kImgP}store0.jpg';
-// static const store1 = '${kImgP}store1.jpg';
-// static const store2 = '${kImgP}store2.jpg';
-// static const store3 = '${kImgP}store3.jpg';
-// static const store4 = '${kImgP}store4.jpg';
-// static const store5 = '${kImgP}store5.jpg';
-// static const apt0 = '${kImgP}apt0.jpg';
-// static const apt1 = '${kImgP}apt1.jpg';
-// static const apt2 = '${kImgP}apt2.jpg';
-// static const apt3 = '${kImgP}apt3.jpg';
-// static const apt4 = '${kImgP}apt4.jpg';
-// static const apt5 = '${kImgP}apt5.jpg';
-// static const house0 = '${kImgP}house0.jpg';
-// static const house1 = '${kImgP}house1.jpg';
-// static const house2 = '${kImgP}house2.jpg';
-// static const house3 = '${kImgP}house3.jpg';
-// static const house4 = '${kImgP}house4.jpg';
-// static const house5 = '${kImgP}house5.jpg';
