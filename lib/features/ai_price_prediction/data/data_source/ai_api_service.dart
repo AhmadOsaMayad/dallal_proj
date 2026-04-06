@@ -3,42 +3,18 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
-/// API Service specifically for the local AI model connection.
-///
-/// IMPORTANT FOR LOCAL DEVELOPMENT:
-/// - When running on an Android emulator, use "10.0.2.2" instead of "127.0.0.1"
-/// - When running on a real Android device, use your laptop's local IP address
-///   (e.g., "192.168.1.100") - both devices must be on the same WiFi network
-/// - When running on iOS simulator, use "127.0.0.1" or "localhost"
-/// - When running on a real iOS device, use your laptop's local IP address
+/// API Service for the local AI model connection.
 class AiApiService {
   /// The base URL for the local AI prediction server.
   ///
-  /// HOW TO GET YOUR LAPTOP'S IP:
-  /// 1. Open Command Prompt (cmd)
-  /// 2. Type: ipconfig
-  /// 3. Look for "IPv4 Address" under your active network adapter (WiFi or Ethernet)
-  /// 4. Replace the IP below with your laptop's IP
-  ///
-  /// Example: If your laptop IP is 192.168.1.100, set:
-  /// static const String _baseUrl = 'http://192.168.1.100:8000';
+  /// Update [_laptopIp] to match your development machine's local IP address.
+  static const String _laptopIp = '192.168.1.8';
 
-  // For real Android device on same WiFi - use your laptop's IP
-  // static const String _baseUrl = 'http://YOUR_LAPTOP_IP:8000';
-
-  // For Android Emulator:
-  // static const String _baseUrl = 'http://10.0.2.2:8000';
-
-  // Default - will be overridden based on platform
   String get baseUrl {
-    // For real device testing, you'll need to set your actual IP here
-    // This is a placeholder - replace with your laptop's IP
-    const String laptopIp = '192.168.1.8';
     if (kIsWeb) {
       return 'http://127.0.0.1:8000';
     }
-    // For real devices (both Android and iOS), use the laptop's IP
-    return 'http://$laptopIp:8000';
+    return 'http://$_laptopIp:8000';
   }
 
   final Duration _timeout = const Duration(seconds: 30);

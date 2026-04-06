@@ -18,13 +18,3 @@ class PrpText extends StatelessWidget {
   }
 }
 
-// Padding(
-//   padding: EdgeInsets.symmetric(
-//     horizontal: Funcs.respWidth(fract: 0.007, context: context),
-//   ),
-//   child: RText(
-//     'لتتمكن من نشر إعلانك العقاري، يرجى تسجيل الدخول أو إنشاء حساب جديد!\nسجل الآن وابدأ بعرض عقاراتك بسهولة وسرعة.',
-//     FStyles.s16w6h175,
-//     txtAlign: TextAlign.right,
-//   ),
-// );

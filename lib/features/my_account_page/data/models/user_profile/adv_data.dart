@@ -71,19 +71,10 @@ class AdvData extends ShowDetailsEntity {
          refuseReason: ad.rejectReason,
        );
 
-  // }):super(advId: ad.id,area: ad.area,city: ,dateDet: ,fName: ,isFavedDet: ,isLikedDet: ,isMineDet: ,isNegot: ,isPended: ,isPrem: ,likes: ,location: ,offerType: ,phoneNum: ,priceDet: ,sectionDet: ,titleDet: ,userId: ,whatsNum: ,bthCount: ,extraDetails: ,flrCount: ,halCount: ,imgs: ,kchCount: ,linkToPhone: ,linkToSms: ,linkToWhatsApp: ,mapLink: ,pfp: ,pkgExpTime: ,pkgType: ,romCount: ,status: ad.status,);
-
   factory AdvData.fromJson(Map<String, dynamic> json) => AdvData(
     ad: Ad.fromJson(json['ad'] as Map<String, dynamic>),
 
-    // ad:
-    //     json['ad'] == null
-    //         ? null
-    //         : Ad.fromJson(json['ad'] as Map<String, dynamic>),
     owner:
-    // json['owner'] == null
-    //     ? null
-    //     : AdvOwner.fromJson(json['owner'] as Map<String, dynamic>),
     AdvOwner.fromJson(json['owner'] as Map<String, dynamic>),
     media:
         (json['media'] is List<dynamic>?)
@@ -91,10 +82,8 @@ class AdvData extends ShowDetailsEntity {
                 ?.map((e) => Media.fromJson(e as Map<String, dynamic>))
                 .toList()
             : <Media>[],
-    // media: json['media'] as List<dynamic>?,
     mainImage: json['main_image'] as String?,
     isFeatured: json['is_featured'] as bool?,
-    // featuredInfo: json['featured_info'] as dynamic,
     featuredInfo:
         (json['featured_info'] is Map<String, dynamic>)
             ? FeaturedInfo.fromJson(
@@ -108,11 +97,6 @@ class AdvData extends ShowDetailsEntity {
               json['statistics'] as Map<String, dynamic>,
             ),
     userInteraction:
-    // json['user_interaction'] == null
-    //     ? null
-    //     : UserInteraction.fromJson(
-    //       json['user_interaction'] as Map<String, dynamic>,
-    //     ),
     UserInteraction.fromJson(json['user_interaction'] as Map<String, dynamic>),
   );
 
@@ -191,19 +175,10 @@ class AdvData2 extends ShowDetailsEntity {
          refuseReason: ad.rejectReason,
        );
 
-  // }):super(advId: ad.id,area: ad.area,city: ,dateDet: ,fName: ,isFavedDet: ,isLikedDet: ,isMineDet: ,isNegot: ,isPended: ,isPrem: ,likes: ,location: ,offerType: ,phoneNum: ,priceDet: ,sectionDet: ,titleDet: ,userId: ,whatsNum: ,bthCount: ,extraDetails: ,flrCount: ,halCount: ,imgs: ,kchCount: ,linkToPhone: ,linkToSms: ,linkToWhatsApp: ,mapLink: ,pfp: ,pkgExpTime: ,pkgType: ,romCount: ,status: ad.status,);
-
   factory AdvData2.fromJson(Map<String, dynamic> json) => AdvData2(
     ad: Ad.fromJson(json['ad'] as Map<String, dynamic>),
 
-    // ad:
-    //     json['ad'] == null
-    //         ? null
-    //         : Ad.fromJson(json['ad'] as Map<String, dynamic>),
     owner:
-    // json['owner'] == null
-    //     ? null
-    //     : AdvOwner.fromJson(json['owner'] as Map<String, dynamic>),
     AdvOwner.fromJson(json['user'] as Map<String, dynamic>),
     media:
         (json['media'] is List<dynamic>?)
@@ -211,10 +186,8 @@ class AdvData2 extends ShowDetailsEntity {
                 ?.map((e) => Media.fromJson(e as Map<String, dynamic>))
                 .toList()
             : <Media>[],
-    // media: json['media'] as List<dynamic>?,
     mainImage: json['main_image'] as String?,
     isFeatured: json['is_featured'] as bool?,
-    // featuredInfo: json['featured_info'] as dynamic,
     featuredInfo:
         (json['featured_info'] is Map<String, dynamic>)
             ? FeaturedInfo.fromJson(
@@ -228,11 +201,6 @@ class AdvData2 extends ShowDetailsEntity {
               json['statistics'] as Map<String, dynamic>,
             ),
     userInteraction:
-    // json['user_interaction'] == null
-    //     ? null
-    //     : UserInteraction.fromJson(
-    //       json['user_interaction'] as Map<String, dynamic>,
-    //     ),
     UserInteraction.fromJson(json['user_interaction'] as Map<String, dynamic>),
   );
 

@@ -12,28 +12,20 @@ class HCardFormShimmer extends StatelessWidget {
     this.isMine = false,
     this.status,
   });
-  // final ShowDetailsEntity advsListItem;
-  // final NCardModel cardModel;
   final String? likes;
   final bool isMine;
   final bool? isLiked, isFaved, isFeatured, status;
 
   @override
   Widget build(BuildContext context) {
-    // final ValueNotifier<bool> isLikedNotifier = ValueNotifier(
-    //   advsListItem.isLiked,
-    // );
     return Column(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: buildHCardFormShimmer(
-        // advsListItem,
-        // cardModel,
         isFaved: isFaved,
         isFeatured: isFeatured,
         status: status,
         child: HCardBtnSwitcherShimmer(
           likes: likes,
-          // detailsEntity: advsListItem,
           isMine: isMine,
           isLiked: isLiked ?? false,
         ),

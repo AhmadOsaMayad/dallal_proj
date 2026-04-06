@@ -9,19 +9,6 @@ class PckgInfEntity {
 
   const PckgInfEntity({required this.type, required this.startDate});
 
-  // Map<String, dynamic> toEJson() {
-  //   return {
-  //     'type': type.name,
-  //     'package_id': type.id,
-  //     'start_date': DateFormat(kDefDateFormat).format(startDate),
-  //     'frame': type.frame,
-  //     'start_date_str': startDateStr,
-  //     'end_date': DateFormat(kDefDateFormat).format(endDate),
-  //     'end_date_str': endDateStr,
-  //     'remaining_days': remainingDays,
-  //   };
-  // }
-
   /// Formatted start date
   String get startDateStr => DateFormat(kDefDateFormat).format(startDate);
 

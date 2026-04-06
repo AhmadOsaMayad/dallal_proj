@@ -9,34 +9,23 @@ import 'package:flutter/material.dart';
 class CardLikesBtnShimmer extends StatelessWidget {
   const CardLikesBtnShimmer({
     super.key,
-    // required this.isLikedNotifier,
     required this.likesCount,
     required this.isLiked,
     this.radius,
-    // this.onTap,
     this.mXAlign,
     required this.btnSize,
   });
   final String likesCount;
-  // final ValueNotifier<bool> isLikedNotifier;
   final bool isLiked;
   final double? radius;
-  // final void Function()? onTap;
   final MainAxisAlignment? mXAlign;
   final XBSize btnSize;
 
   @override
   Widget build(BuildContext context) {
-    // return ValueListenableBuilder<bool>(
-    // valueListenable: isLikedNotifier,
-    // builder: (context, isVLiked, _) {
     return TconBtn(
       btnSize: btnSize,
       onTap: () {},
-      // () {
-      //   isLikedNotifier.value = !isVLiked;
-      //   if (onTap != null) onTap!(); // optional external tap logic
-      // },
       radius: radius,
       leftChild: IVIco(
         isActv: isLiked,

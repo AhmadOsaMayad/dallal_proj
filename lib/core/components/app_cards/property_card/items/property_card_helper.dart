@@ -27,34 +27,24 @@ class PCardH {
     ),
     CardLikesBtn(
       btnSize: likeBtnSize ?? moreBtnSize,
-      // likesCount: detailsEntity.likes,
       onTap: onTapLikes,
       advListItem: detailsEntity,
-      // isLiked: isLiked,
-      // istLiked: isLikedNotifier,
     ),
   ];
   static List<Widget> normalBtnsShimmer(
-    // ShowDetailsEntity detailsEntity,
-    // void Function()? onTapDetails,
-    // void Function()? onTapLikes,
     String? likes,
     bool isLiked, {
-    // ValueNotifier<bool> isLikedNotifier, {
     required XBSize moreBtnSize,
     XBSize? likeBtnSize,
   }) => [
     CardMoreBtn(
-      // onTap: onTapDetails,
       btnSize: moreBtnSize,
       style: FsC.colStW(FStyles.s12wB),
     ),
     CardLikesBtnShimmer(
       btnSize: likeBtnSize ?? moreBtnSize,
       likesCount: likes ?? '0',
-      // onTap: onTapLikes,
       isLiked: isLiked,
-      // isLikedNotifier: isLikedNotifier,
     ),
   ];
 
@@ -76,13 +66,9 @@ class PCardH {
     const Spacer(flex: 1),
   ];
   static List<Widget> normalAdvBtnsShimmer(
-    // void Function()? onTapDetails,
-    // void Function()? onTapDelete,
-    // void Function()? onTapEdit,
   ) => [
     const Spacer(flex: 1),
     CardMoreBtn(
-      // onTap: onTapDetails,
       btnSize: const XBSize(width: 71, height: 29),
       style: FsC.colStW(FStyles.s12wB),
     ),

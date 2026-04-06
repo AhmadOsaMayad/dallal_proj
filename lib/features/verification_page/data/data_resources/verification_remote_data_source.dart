@@ -4,7 +4,6 @@ import 'package:dallal_proj/core/common/models/rsp_auth.dart';
 
 abstract class VerificationRemoteDataSource {
   Future<RspAuth> resendMsg(String phone);
-  // Future<RspAuth> getMsg(String phone);
 }
 
 class VerificationRemoteDataSourceImplement
@@ -12,17 +11,6 @@ class VerificationRemoteDataSourceImplement
   final Api api;
 
   VerificationRemoteDataSourceImplement(this.api);
-  // @override
-  // Future<RspAuth> getMsg(String phone) async {
-  //   var data = await api.post(
-  //     url: "user/get_otp.php",
-  //     body: {"phone": phone},
-  //     token: null,
-  //   );
-  //   RspAuth response = RspAuth.fromJson(data);
-  //   return response;
-  //   // throw UnimplementedError();
-  // }
 
   @override
   Future<RspAuth> resendMsg(String phone) async {

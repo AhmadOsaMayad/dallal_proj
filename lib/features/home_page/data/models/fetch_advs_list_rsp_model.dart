@@ -8,15 +8,4 @@ class FetchAdvsListRspModel extends RspAuth {
   FetchAdvsListRspModel({this.fetchStatus, this.fetchMessage, this.advList})
     : super(status: fetchStatus, message: fetchMessage);
 
-  // factory FetchAdvsListRspModel.fromJson(Map<String, dynamic> json) => LoginRspModel(
-  //   logStatus: json['status'] as String?,
-  //   logMessage: json['message'] as String?,
-  //   userData:
-  //       json['data'] is Map<String, dynamic>
-  //           ? UserData.fromJson(json['data'])
-  //           : null,
-  //   verified: json['need_verification'] as bool?,
-  // );
-
-  // Map<String, dynamic> toJson() => {'phone': phone, 'password': password};
 }
