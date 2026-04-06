@@ -58,8 +58,6 @@ class MyAdvSeperatedBtns extends StatelessWidget {
             }
           }
         }
-      } else {
-        // result is null; no action needed
       }
     }
 
