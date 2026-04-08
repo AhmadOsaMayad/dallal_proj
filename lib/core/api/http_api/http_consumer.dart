@@ -1,11 +1,9 @@
 import 'dart:convert';
 
 import 'package:dallal_proj/core/api/api_consumer.dart';
-import 'package:dallal_proj/core/api/end_points.dart';
 import 'package:dallal_proj/core/api/http_api/http_handler.dart';
 import 'package:dallal_proj/core/utils/functions/get_me_data.dart';
 import 'package:dallal_proj/core/utils/functions/get_me_token.dart';
-import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class HttpConsumer extends ApiConsumer {
@@ -65,11 +63,6 @@ class HttpConsumer extends ApiConsumer {
       body: isFormD(isFormData, data),
       headers: buildHeaders(withContentType: true, token: token),
     );
-    debugPrint("PUT ${EndPoints.baseUrl}$path ::: BODY: $data");
-    if (response.statusCode == 200) {
-      Map<String, dynamic> data = jsonDecode(response.body);
-      return data;
-    }
     return handleResponse(response);
   }
 
@@ -88,12 +81,7 @@ class HttpConsumer extends ApiConsumer {
       body: isFormD(isFormData, data),
       headers: buildHeaders(withContentType: false, token: token),
     );
-    debugPrint("PATCH ${EndPoints.baseUrl}$path ::: BODY: $data");
-    if (response.statusCode == 200) {
-      Map<String, dynamic> data = jsonDecode(response.body);
-      return data;
-    }
-    return handleResponse(response);
+    return handleResponse(response, allowNoContent: true);
   }
 
   @override
@@ -111,11 +99,6 @@ class HttpConsumer extends ApiConsumer {
       body: isFormD(isFormData, data),
       headers: buildHeaders(withContentType: true, token: token),
     );
-    debugPrint("DELETE ${EndPoints.baseUrl}$path");
-    if (response.statusCode == 200) {
-      Map<String, dynamic> data = jsonDecode(response.body);
-      return data;
-    }
-    return handleResponse(response);
+    return handleResponse(response, allowNoContent: true);
   }
 }

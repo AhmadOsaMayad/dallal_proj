@@ -5,7 +5,6 @@ import 'package:dallal_proj/core/common/models/rsp_auth.dart';
 
 abstract class VerificationRemoteDataSource {
   Future<RspAuth> resendMsg(String phone);
-  // Future<RspAuth> getMsg(String phone);
 }
 
 class VerificationRemoteDataSourceImplement

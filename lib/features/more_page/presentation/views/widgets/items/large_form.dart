@@ -35,23 +35,3 @@ class LargeForm extends StatelessWidget {
     );
   }
 }
-
-///for Large form sizes recommendation:
-////////////////// (abMedium) Guess-Working Sizes
-///fixedSizeFraction:
-///      fixedSizeFraction: 0.42, //(mLFormHeight / mScRespHeight) * /*implicitly*/ MediaQuery //implicitly,
-///      aspect: mFormWidth / 367, //mFormWidth / mLFormHeight,
-///             //mFormWidth = 382
-//////////////////
-////////////////// (subMedium) standard
-///fixedSizeFraction:
-///          0.383, //aspect of form height to screen height mSFormHeight / mScRespHeight,
-///      aspect:
-///          mFormWidth / 367,
-///         //mFormWidth = 410
-//////////////////
-
-//     kMLFormFractMedium, //0.42, //0.415, mLFormHeight / mScRespHeight,
-// aspect:
-//     kMFormWidthMedium /
-//     kMLFormHeight, //410ss / 367, //mFormWidth / mLFormHeight,

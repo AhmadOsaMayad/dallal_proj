@@ -28,34 +28,24 @@ class PCardH {
     ),
     CardLikesBtn(
       btnSize: likeBtnSize ?? moreBtnSize,
-      // likesCount: detailsEntity.likes,
       onTap: onTapLikes,
       advListItem: detailsEntity,
-      // isLiked: isLiked,
-      // istLiked: isLikedNotifier,
     ),
   ];
   static List<Widget> normalBtnsShimmer(
-    // ShowDetailsEntity detailsEntity,
-    // void Function()? onTapDetails,
-    // void Function()? onTapLikes,
     String? likes,
     bool isLiked, {
-    // ValueNotifier<bool> isLikedNotifier, {
     required XBSize moreBtnSize,
     XBSize? likeBtnSize,
   }) => [
     CardMoreBtn(
-      // onTap: onTapDetails,
       btnSize: moreBtnSize,
       style: FsC.colStW(FStyles.s12wB),
     ),
     CardLikesBtnShimmer(
       btnSize: likeBtnSize ?? moreBtnSize,
       likesCount: likes ?? '0',
-      // onTap: onTapLikes,
       isLiked: isLiked,
-      // isLikedNotifier: isLikedNotifier,
     ),
   ];
 

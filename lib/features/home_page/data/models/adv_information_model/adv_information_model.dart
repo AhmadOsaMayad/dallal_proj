@@ -74,26 +74,14 @@ class AdvInformationModel extends ShowDetailsEntity {
   factory AdvInformationModel.fromJson(Map<String, dynamic> json) {
     return AdvInformationModel(
       ad: Ad.fromJson(json['ad'] as Map<String, dynamic>),
-      // (json['ad'] is Map<String, dynamic>)
-      //     ? Ad.fromJson(json['ad'])
-      //     : null,
-      // json['ad'] == null
-      //     ? null
-      //     : Ad.fromJson(json['ad'] as Map<String, dynamic>),
       advUser: AdvOwner.fromJson(json['owner'] as Map<String, dynamic>),
-      // (json['user'] is Map<String, dynamic>?)
-      //     ? User.fromJson(json['user'])
-      //     : null,
-      // json['user'] == null
-      //     ? null
-      //     : User.fromJson(json['user'] as Map<String, dynamic>),
       media:
           (json['media'] is List<dynamic>?)
               ? (json['media'] as List<dynamic>?)
                   ?.map((e) => Media.fromJson(e as Map<String, dynamic>))
                   .toList()
               : <Media>[],
-      mainImage: null, //json['main_image'] as String?,
+      mainImage: null,
       isFeatured: (json['is_featured'] as bool?) ?? false,
       featuredInfo:
           (json['featured_info'] is Map<String, dynamic>)
@@ -101,31 +89,15 @@ class AdvInformationModel extends ShowDetailsEntity {
                 json['featured_info'] as Map<String, dynamic>,
               )
               : null,
-      // json['featured_info'] == null
-      //     ? null
-      //     : FeaturedInfo.fromJson(
-      //       json['featured_info'] as Map<String, dynamic>,
-      //     ),
-      statistics: //json['statistics'],
+      statistics:
           (json['statistics'] is Map<String, dynamic>?)
               ? AdvStatistics.fromJson(
                 json['statistics'] as Map<String, dynamic>,
               )
               : null,
-      // json['statistics'] == null
-      //     ? null
-      //     : Statistics.fromJson(json['statistics'] as Map<String, dynamic>),
       userInteraction: UserInteraction.fromJson(
         json['user_interaction'] as Map<String, dynamic>,
       ),
-      // (json['user_interaction'] is Map<String, dynamic>?)
-      //     ? UserInteraction.fromJson(json['user_interaction'])
-      //     : null,
-      // json['user_interaction'] == null
-      //     ? null
-      //     : UserInteraction.fromJson(
-      //       json['user_interaction'] as Map<String, dynamic>,
-      //     ),
     );
   }
 

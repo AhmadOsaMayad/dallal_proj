@@ -22,17 +22,7 @@ class HomePageRepoImplement extends HomePageRepo {
     String? token,
   ) async {
     try {
-      // var localAllAdvsList = localDataSource.fetchAllAdvs();
-      // if (localAllAdvsList.isNotEmpty) {
-      //   return right(
-      //     FetchAdvsListRspModel(
-      //       advList: localAllAdvsList,
-      //       fetchStatus: 'local',
-      //       fetchMessage: 'it is local',
-      //     ),
-      //   );
-      // }
-      var remoteAllAdvsList = await remoteDataSource.fetchAllAdvs(token);
+      final remoteAllAdvsList = await remoteDataSource.fetchAllAdvs(token);
       return right(remoteAllAdvsList);
     } catch (e) {
       return left(mapExceptionToFailure(e));
@@ -44,17 +34,7 @@ class HomePageRepoImplement extends HomePageRepo {
     String? token,
   ) async {
     try {
-      // var localFeaturedAdvsList = localDataSource.fetchFeaturedAdvs();
-      // if (localFeaturedAdvsList.isNotEmpty) {
-      //   return right(
-      //     FetchAdvsListRspModel(
-      //       advList: localFeaturedAdvsList,
-      //       fetchStatus: 'local',
-      //       fetchMessage: 'it is local',
-      //     ),
-      //   );
-      // }
-      var remoteFeaturedAdvsList = await remoteDataSource.fetchFeaturedAdvs(
+      final remoteFeaturedAdvsList = await remoteDataSource.fetchFeaturedAdvs(
         token,
       );
       return right(remoteFeaturedAdvsList);

@@ -3,7 +3,6 @@ import 'package:dallal_proj/features/create_adv_page/data/models/cr_adv_req_mode
 import 'package:dallal_proj/features/create_adv_page/data/models/media_req_model.dart';
 import 'package:dallal_proj/features/create_adv_page/domain/use_cases/craete_media_use_case.dart';
 import 'package:dallal_proj/features/create_adv_page/domain/use_cases/create_adv_use_case.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
 
@@ -56,10 +55,6 @@ class CreateAdOrcstrCubit extends Cubit<CreateAdOrcstrState> {
             mediaResult.fold(
               (failure) {
                 failedMediaIds.add('${i + 1}');
-                // Log error but continue with other media
-                debugPrint(
-                  'Failed to upload media ${i + 1} : ${failure.message}',
-                );
               },
               (mediaResponse) {
                 successfulMediaIds.add('${i + 1}');

@@ -64,7 +64,6 @@ class NumericField extends StatelessWidget {
           style: style,
           keyboardType: keyboardType,
           deco: Themer.numInput(hint, hintStyle: hintStyle),
-          // onChanged: (value) {},
           onChanged: (value) {
             onChanged?.call();
           },

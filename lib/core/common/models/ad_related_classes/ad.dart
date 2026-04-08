@@ -9,8 +9,6 @@ class Ad {
   String city;
   String? locationText;
   String? googleMapUrl;
-  // dynamic latitude;
-  // dynamic longitude;
   String price;
   String currency;
   String negotiable;
@@ -37,8 +35,6 @@ class Ad {
     required this.city,
     required this.locationText,
     this.googleMapUrl,
-    // this.latitude,
-    // this.longitude,
     required this.price,
     required this.currency,
     required this.negotiable,
@@ -66,8 +62,6 @@ class Ad {
     city: json['city'] as String,
     locationText: json['location_text'] as String?,
     googleMapUrl: json['google_map_url'] as String?,
-    // latitude: json['latitude'] as dynamic,
-    // longitude: json['longitude'] as dynamic,
     price: json['price'] as String,
     currency: json['currency'] as String,
     negotiable: json['negotiable'] as String,
@@ -95,8 +89,6 @@ class Ad {
     'city': city,
     'location_text': locationText,
     'google_map_url': googleMapUrl,
-    // 'latitude': latitude,
-    // 'longitude': longitude,
     'price': price,
     'currency': currency,
     'negotiable': negotiable,

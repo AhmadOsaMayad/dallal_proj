@@ -21,17 +21,8 @@ class AllAdvsCubit extends Cubit<AllAdvsState> {
         emit(AllAdvsFailure(errMsg: failure.message));
       },
       (advsListRsp) {
-        // if (advsListRsp.fetchStatus == 'local') {
-        //   emit(
-        //     AllAdvsSuccessLocal(
-        //       localMsg: advsListRsp.fetchMessage ?? 'localism',
-        //       allAdvsList: advsListRsp.advList!,
-        //     ),
-        //   );
-        // }
         if (isSuxes(advsListRsp.fetchStatus)) {
           emit(AllAdvsSuccess(allAdvsList: advsListRsp.advList!));
-          // emit(AllAdvsLoading());
           return;
         }
         emit(

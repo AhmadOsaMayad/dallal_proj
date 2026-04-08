@@ -76,11 +76,6 @@ class _CrAdvBodyState extends State<CrAdvBody> {
       _selectedImagesBase64 = base64Images;
     });
 
-    // Here we can:
-    // 1. Store in our request model
-    // 2. Validate if needed
-    // 3. Prepare for API submission
-
     log('Number of images selected: ${base64Images.length}');
     if (base64Images.isNotEmpty) {
       log('First image base64 length: ${base64Images[0].length}');
@@ -98,7 +93,6 @@ class _CrAdvBodyState extends State<CrAdvBody> {
 
     final isNegotiable = selectedOptB.value == kYes;
 
-    // Create the model
     return AdvertisementRequestModel(
       userToken: userToken!,
       imagesBase64: _selectedImagesBase64,
@@ -255,7 +249,6 @@ class _CrAdvBodyState extends State<CrAdvBody> {
                         aiOnpressed: () {
                           if (isAccessibleUser()) {
                             if (formKey.currentState!.validate()) {
-                              // Prepare data for AI prediction
                               final cityForAi = _city.isEmpty ? 'Sanaa' : _city;
                               final areaNameForAi = _locationText;
                               final propertyTypeForAi = _type;
@@ -264,7 +257,6 @@ class _CrAdvBodyState extends State<CrAdvBody> {
                                 selectedOpt.value,
                               );
                               final areaM2ForAi = int.tryParse(_area) ?? 100;
-                              // Set defaults based on property type
                               final isLand = propertyTypeForAi == 'land';
                               final isShop = propertyTypeForAi == 'shop';
                               final roomsForAi =
@@ -315,7 +307,6 @@ class _CrAdvBodyState extends State<CrAdvBody> {
                         postOnpressed: () {
                           if (isAccessibleUser()) {
                             if (formKey.currentState!.validate()) {
-                              // Validate at least one image exists
                               if (_selectedImagesBase64.isEmpty) {
                                 showAppSnackBar(
                                   context,
@@ -324,7 +315,6 @@ class _CrAdvBodyState extends State<CrAdvBody> {
                                 );
                                 return;
                               }
-                              // Now here we have _selectedImagesBase64 ready for our API
                               log(
                                 'Posting with ${_selectedImagesBase64.length} images',
                               );

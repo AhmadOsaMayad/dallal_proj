@@ -19,8 +19,6 @@ class CLwid {
         mainAxisSpacing: 15,
         crossAxisSpacing: 10,
         childAspectRatio: context.respFMQ(itmFract: 0.29246),
-        //Funcs.respFMQ(itmFract: 0.29246, context: context),
-        //: 189 / 320,
       );
 
   static List<DropdownMenuEntry<String>> ddmList() {

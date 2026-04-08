@@ -39,29 +39,4 @@ class EditPersonalInfoCubit extends Cubit<EditPersonalInfoState> {
       },
     );
   }
-  // Future<void> editPersonalInfo(UserProfileModel profileModel) async {
-  //   emit(EditPersonalInfoLoading());
-
-  //   var result = await SetProfileUseCase.call(profileModel);
-
-  //   result.fold(
-  //     (failure) {
-  //       emit(EditPersonalInfoFailure(errMsg: failure.message));
-  //     },
-  //     (profileModel) {
-  //       if (isSuxes(profileModel.status)) {
-  //         updateUserData(
-  //           profileImage: profileModel.profileImage,
-  //           name: profileModel.name,
-  //           whatsapp: profileModel.whatsapp,
-  //         );
-  //         emit(EditPersonalInfoSuccess(profileModel: profileModel));
-  //       } else {
-  //         emit(
-  //           EditPersonalInfoFailure(errMsg: profileModel.message ?? "Unknown error"),
-  //         );
-  //       }
-  //     },
-  //   );
-  // }
 }

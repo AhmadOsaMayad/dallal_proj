@@ -24,7 +24,7 @@ class FilterForm extends StatefulWidget {
   });
   final bool withPropType;
   final ValueChanged<FilterSheetValues> onValuesChanged;
-  final ValueChanged<FilterSheetValues> onSubmit; // NEW
+  final ValueChanged<FilterSheetValues> onSubmit;
   final FilterSheetValues? initialValues;
   @override
   State<FilterForm> createState() => _FilterFormState();
@@ -83,23 +83,6 @@ class _FilterFormState extends State<FilterForm> {
       (initial?.featuredOnly ?? 0) == 1 ? kYes : kDefYesNoOPtion,
     );
   }
-
-  // @override
-  // void initState() {
-  //   withProptype = widget.withPropType;
-  //   setState(() {});
-  //   super.initState();
-  // }
-
-  // @override
-  // void dispose() {
-  //   _selectedOptA.dispose();
-  //   _selectedOptB.dispose();
-  //   super.dispose();
-  // }
-
-  @override
-  void dispose() {
     _selectedOptA.dispose();
     _selectedOptB.dispose();
     _minPriceController.dispose();
@@ -126,7 +109,6 @@ class _FilterFormState extends State<FilterForm> {
 
     // Notify parent
     widget.onValuesChanged.call(_filterValues);
-    // widget.onValuesChanged(_filterValues);
   }
 
   void _submitValues() {
@@ -143,9 +125,6 @@ class _FilterFormState extends State<FilterForm> {
       key: formKey,
       child: FilterFormItems(
         children: [
-          // withProptype
-          //     ? const CheckboxRow(oLModel: kPropCkbModel)
-          //     : const SizedBox(),
           withProptype
               ? CheckboxRow(
                 oLModel: kPropCkbModel,
@@ -156,7 +135,6 @@ class _FilterFormState extends State<FilterForm> {
                 },
               )
               : const SizedBox(),
-          // const CheckboxRow(oLModel: kOfferCkbModel),
           CheckboxRow(
             oLModel: kOfferCkbModel,
             initialSelected: _filterValues.offerTypes,
@@ -165,7 +143,6 @@ class _FilterFormState extends State<FilterForm> {
               _updateValues();
             },
           ),
-          // const FilterFormItem(title: kCity, child: CtDropMenu()),
           FilterFormItem(
             title: kCity,
             child: CtDropMenu(
@@ -192,16 +169,6 @@ class _FilterFormState extends State<FilterForm> {
               onPriceChanged: _updateValues,
             ),
           ),
-
-          // const FilterFormItem(
-          //   title: kPrice,
-          //   height: 78,
-          //   child: FromToFields(
-          //     withCurrency: true,
-          //     aspect: 122 / 56,
-          //     spacingFract: 0.045,
-          //   ),
-          // ),
           FilterFormItem(
             title: kArea,
             height: 78,
@@ -211,14 +178,11 @@ class _FilterFormState extends State<FilterForm> {
               onAreaChanged: _updateValues,
             ),
           ),
-          // const FilterFormItem(title: kArea, height: 78, child: FromToFields()),
-          // VTitleRbit(selectedOpt: _selectedOptA, oLModel: kOrderByRBModel),
           VTitleRbit(
             selectedOpt: _selectedOptA,
             oLModel: kOrderByRBModel,
             onChanged: () => _updateValues(),
           ),
-          // HRadioForm(selectedOpt: _selectedOptB, olModel: kOnlyPremOptModel),
           HRadioForm(
             selectedOpt: _selectedOptB,
             olModel: kOnlyPremOptModel,
@@ -229,7 +193,6 @@ class _FilterFormState extends State<FilterForm> {
             lBtnTxt: kReset,
             btnSize: const XBSize(width: 177, height: 56, border: 0.5),
             onTapL: () {
-              // Reset all values
               _filterValues.reset();
               _minPriceController.clear();
               _maxPriceController.clear();
@@ -243,22 +206,11 @@ class _FilterFormState extends State<FilterForm> {
               widget.onValuesChanged(_filterValues);
             },
             onTapR: () {
-              // Close bottom sheet and apply filter
-              _submitValues(); // Call submission method
+              _submitValues();
               Navigator.of(context).pop(_filterValues);
-              // Navigator.of(context).pop(_filterValues);
             },
             rBtnCol: kPrimColG,
           ),
-          // BottomSheetBtns(
-          //   rBtnTxt: kApply,
-          //   lBtnTxt: kReset,
-          //   btnSize: const XBSize(width: 177, height: 56, border: 0.5),
-          //   onTapL: () {},
-          //   onTapR: () {},
-          //   rBtnCol: kPrimColG,
-          // ),
-          //Fltr.buildAddButton(),
         ],
       ),
     );

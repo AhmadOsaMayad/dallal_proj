@@ -127,15 +127,13 @@ abstract class AppRouter {
 
   static final router = GoRouter(
     routes: [
-      // GoRoute(path: '/', builder: (context, state) => const SplashView()),
-      // GoRoute(path: kHomeView, builder: (context, state) => const HomeView()),
       GoRoute(
         path: '/',
         pageBuilder:
             (context, state) => CustomTransitionPage(
               key: state.pageKey,
               child:
-                  const SplashView(), // or SplashViewBody if that's your entry widget
+                  const SplashView(),
               transitionsBuilder:
                   (context, animation, secondaryAnimation, child) =>
                       FadeTransition(opacity: animation, child: child),
@@ -165,7 +163,7 @@ abstract class AppRouter {
                     RegisterUserUseCase(getIt.get<RegisterPageRepoImplement>()),
                   ),
               child: const RegisterPage(),
-            ), // your register page widget
+            ),
       ),
       GoRoute(
         path: kLoginPage,
@@ -364,7 +362,6 @@ abstract class AppRouter {
                         detailsPageRepo: getIt.get<DetailsPageRepoImplement>(),
                       ),
                     ),
-                // child: Container(),
               ),
               BlocProvider(
                 create:
@@ -384,10 +381,8 @@ abstract class AppRouter {
                         getIt.get<DetailsPageRepoImplement>(),
                       ),
                     ),
-                // child: Container(),
               ),
             ],
-            // create: (context) => SubjectBloc(),
             child: AdvDetailsPage(detailsEntity: detailsEntity),
           );
         },

@@ -7,9 +7,6 @@ class CardSeperatedBtnsShimmer extends StatelessWidget {
   const CardSeperatedBtnsShimmer({
     super.key,
     this.sepWidth,
-    // this.onTapDetails,
-    // this.onTapLikes,
-    // required this.detailsEntity,
     this.likes,
     this.likeBtnSize,
     required this.moreBtnSize,
@@ -19,8 +16,6 @@ class CardSeperatedBtnsShimmer extends StatelessWidget {
 
   final bool? isLiked;
 
-  // final ShowDetailsEntity detailsEntity;
-  // final void Function()? onTapLikes, onTapDetails;
   final String? likes;
   final double? sepWidth;
   final XBSize? likeBtnSize;
@@ -32,12 +27,8 @@ class CardSeperatedBtnsShimmer extends StatelessWidget {
     return SeperatedBtnsBox(
       rMXAlign: rMXAlign,
       children: PCardH.normalBtnsShimmer(
-        // detailsEntity,
-        // onTapDetails,
-        // onTapLikes,
         likes,
         isLiked ?? false,
-        // isLikedNotifier,
         moreBtnSize: moreBtnSize,
         likeBtnSize: likeBtnSize,
       ),

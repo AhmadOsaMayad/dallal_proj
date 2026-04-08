@@ -20,18 +20,4 @@ class ReportSheetValues {
     );
   }
 
-  // Reset all values
-  // void reset() {
-  //   searchQuery = null;
-  //   propertyTypes.clear();
-  //   offerTypes.clear();
-  //   city = null;
-  //   minPrice = null;
-  //   maxPrice = null;
-  //   currency = null;
-  //   minArea = null;
-  //   maxArea = null;
-  //   sortBy = null;
-  //   featuredOnly = 0;
-  // }
 }
