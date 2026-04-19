@@ -1,5 +1,7 @@
 import 'dart:convert';
 import 'package:dallal_proj/core/api/end_points.dart';
+import 'package:dallal_proj/core/utils/functions/get_me_data.dart';
+import 'package:dallal_proj/core/utils/functions/is_success.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -8,11 +10,19 @@ Map<String, String> buildHeaders({
   String? token,
   bool withContentType = false,
 }) {
-  final headers = <String, String>{};
+  final user = getMeData();
+  if (isntVNull(user)) {
+    token = user!.uToken;
+  }
+  final headers = <String, String>{
+    HttpKeys.contentTypeK: HttpKeys.xwContentType,
+  };
   if (withContentType) {
     headers[HttpKeys.contentTypeK] = HttpKeys.xwContentType;
+    // headers.addAll({HttpKeys.contentTypeK: HttpKeys.xwContentType});
   }
   if (token != null && token.isNotEmpty && token != 'null') {
+    // headers.addAll({HttpKeys.auth: '${HttpKeys.bearer} $token'});
     headers[HttpKeys.auth] = '${HttpKeys.bearer} $token';
   }
   return headers;
@@ -29,7 +39,10 @@ isFormD(bool isForm, dynamic data) {
 
 /// Build URI with query parameters
 Uri buildUri(String path, Map<String, dynamic>? queryParams) {
-  final uri = Uri.parse('${EndPoints.baseUrl}$path');
+  final uri = Uri.parse(
+    '${EndPoints.baseUrl}'
+    '$path',
+  );
   return queryParams != null ? uri.replace(queryParameters: queryParams) : uri;
 }
 

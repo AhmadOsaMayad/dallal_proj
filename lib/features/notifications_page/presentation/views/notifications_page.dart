@@ -1,7 +1,7 @@
 import 'package:dallal_proj/core/theme/app_colors.dart';
 import 'package:dallal_proj/core/utils/functions/get_me_data.dart';
-import 'package:dallal_proj/core/utils/service_locator.dart';
-import 'package:dallal_proj/core/widgets/custom_app_bar.dart';
+import 'package:dallal_proj/core/di/service_locator.dart';
+import 'package:dallal_proj/core/shared/widgets/custom_app_bar.dart';
 import 'package:dallal_proj/features/notifications_page/data/repos/notifications_page_repo_implement.dart';
 import 'package:dallal_proj/features/notifications_page/domain/use_cases/fetch_notifications_use_case.dart';
 import 'package:dallal_proj/features/notifications_page/domain/use_cases/mark_as_read_use_case.dart';

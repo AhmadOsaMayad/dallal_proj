@@ -1,9 +1,9 @@
 import 'package:dallal_proj/core/constants/app_defs.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
-import 'package:dallal_proj/core/entities/adv_card_entity/adv_card_entity.dart';
+import 'package:dallal_proj/core/common/entities/adv_card_entity/adv_card_entity.dart';
 import 'package:dallal_proj/core/theme/app_colors.dart';
 import 'package:dallal_proj/core/utils/app_router.dart';
-import 'package:dallal_proj/core/utils/service_locator.dart';
+import 'package:dallal_proj/core/di/service_locator.dart';
 import 'package:dallal_proj/core/utils/simple_bloc_observer.dart';
 import 'package:dallal_proj/features/login_page/domain/entities/loggedin_user_entity.dart';
 import 'package:flutter/material.dart';

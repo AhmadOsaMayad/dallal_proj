@@ -14,7 +14,7 @@ class SetProfileRepoImplement extends SetProfileRepo {
     UserProfileModel profileModel,
   ) async {
     try {
-      final result = await remoteDataSource.setProfile(profileModel);
+      final result = await remoteDataSource.setProfileDio(profileModel);
       return Right(result);
     } catch (e) {
       return left(mapExceptionToFailure(e));

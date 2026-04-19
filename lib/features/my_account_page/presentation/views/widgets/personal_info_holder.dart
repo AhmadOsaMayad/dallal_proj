@@ -1,5 +1,5 @@
-import 'package:dallal_proj/core/utils/app_funcs.dart';
-import 'package:dallal_proj/core/widgets/helpers/widgets_helper.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/widgets_helper.dart';
 import 'package:dallal_proj/core/theme/app_colors.dart';
 import 'package:dallal_proj/core/theme/app_font_styles_colorer.dart';
 import 'package:dallal_proj/core/theme/app_font_styles.dart';
@@ -55,7 +55,8 @@ class PersonalInfoHolder2 extends StatelessWidget {
       textDirection: WidH.trd,
       child: Container(
         height: 31,
-        width: Funcs.respWidth(fract: 0.75, context: context),
+        width: context.respWidth(fract: 0.75),
+        // Funcs.respWidth(fract: 0.75, context: context),
         decoration: ShapeDecoration(
           color: kWhiteF6,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(3)),

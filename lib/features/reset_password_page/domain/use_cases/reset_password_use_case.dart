@@ -1,5 +1,5 @@
 import 'package:dallal_proj/core/errors/failure.dart';
-import 'package:dallal_proj/core/use_cases/use_case.dart';
+import 'package:dallal_proj/core/common/use_cases/use_case.dart';
 import 'package:dallal_proj/core/common/models/rsp_auth.dart';
 import 'package:dallal_proj/features/login_page/data/models/login_req_model.dart';
 import 'package:dallal_proj/features/reset_password_page/domain/repos/reset_password_page_repo.dart';

@@ -2,8 +2,39 @@ import 'package:dallal_proj/core/constants/app_defs.dart';
 
 class EndPoints {
   static String baseUrl = kDomainApp;
-  static String token = 'token';
   static String login = 'user/login.php';
+  static String register = 'user/register.php';
+  static String changePass = 'user_profile/change_password.php';
+  static String createAdv = 'ad/create_ad.php';
+  static String reportAdv = 'ad/report_ad.php';
+  static String faveAdv = 'ad/add_favorite.php';
+  static String unfaveAdv = 'ad/remove_favorite.php?ad_id=';
+  static String likeAdv = 'ad/like_ad.php';
+  static String unlikeAdv = 'ad/unlike_ad.php?ad_id=';
+  static String updateAdv = 'ad/update_ad.php';
+  static String createMedia = 'ad/create_ad_media.php';
+  static String deleteMedia = 'ad/delete_ad_media.php?media_id=';
+  static String activatePkg = 'package/activate_package.php';
+  static String fetchAllAdvs = 'ad/list_all_ads.php';
+  static String fetchFeaturedAdvs = 'ad/list_featured_ads.php';
+  static String fetchAllBanners = 'banner/get_banners.php';
+  static String setProfile = 'user_profile/update_user_profile.php';
+  static String getProfile = 'user_profile/get_user_profile.php';
+  static String deleteAcc = 'user/request_delete_account.php';
+  static String deleteAdv = 'ad/delete_ad.php?id=';
+  static String fetchNotifications = 'notification/get_notifications.php?';
+  static String getUnreadNotifications = 'notification/unread_count.php';
+  static String markAsRead = 'notification/mark_as_read.php';
+  static String getPkgInfo = 'package/check_package_expiry.php?ad_id=';
+  static String resetPass = 'user/forgot_password.php';
+  static String searchFilter = 'search_and_filter/search_and_filter_ads.php?';
+  static String fetchApts = '${ApiKeys.propType}${searchFilter}apartment';
+  static String fetchHouses = '${ApiKeys.propType}${searchFilter}house';
+  static String fetchLands = '${ApiKeys.propType}${searchFilter}land';
+  static String fetchShops = '${ApiKeys.propType}${searchFilter}shop';
+  static String resendMsg = 'user/resend_otp_code.php';
+  static String getMsg = 'user/get_otp.php';
+  static String verifyMsg = 'user/verify_otp.php';
 }
 
 class HttpKeys {
@@ -12,10 +43,30 @@ class HttpKeys {
   static String auth = 'Authorization';
   static String bearer = 'Bearer';
   static String respIsntJson = 'Response is not valid JSON:';
+  static String invalidJson = "Invalid Json format";
+  static String serverErr = "Server Error";
   static String reqFailedWithStatus = 'Request failed with StatusCode';
+  static String status = ApiKeys.status;
+  static String errMsg = ApiKeys.errMsg;
+}
+
+class ApiKeys {
+  static String token = 'token';
+  static String userId = 'user_id';
+  static String status = 'status';
+  static String errMsg = 'message';
+  static String data = 'data';
+  static String pfpImg = 'profile_image';
+  static String createdAt = 'created_at';
+  static String name = 'name';
+  static String phone = 'phone';
+  static String whatsapp = 'whatsapp';
+  static String dataImg64 = '$data:image/jpg;base64,';
+  static String propType = 'property_type=';
+  static String needVerf = 'need_verification';
 }
 
 class DioKeys {
-  static String status = 'status';
-  static String errMsg = 'errorMessage';
+  static String status = ApiKeys.status;
+  static String errMsg = ApiKeys.errMsg;
 }

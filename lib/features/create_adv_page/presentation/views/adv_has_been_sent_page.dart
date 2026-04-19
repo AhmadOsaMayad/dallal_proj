@@ -1,11 +1,12 @@
-import 'package:dallal_proj/core/components/app_btns/col_btn.dart';
+import 'package:dallal_proj/core/shared/components/app_btns/col_btn.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:dallal_proj/core/utils/app_router.dart';
-import 'package:dallal_proj/core/utils/assets_data.dart';
-import 'package:dallal_proj/core/widgets/page_padding.dart';
-import 'package:dallal_proj/core/widgets/symmetric_pads/v_p_item.dart';
-import 'package:dallal_proj/core/widgets/text_widgets/body_text.dart';
-import 'package:dallal_proj/core/widgets/text_widgets/right_main_title.dart';
+
+import 'package:dallal_proj/core/shared/widgets/page_padding.dart';
+import 'package:dallal_proj/core/shared/widgets/symmetric_pads/v_p_item.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/body_text.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/right_main_title.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -18,7 +19,10 @@ class AdvHasBeenSentPage extends StatelessWidget {
       body: PagePadding(
         child: Column(
           children: [
-            VPItem(tSpc: 40, child: Image.asset(AssetsData.crAdvCompletedGif)),
+            VPItem(
+              tSpc: 40,
+              child: Image.asset(Assets.images.gif.completed.path),
+            ),
             const RightMainTitle(text: kCrAdvSentSuxss, isRight: false),
             const VPItem(
               tSpc: 20,

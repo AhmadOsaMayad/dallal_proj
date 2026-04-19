@@ -1,9 +1,9 @@
-import 'package:dallal_proj/core/components/app_btns/col_btn.dart';
+import 'package:dallal_proj/core/shared/components/app_btns/col_btn.dart';
 import 'package:dallal_proj/core/theme/app_colors.dart';
 import 'package:dallal_proj/core/utils/app_router.dart';
-import 'package:dallal_proj/core/widgets/symmetric_pads/v_p_item.dart';
-import 'package:dallal_proj/core/widgets/text_widgets/r_text.dart';
-import 'package:dallal_proj/core/widgets/two_item_widgets/two_itm_col.dart';
+import 'package:dallal_proj/core/shared/widgets/symmetric_pads/v_p_item.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/r_text.dart';
+import 'package:dallal_proj/core/shared/widgets/two_item_widgets/two_itm_col.dart';
 import 'package:dallal_proj/features/my_account_page/presentation/manager/user_profile_cubit/user_profile_cubit.dart';
 import 'package:dallal_proj/features/my_account_page/presentation/views/widgets/my_account_loadable_body_builder.dart';
 import 'package:flutter/material.dart';

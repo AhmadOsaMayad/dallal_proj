@@ -1,6 +1,7 @@
 import 'package:dallal_proj/core/theme/app_colors.dart';
-import 'package:dallal_proj/core/utils/assets_data.dart';
-import 'package:dallal_proj/core/widgets/svg_ico.dart';
+
+import 'package:dallal_proj/core/shared/widgets/svg_ico.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
 import 'package:flutter/material.dart';
 
 class SuffixTextIcon extends StatelessWidget {
@@ -28,7 +29,7 @@ class SuffixTextIcon extends StatelessWidget {
           padding: const EdgeInsets.all(8),
           child: GestureDetector(
             onTap: onTap,
-            child: const SvgIco(ico: AssetsData.searchSvg, color: kPrimColG),
+            child: SvgIco(ico: Assets.icons.svg.search24, color: kPrimColG),
           ),
         ),
       ],

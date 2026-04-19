@@ -1,5 +1,5 @@
 import 'package:dallal_proj/core/constants/app_texts.dart';
-import 'package:dallal_proj/core/widgets/custom_app_bar.dart';
+import 'package:dallal_proj/core/shared/widgets/custom_app_bar.dart';
 import 'package:dallal_proj/features/favorite_page/presentation/views/widgets/favorite_grid_view_bloc_builder.dart';
 import 'package:flutter/material.dart';
 

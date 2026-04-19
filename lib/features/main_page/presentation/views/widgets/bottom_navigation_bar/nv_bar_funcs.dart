@@ -1,5 +1,5 @@
 import 'package:dallal_proj/core/utils/functions/get_me_data.dart';
-import 'package:dallal_proj/core/utils/service_locator.dart';
+import 'package:dallal_proj/core/di/service_locator.dart';
 import 'package:dallal_proj/features/main_page/data/repos/main_page_repo_implement.dart';
 import 'package:dallal_proj/features/main_page/domain/use_cases/fetch_user_profile_use_case.dart';
 import 'package:dallal_proj/features/more_page/data/repos/more_page_repo_implement.dart';
@@ -21,11 +21,12 @@ import 'package:dallal_proj/features/sections_page/presentation/manager/fetch_ap
 import 'package:dallal_proj/features/sections_page/presentation/manager/fetch_house_list_cubit/fetch_house_list_cubit.dart';
 import 'package:dallal_proj/features/sections_page/presentation/manager/fetch_land_list_cubit/fetch_land_list_cubit.dart';
 import 'package:dallal_proj/features/sections_page/presentation/manager/fetch_shop_list_cubit/fetch_shop_list_cubit.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
 import 'package:dallal_proj/core/theme/app_colors.dart';
-import 'package:dallal_proj/core/utils/assets_data.dart';
+
 import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 import 'package:dallal_proj/features/home_page/presentation/views/home_page.dart';
@@ -123,11 +124,11 @@ class NvBar {
 
   static List<PersistentBottomNavBarItem> items() {
     return [
-      navItem(title: kMoreP, ico: AssetsData.menuSvg),
-      navItem(title: kMyAccP, ico: AssetsData.usertSvg),
-      navItem(title: kAdvP, ico: AssetsData.addSquaretSvg),
-      navItem(title: kSectsP, ico: AssetsData.sectionsSvg),
-      navItem(title: kMainP, ico: AssetsData.homeSvg),
+      navItem(title: kMoreP, ico: Assets.icons.svg.menu24),
+      navItem(title: kMyAccP, ico: Assets.icons.svg.user24),
+      navItem(title: kAdvP, ico: Assets.icons.svg.addsquare24),
+      navItem(title: kSectsP, ico: Assets.icons.svg.category24),
+      navItem(title: kMainP, ico: Assets.icons.svg.home24),
     ];
   }
 

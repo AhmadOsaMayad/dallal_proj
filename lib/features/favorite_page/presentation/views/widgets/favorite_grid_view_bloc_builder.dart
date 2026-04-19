@@ -1,6 +1,6 @@
-import 'package:dallal_proj/core/components/shimmer_widgets/favorite_grid_view_shimmer.dart';
+import 'package:dallal_proj/core/shared/components/shimmer_widgets/favorite_grid_view_shimmer.dart';
 import 'package:dallal_proj/core/utils/functions/get_only_active_advs.dart';
-import 'package:dallal_proj/core/widgets/helpers/show_snack_bar.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/show_snack_bar.dart';
 import 'package:dallal_proj/features/favorite_page/presentation/manager/fetch_fav_advs_cubit/fetch_fav_advs_cubit.dart';
 import 'package:dallal_proj/features/favorite_page/presentation/views/widgets/favorite_grid_view.dart';
 import 'package:flutter/material.dart';

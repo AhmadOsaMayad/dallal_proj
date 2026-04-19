@@ -1,6 +1,7 @@
 import 'package:dallal_proj/core/theme/app_colors.dart';
-import 'package:dallal_proj/core/utils/assets_data.dart';
-import 'package:dallal_proj/core/components/app_btns/ico_only_btn.dart';
+
+import 'package:dallal_proj/core/shared/components/app_btns/ico_only_btn.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
 import 'package:flutter/material.dart';
 
 class ContactsBtns extends StatelessWidget {
@@ -17,13 +18,13 @@ class ContactsBtns extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         const Spacer(flex: 2),
-        IcoOnlyBtn(img: AssetsData.sms, onTap: smsOnTap),
+        IcoOnlyBtn(img: Assets.icons.svg.sms, onTap: smsOnTap),
         const Spacer(flex: 3),
-        IcoOnlyBtn(img: AssetsData.contact, onTap: callOnTap),
+        IcoOnlyBtn(img: Assets.icons.svg.call, onTap: callOnTap),
         const Spacer(flex: 3),
         IcoOnlyBtn(
           onTap: whatsAppOnTap,
-          img: AssetsData.whatsAppsvg,
+          img: Assets.icons.svg.whatsapp,
           fillCol: Colors.white,
           color: kPrimColG,
         ),

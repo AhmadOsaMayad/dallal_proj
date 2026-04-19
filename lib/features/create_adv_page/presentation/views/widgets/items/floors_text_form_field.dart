@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/components/app_input_fields/titled_text_form_field.dart';
+import 'package:dallal_proj/core/shared/components/app_input_fields/titled_text_form_field.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:flutter/material.dart';
 

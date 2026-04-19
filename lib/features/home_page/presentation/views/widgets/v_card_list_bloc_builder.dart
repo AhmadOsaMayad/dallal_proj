@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/components/shimmer_widgets/v_card_shimmer/v_card_list_shimmer.dart';
+import 'package:dallal_proj/core/shared/components/shimmer_widgets/v_card_shimmer/v_card_list_shimmer.dart';
 import 'package:dallal_proj/core/theme/app_colors.dart';
 import 'package:dallal_proj/features/home_page/presentation/manager/all_advs_cubit/all_advs_cubit.dart';
 import 'package:dallal_proj/features/home_page/presentation/views/widgets/v_card_list/v_card_list.dart';

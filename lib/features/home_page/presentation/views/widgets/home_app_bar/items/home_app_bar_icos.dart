@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/widgets/two_item_widgets/two_itm_row.dart';
+import 'package:dallal_proj/core/shared/widgets/two_item_widgets/two_itm_row.dart';
 import 'package:dallal_proj/features/home_page/presentation/views/widgets/home_app_bar/items/named_logo_mini.dart';
 import 'package:dallal_proj/features/home_page/presentation/views/widgets/home_app_bar/items/noti_fav_icos.dart';
 import 'package:flutter/material.dart';

@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/widgets/inf_comp.dart';
+import 'package:dallal_proj/core/shared/widgets/inf_comp.dart';
 import 'package:flutter/material.dart';
 
 class AdvDBTitledItem extends StatelessWidget {

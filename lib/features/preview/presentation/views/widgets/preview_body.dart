@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/widgets/named_logo.dart';
+import 'package:dallal_proj/core/shared/widgets/named_logo.dart';
 import 'package:dallal_proj/features/preview/presentation/views/widgets/next_btn.dart';
 import 'package:dallal_proj/features/preview/presentation/views/widgets/pvp_text.dart';
 import 'package:flutter/material.dart';

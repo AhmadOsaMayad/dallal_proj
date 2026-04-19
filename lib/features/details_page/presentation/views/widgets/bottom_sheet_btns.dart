@@ -2,10 +2,10 @@ import 'package:dallal_proj/core/theme/app_colors.dart';
 import 'package:dallal_proj/core/theme/app_font_styles_colorer.dart';
 import 'package:dallal_proj/core/theme/app_themes.dart';
 import 'package:dallal_proj/core/theme/app_font_styles.dart';
-import 'package:dallal_proj/core/widgets/two_item_widgets/two_itm_row.dart';
-import 'package:dallal_proj/core/components/app_btns/models/x_b_size.dart';
-import 'package:dallal_proj/core/components/app_btns/col_btn.dart';
-import 'package:dallal_proj/core/components/app_btns/white_btn.dart';
+import 'package:dallal_proj/core/shared/widgets/two_item_widgets/two_itm_row.dart';
+import 'package:dallal_proj/core/shared/components/app_btns/models/x_b_size.dart';
+import 'package:dallal_proj/core/shared/components/app_btns/col_btn.dart';
+import 'package:dallal_proj/core/shared/components/app_btns/white_btn.dart';
 import 'package:flutter/material.dart';
 
 class BottomSheetBtns extends StatelessWidget {

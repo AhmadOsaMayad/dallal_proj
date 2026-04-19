@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/widgets/text_widgets/v_p_text.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/v_p_text.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/desc_holder_items/details_desc_box.dart';
 import 'package:flutter/material.dart';
 

@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/utils/service_locator.dart';
+import 'package:dallal_proj/core/di/service_locator.dart';
 import 'package:dallal_proj/features/change_password_page/data/repos/change_password_page_repo_implement.dart';
 import 'package:dallal_proj/features/change_password_page/domain/use_cases/change_password_use_case.dart';
 import 'package:dallal_proj/features/change_password_page/presentation/manager/change_password_cubit/change_password_cubit.dart';
@@ -95,7 +95,6 @@ import 'package:dallal_proj/features/verify_msg_page/presentation/manager/get_ot
 import 'package:dallal_proj/features/verify_msg_page/presentation/manager/resend_otp_code_cubit/resend_otp_code_cubit.dart';
 import 'package:dallal_proj/features/verify_msg_page/presentation/manager/verify_otp_code_cubit/verify_otp_code_cubit.dart';
 import 'package:dallal_proj/features/verify_msg_page/presentation/views/verify_msg_page.dart';
-import 'package:dallal_proj/temp_try.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -167,10 +166,6 @@ abstract class AppRouter {
                   ),
               child: const RegisterPage(),
             ), // your register page widget
-        // BlocProvider(
-        //   create: (context) => SimilarBooksCubit(getIt.get<HomeRepoImpl>()),
-        //   child: BookDetailsView(bookModel: state.extra as BookModel),
-        // ),
       ),
       GoRoute(
         path: kLoginPage,
@@ -319,7 +314,7 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: kSelectedSectPage,
-        name: kSelectedSectPage, // Needed for pushNamed to work
+        name: kSelectedSectPage,
         builder: (context, state) {
           final sectionListEntity = state.extra as SectionListEntity;
           return SelectedSectPage(sectionListEntity: sectionListEntity);
@@ -327,7 +322,7 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: kSearchFilterPage,
-        name: kSearchFilterPage, // Needed for pushNamed to work
+        name: kSearchFilterPage,
         builder: (context, state) {
           final filterReqModel = state.extra as FilterReqModel;
           return BlocProvider(
@@ -415,7 +410,7 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: kCrAdvPage,
-        name: kCrAdvPage, // Needed for pushNamed to work
+        name: kCrAdvPage,
         builder: (context, state) {
           final title = state.extra as String;
           return BlocProvider(

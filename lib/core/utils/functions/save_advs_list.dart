@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/entities/adv_card_entity/adv_card_entity.dart';
+import 'package:dallal_proj/core/common/entities/adv_card_entity/adv_card_entity.dart';
 import 'package:hive/hive.dart';
 
 void saveAdvsList(List<AdvCardEntity> featuredAdvs, String boxName) {

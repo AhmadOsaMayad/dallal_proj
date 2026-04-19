@@ -1,8 +1,8 @@
 import 'package:dallal_proj/features/more_page/presentation/views/more_loadable_body_builder.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
-import 'package:dallal_proj/core/widgets/custom_app_bar.dart';
+import 'package:dallal_proj/core/shared/widgets/custom_app_bar.dart';
 import 'package:dallal_proj/core/theme/app_colors.dart';
-import 'package:dallal_proj/core/utils/app_funcs.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
 import 'package:flutter/material.dart';
 
 class MorePage extends StatelessWidget {
@@ -15,7 +15,8 @@ class MorePage extends StatelessWidget {
       appBar: const CustomAppBar(title: kMoreP, showBackButton: false),
       body: Padding(
         padding: EdgeInsets.symmetric(
-          horizontal: Funcs.respWidth(fract: 0.06, context: context),
+          horizontal: context.respWidth(fract: 0.06),
+          // Funcs.respWidth(fract: 0.06, context: context),
         ),
         child: const MoreLoadableBodyBuilder(),
       ),

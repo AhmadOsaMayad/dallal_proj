@@ -1,5 +1,5 @@
 import 'package:dallal_proj/core/theme/app_colors.dart';
-import 'package:dallal_proj/core/widgets/text_widgets/r_text.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/r_text.dart';
 import 'package:dallal_proj/features/notifications_page/presentation/manager/notifications_cubit/notifications_cubit.dart';
 import 'package:dallal_proj/features/notifications_page/presentation/views/widgets/notific_list_builder.dart';
 import 'package:flutter/material.dart';

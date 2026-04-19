@@ -1,5 +1,5 @@
-import 'package:dallal_proj/core/widgets/helpers/show_snack_bar.dart';
-import 'package:dallal_proj/core/widgets/loadable_body.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/show_snack_bar.dart';
+import 'package:dallal_proj/core/shared/widgets/loadable_body.dart';
 import 'package:dallal_proj/features/featuring_adv_page/presentation/manager/feature_the_adv_cubit/feature_the_adv_cubit.dart';
 import 'package:dallal_proj/features/featuring_adv_page/presentation/views/widgets/featuring_adv_body.dart';
 import 'package:flutter/material.dart';

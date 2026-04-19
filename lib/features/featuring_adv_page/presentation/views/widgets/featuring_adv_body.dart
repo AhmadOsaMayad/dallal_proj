@@ -1,11 +1,11 @@
-import 'package:dallal_proj/core/components/app_cards/package_card/package_card.dart';
+import 'package:dallal_proj/core/shared/components/app_cards/package_card/package_card.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:dallal_proj/core/constants/mock_models.dart';
-import 'package:dallal_proj/core/utils/app_funcs.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
 import 'package:dallal_proj/core/utils/functions/get_me_data.dart';
-import 'package:dallal_proj/core/widgets/helpers/widgets_helper.dart';
-import 'package:dallal_proj/core/widgets/text_widgets/body_text.dart';
-import 'package:dallal_proj/core/widgets/text_widgets/right_main_title.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/widgets_helper.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/body_text.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/right_main_title.dart';
 import 'package:dallal_proj/features/featuring_adv_page/data/models/feature_adv_model.dart';
 import 'package:dallal_proj/features/featuring_adv_page/presentation/manager/feature_the_adv_cubit/feature_the_adv_cubit.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +17,8 @@ class FeaturingAdvBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double cSize = ((Funcs.respWidth(fract: 0.9, context: context)) / 3);
+    final double cSize = ((0.9) / 3);
+    // final double cSize = ((Funcs.respWidth(fract: 0.9, context: context)) / 3);
     return Column(
       children: [
         const Spacer(flex: 2),

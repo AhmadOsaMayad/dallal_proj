@@ -1,7 +1,7 @@
-import 'package:dallal_proj/core/components/app_bottom_sheets/filter_b_s/filter_form_items/dropdown_menu/crn_drop_menu.dart';
-import 'package:dallal_proj/core/widgets/inf_comp.dart';
-import 'package:dallal_proj/core/widgets/symmetric_pads/h_p_item.dart';
-import 'package:dallal_proj/core/widgets/symmetric_pads/v_p_item.dart';
+import 'package:dallal_proj/core/shared/components/app_bottom_sheets/filter_b_s/filter_form_items/dropdown_menu/crn_drop_menu.dart';
+import 'package:dallal_proj/core/shared/widgets/inf_comp.dart';
+import 'package:dallal_proj/core/shared/widgets/symmetric_pads/h_p_item.dart';
+import 'package:dallal_proj/core/shared/widgets/symmetric_pads/v_p_item.dart';
 import 'package:flutter/material.dart';
 
 class CrAdvCrn extends StatelessWidget {

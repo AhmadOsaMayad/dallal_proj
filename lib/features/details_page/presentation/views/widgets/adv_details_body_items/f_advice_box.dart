@@ -2,7 +2,6 @@ import 'package:dallal_proj/core/common/entities/options_list_entity.dart';
 import 'package:dallal_proj/core/theme/app_font_styles.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/adv_details_body_items/adv_advise_section.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/adv_details_body_items/adv_details_body_titled_item.dart';
-import 'package:dallal_proj/temp_try.dart';
 import 'package:flutter/material.dart';
 
 class FAdviceBox extends StatelessWidget {

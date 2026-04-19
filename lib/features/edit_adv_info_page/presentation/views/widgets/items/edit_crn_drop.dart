@@ -1,13 +1,13 @@
-import 'package:dallal_proj/core/widgets/helpers/widgets_helper.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/widgets_helper.dart';
 import 'package:dallal_proj/core/theme/app_colors.dart';
 import 'package:dallal_proj/core/constants/wid_lists.dart';
 import 'package:dallal_proj/core/theme/app_font_styles_colorer.dart';
 import 'package:dallal_proj/core/theme/app_themes.dart';
-import 'package:dallal_proj/core/utils/app_funcs.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
 import 'package:dallal_proj/core/theme/app_font_styles.dart';
-import 'package:dallal_proj/core/widgets/inf_comp.dart';
-import 'package:dallal_proj/core/widgets/symmetric_pads/h_p_item.dart';
-import 'package:dallal_proj/core/widgets/symmetric_pads/v_p_item.dart';
+import 'package:dallal_proj/core/shared/widgets/inf_comp.dart';
+import 'package:dallal_proj/core/shared/widgets/symmetric_pads/h_p_item.dart';
+import 'package:dallal_proj/core/shared/widgets/symmetric_pads/v_p_item.dart';
 import 'package:flutter/material.dart';
 
 class EditCrnDrop extends StatelessWidget {
@@ -70,7 +70,8 @@ class EditCrnDropMenu extends StatelessWidget {
             iconColor: kWhite,
           ),
           dropdownMenuEntries: CLwid.cddmList(isFltr: isFltr),
-          width: Funcs.respWidth(fract: 0.25, context: context),
+          width: context.respWidth(fract: 0.25),
+          // Funcs.respWidth(fract: 0.25, context: context),
         ),
       ),
     );

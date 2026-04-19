@@ -1,4 +1,4 @@
-import 'package:dallal_proj/features/verify_msg_page/domain/entities/verify_msg_type.dart';
+import 'package:dallal_proj/core/enums/verify_msg_type.dart';
 
 class VerifyMsgEntity {
   final String phone;

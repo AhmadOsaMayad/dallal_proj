@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/utils/app_funcs.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
 import 'package:flutter/material.dart';
 
 class MoreBodyItemHolder extends StatelessWidget {
@@ -15,7 +15,8 @@ class MoreBodyItemHolder extends StatelessWidget {
               children: [
                 Padding(
                   padding: EdgeInsets.only(
-                    left: Funcs.respWidth(fract: 0.036, context: context),
+                    left: context.respWidth(fract: 0.036),
+                    // Funcs.respWidth(fract: 0.036, context: context),
                   ),
                   child: child,
                 ),

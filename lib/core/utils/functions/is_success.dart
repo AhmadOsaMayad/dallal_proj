@@ -15,4 +15,9 @@ bool isntNull(String? value) {
   return false;
 }
 
+bool isntVNull(dynamic value) {
+  if (value != null) return true;
+  return false;
+}
+
 bool isntEmp(String value) => value.isNotEmpty ? true : false;

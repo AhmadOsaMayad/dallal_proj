@@ -1,7 +1,7 @@
 import 'package:dallal_proj/core/constants/app_texts.dart';
-import 'package:dallal_proj/core/utils/app_funcs.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
 import 'package:dallal_proj/core/theme/app_font_styles.dart';
-import 'package:dallal_proj/core/widgets/text_widgets/dynamic_text.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/dynamic_text.dart';
 import 'package:flutter/material.dart';
 
 class PrpText extends StatelessWidget {
@@ -13,7 +13,8 @@ class PrpText extends StatelessWidget {
       txt: kPrpTxt,
       txtAlign: TextAlign.right,
       style: FStyles.s16w6h175,
-      hPadding: Funcs.respWidth(fract: 0.007, context: context),
+      hPadding: context.respWidth(fract: 0.007),
+      // Funcs.respWidth(fract: 0.007, context: context),
     );
   }
 }

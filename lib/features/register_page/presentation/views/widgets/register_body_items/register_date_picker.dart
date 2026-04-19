@@ -1,6 +1,6 @@
 import 'package:dallal_proj/core/constants/app_texts.dart';
-import 'package:dallal_proj/core/widgets/inf_comp.dart';
-import 'package:dallal_proj/core/components/app_input_fields/date_picker_field/date_picker_text_field.dart';
+import 'package:dallal_proj/core/shared/widgets/inf_comp.dart';
+import 'package:dallal_proj/core/shared/components/app_input_fields/date_picker_field/date_picker_text_field.dart';
 import 'package:flutter/material.dart';
 
 class RegisterDatePicker extends StatelessWidget {

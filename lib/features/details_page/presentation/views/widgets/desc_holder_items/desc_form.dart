@@ -1,5 +1,5 @@
 import 'package:dallal_proj/core/constants/str_lists.dart';
-import 'package:dallal_proj/core/widgets/helpers/s_bx.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/s_bx.dart';
 import 'package:dallal_proj/features/details_page/domain/entities/show_details_entity.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/desc_holder_items/desc_img_item.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/desc_item.dart';

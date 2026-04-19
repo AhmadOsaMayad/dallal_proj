@@ -1,6 +1,6 @@
-import 'package:dallal_proj/core/widgets/custom_app_bar.dart';
-import 'package:dallal_proj/core/widgets/page_padding.dart';
-import 'package:dallal_proj/core/widgets/unfocus_ontap.dart';
+import 'package:dallal_proj/core/shared/widgets/custom_app_bar.dart';
+import 'package:dallal_proj/core/shared/widgets/page_padding.dart';
+import 'package:dallal_proj/core/shared/widgets/unfocus_ontap.dart';
 import 'package:dallal_proj/features/change_password_page/presentation/views/change_pasword_loadable_budy_builder.dart';
 import 'package:flutter/material.dart';
 

@@ -1,5 +1,6 @@
-import 'package:dallal_proj/core/utils/app_funcs.dart';
-import 'package:dallal_proj/core/utils/assets_data.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
+
 import 'package:flutter/material.dart';
 
 class DeskMapImg extends StatelessWidget {
@@ -8,13 +9,14 @@ class DeskMapImg extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: Funcs.respWidth(fract: 0.17, context: context),
+      height: context.respWidth(fract: 0.17),
+      // Funcs.respWidth(fract: 0.17, context: context),
       child: ClipRRect(
         borderRadius: const BorderRadius.all(Radius.circular(8)),
         child: AspectRatio(
           aspectRatio: 1.505,
           child: Image.asset(
-            AssetsData.mapImg,
+            Assets.images.jpg.map.path,
             fit: BoxFit.fill,
             alignment: Alignment.center,
           ),

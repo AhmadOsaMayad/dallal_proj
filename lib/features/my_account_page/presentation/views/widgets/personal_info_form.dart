@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/utils/app_funcs.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
 import 'package:dallal_proj/features/my_account_page/presentation/views/widgets/personal_info_holder.dart';
 import 'package:flutter/material.dart';
 
@@ -19,9 +19,12 @@ class PersonalInfoForm extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         PersonalInfoHolder(title: 'الاسم   ', info: ' $name '),
-        SizedBox(height: Funcs.respHieght(fract: 0.0162, context: context)),
+        SizedBox(height: context.respHieght(fract: 0.0162)),
+        // SizedBox(height: Funcs.respHieght(fract: 0.0162, context: context)),
         PersonalInfoHolder(title: 'رقم الهاتف   ', info: ' $phone '),
-        SizedBox(height: Funcs.respHieght(fract: 0.0162, context: context)),
+        SizedBox(height: context.respHieght(fract: 0.0162)),
+
+        // SizedBox(height: Funcs.respHieght(fract: 0.0162, context: context)),
         if (withWhatsAppNum)
           PersonalInfoHolder(
             title: 'رقم الواتساب   ',
@@ -50,9 +53,13 @@ class PersonalInfoForm2 extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         PersonalInfoHolder2(title: 'الاسم   ', info: ' $name '),
-        SizedBox(height: Funcs.respHieght(fract: 0.0162, context: context)),
+        SizedBox(height: context.respHieght(fract: 0.0162)),
+
+        // SizedBox(height: Funcs.respHieght(fract: 0.0162, context: context)),
         PersonalInfoHolder2(title: 'الهاتف   ', info: ' $phone '),
-        SizedBox(height: Funcs.respHieght(fract: 0.0162, context: context)),
+        SizedBox(height: context.respHieght(fract: 0.0162)),
+
+        // SizedBox(height: Funcs.respHieght(fract: 0.0162, context: context)),
         if (withWhatsAppNum)
           PersonalInfoHolder2(
             title: 'الإيميل ',

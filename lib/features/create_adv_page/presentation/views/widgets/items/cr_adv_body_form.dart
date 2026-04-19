@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/components/app_input_fields/titled_text_form_field.dart';
+import 'package:dallal_proj/core/shared/components/app_input_fields/titled_text_form_field.dart';
 import 'package:dallal_proj/features/create_adv_page/presentation/views/widgets/cr_adv_helper.dart';
 import 'package:dallal_proj/features/create_adv_page/presentation/views/widgets/items/a_i_btn.dart';
 import 'package:dallal_proj/features/create_adv_page/presentation/views/widgets/items/add_img_item.dart';
@@ -10,7 +10,7 @@ import 'package:dallal_proj/features/create_adv_page/presentation/views/widgets/
 import 'package:dallal_proj/features/create_adv_page/presentation/views/widgets/items/parts_of_prop_text_form_fields.dart';
 import 'package:dallal_proj/features/create_adv_page/presentation/views/widgets/items/price_t_f_f.dart';
 import 'package:dallal_proj/features/preregister/presentation/views/widgets/register_btn.dart';
-import 'package:dallal_proj/core/widgets/symmetric_pads/v_p_item.dart';
+import 'package:dallal_proj/core/shared/widgets/symmetric_pads/v_p_item.dart';
 import 'package:dallal_proj/core/constants/mock_models.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:flutter/material.dart';

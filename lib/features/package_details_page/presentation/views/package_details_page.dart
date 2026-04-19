@@ -1,7 +1,7 @@
 import 'package:dallal_proj/core/theme/app_colors.dart';
-import 'package:dallal_proj/core/widgets/custom_app_bar.dart';
-import 'package:dallal_proj/core/widgets/helpers/show_snack_bar.dart';
-import 'package:dallal_proj/core/widgets/page_padding.dart';
+import 'package:dallal_proj/core/shared/widgets/custom_app_bar.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/show_snack_bar.dart';
+import 'package:dallal_proj/core/shared/widgets/page_padding.dart';
 import 'package:dallal_proj/features/package_details_page/presentation/manager/get_package_info_cubit/get_package_info_cubit.dart';
 import 'package:dallal_proj/features/package_details_page/presentation/views/widgets/package_details_body.dart';
 import 'package:flutter/material.dart';

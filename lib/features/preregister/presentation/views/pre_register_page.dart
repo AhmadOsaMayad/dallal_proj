@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/utils/app_funcs.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
 import 'package:flutter/material.dart';
 import 'package:dallal_proj/features/preregister/presentation/views/widgets/pre_register_body.dart';
 
@@ -10,7 +10,8 @@ class PreRegisterPage extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.symmetric(
-          horizontal: Funcs.respWidth(fract: 0.072, context: context),
+          horizontal: context.respWidth(fract: 0.027),
+          // Funcs.respWidth(fract: 0.072, context: context),
         ),
         child: const PreRegisterBody(),
       ),

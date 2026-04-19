@@ -1,5 +1,5 @@
-import 'package:dallal_proj/core/utils/assets_data.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/comment_section_items/comment_bubble/comment_bubble_header_box.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
 import 'package:flutter/material.dart';
 
 class CommentBubbleHeader extends StatelessWidget {
@@ -16,7 +16,7 @@ class CommentBubbleHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return CommentBubbleHeaderBox(
       userName: userName,
-      userImg: userImg ?? AssetsData.rUserAvatar,
+      userImg: userImg ?? Assets.images.jpg.pfpjack.path,
       postedAt: postedAt ?? 'الآن',
     );
   }

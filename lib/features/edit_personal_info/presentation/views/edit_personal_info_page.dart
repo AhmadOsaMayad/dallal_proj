@@ -1,13 +1,13 @@
 import 'dart:developer';
 
-import 'package:dallal_proj/core/components/app_btns/col_btn.dart';
+import 'package:dallal_proj/core/shared/components/app_btns/col_btn.dart';
 import 'package:dallal_proj/core/utils/functions/get_me_data.dart';
-import 'package:dallal_proj/core/widgets/custom_app_bar.dart';
-import 'package:dallal_proj/core/widgets/helpers/lan_detector.dart';
-import 'package:dallal_proj/core/widgets/helpers/show_snack_bar.dart';
-import 'package:dallal_proj/core/widgets/loadable_body.dart';
-import 'package:dallal_proj/core/widgets/page_padding.dart';
-import 'package:dallal_proj/core/widgets/symmetric_pads/v_p_item.dart';
+import 'package:dallal_proj/core/shared/widgets/custom_app_bar.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/lan_detector.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/show_snack_bar.dart';
+import 'package:dallal_proj/core/shared/widgets/loadable_body.dart';
+import 'package:dallal_proj/core/shared/widgets/page_padding.dart';
+import 'package:dallal_proj/core/shared/widgets/symmetric_pads/v_p_item.dart';
 import 'package:dallal_proj/features/edit_personal_info/presentation/manager/edit_personal_info_cubit/edit_personal_info_cubit.dart';
 import 'package:dallal_proj/features/login_page/data/models/set_profile_req_model.dart';
 import 'package:dallal_proj/features/login_page/domain/entities/loggedin_user_entity.dart';

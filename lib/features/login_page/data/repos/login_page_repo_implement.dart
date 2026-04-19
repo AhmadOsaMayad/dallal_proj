@@ -1,3 +1,4 @@
+import 'package:dallal_proj/core/errors/dio_xcept.dart';
 import 'package:dallal_proj/core/errors/error_handler.dart';
 import 'package:dallal_proj/core/errors/failure.dart';
 import 'package:dallal_proj/core/utils/functions/delete_user_login_data.dart';
@@ -27,9 +28,12 @@ class LoginPageRepoImplement extends LoginPageRepo {
       if (isLoggedin(loggedUser)) {
         deleteUserLoginData();
       }
-      var loginUser = await remoteDataSource.loginUser(loginModel);
+      var loginUser = await remoteDataSource.loginUserHtp(loginModel);
       return right(loginUser);
     } catch (e) {
+      if (e is ServerException) {
+        return left(e.errModel);
+      }
       return left(mapExceptionToFailure(e));
     }
   }

@@ -1,5 +1,5 @@
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/adv_details_header_sect/details_image_carousel.dart';
-import 'package:dallal_proj/core/widgets/cust_img_holder.dart';
+import 'package:dallal_proj/core/shared/widgets/cust_img_holder.dart';
 import 'package:flutter/material.dart';
 
 class CrslImgHolder extends StatelessWidget {

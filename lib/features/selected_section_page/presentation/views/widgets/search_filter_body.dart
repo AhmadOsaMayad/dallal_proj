@@ -1,10 +1,10 @@
-import 'package:dallal_proj/core/components/app_bottom_sheets/bottom_sheet_holder.dart';
-import 'package:dallal_proj/core/components/app_bottom_sheets/filter_b_s/filter_form.dart';
-import 'package:dallal_proj/core/components/app_bottom_sheets/filter_b_s/filter_funcs.dart';
-import 'package:dallal_proj/core/utils/app_funcs.dart';
-import 'package:dallal_proj/core/widgets/helpers/s_bx.dart';
-import 'package:dallal_proj/core/widgets/symmetric_pads/v_p_item.dart';
-import 'package:dallal_proj/core/widgets/text_widgets/adv_result_item.dart';
+import 'package:dallal_proj/core/shared/components/app_bottom_sheets/bottom_sheet_holder.dart';
+import 'package:dallal_proj/core/shared/components/app_bottom_sheets/filter_b_s/filter_form.dart';
+import 'package:dallal_proj/core/shared/components/app_bottom_sheets/filter_b_s/filter_funcs.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/s_bx.dart';
+import 'package:dallal_proj/core/shared/widgets/symmetric_pads/v_p_item.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/adv_result_item.dart';
 import 'package:dallal_proj/features/home_page/presentation/views/widgets/filter_v_card_list_view_builder.dart';
 import 'package:dallal_proj/features/home_page/presentation/views/widgets/search_filter/search_filter_row.dart';
 import 'package:dallal_proj/features/sections_page/data/models/filter_req_model.dart';
@@ -54,7 +54,8 @@ class SearchFilterBody extends StatelessWidget {
   }
 
   SizedBox _topPadding(BuildContext context) =>
-      SizedBox(height: Funcs.respHieght(fract: 0.054, context: context));
+      SizedBox(height: context.respHieght(fract: 0.054));
+  // SizedBox(height: Funcs.respHieght(fract: 0.054, context: context));
 
   Column _getSearchtFilterItem(
     BuildContext context, {

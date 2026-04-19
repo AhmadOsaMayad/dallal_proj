@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/components/shimmer_widgets/v_card_shimmer/v_card_list_shimmer.dart';
+import 'package:dallal_proj/core/shared/components/shimmer_widgets/v_card_shimmer/v_card_list_shimmer.dart';
 import 'package:dallal_proj/features/home_page/presentation/views/widgets/v_card_list/v_card_list.dart';
 import 'package:dallal_proj/features/sections_page/presentation/manager/fetch_filtered_result_cubit/fetch_filtered_result_cubit.dart';
 import 'package:flutter/material.dart';

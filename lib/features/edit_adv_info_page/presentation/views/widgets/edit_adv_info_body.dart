@@ -1,7 +1,7 @@
-import 'package:dallal_proj/core/components/app_bottom_sheets/log_required_b_s/show_log_required_b_s.dart';
+import 'package:dallal_proj/core/shared/components/app_bottom_sheets/log_required_b_s/show_log_required_b_s.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
-import 'package:dallal_proj/core/entities/media_entity/media_entity.dart';
-import 'package:dallal_proj/core/widgets/loadable_body.dart';
+import 'package:dallal_proj/core/common/entities/media_entity.dart';
+import 'package:dallal_proj/core/shared/widgets/loadable_body.dart';
 import 'package:dallal_proj/features/create_adv_page/presentation/views/widgets/cr_adv_helper.dart';
 import 'package:dallal_proj/features/details_page/domain/entities/show_details_entity.dart';
 import 'package:dallal_proj/features/edit_adv_info_page/data/models/edit_advertisement_request_model.dart';
@@ -9,11 +9,11 @@ import 'package:dallal_proj/features/edit_adv_info_page/presentation/manager/edi
 import 'package:dallal_proj/features/edit_adv_info_page/presentation/views/widgets/items/edit_adv_body_form.dart';
 import 'package:dallal_proj/core/utils/functions/is_accessible_user.dart';
 import 'package:dallal_proj/core/utils/functions/get_city_value.dart';
-import 'package:dallal_proj/core/widgets/helpers/show_snack_bar.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/show_snack_bar.dart';
 import 'package:dallal_proj/core/utils/functions/get_me_data.dart';
 import 'package:dallal_proj/core/constants/app_defs.dart';
 import 'package:dallal_proj/core/theme/app_colors.dart';
-import 'package:dallal_proj/core/utils/app_funcs.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
@@ -199,9 +199,12 @@ class _EditAdvBodyState extends State<EditAdvBody> {
 
   @override
   Widget build(BuildContext context) {
-    final double textFwidth = (Funcs.respInfWp(50, context) / 2);
-    final double adrFwidth = Funcs.respInfWp(40, context);
-    final double sectFwidth = (Funcs.respInfWp(70, context) / 4);
+    final double textFwidth = (context.respInfWp(50) / 2);
+    // final double textFwidth = (Funcs.respInfWp(50, context) / 2);
+    final double adrFwidth = context.respInfWp(40);
+    // final double adrFwidth = Funcs.respInfWp(40, context);
+    final double sectFwidth = (context.respInfWp(70) / 4);
+    // final double sectFwidth = (Funcs.respInfWp(70, context) / 4);
 
     return CustomScrollView(
       slivers: [

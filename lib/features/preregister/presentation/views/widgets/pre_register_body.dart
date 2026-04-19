@@ -1,5 +1,5 @@
 import 'package:dallal_proj/core/utils/app_router.dart';
-import 'package:dallal_proj/core/widgets/named_logo.dart';
+import 'package:dallal_proj/core/shared/widgets/named_logo.dart';
 import 'package:dallal_proj/features/preregister/presentation/views/widgets/prp_text.dart';
 import 'package:dallal_proj/features/preregister/presentation/views/widgets/reg_log_btns.dart';
 import 'package:flutter/material.dart';

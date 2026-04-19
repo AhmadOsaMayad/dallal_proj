@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/components/app_cards/package_card/entities/package_entity.dart';
+import 'package:dallal_proj/core/shared/components/app_cards/package_card/entities/package_entity.dart';
 import 'package:dallal_proj/core/utils/functions/is_success.dart';
 import 'package:dallal_proj/features/my_account_page/data/models/delete_adv_req_model.dart';
 import 'package:dallal_proj/features/package_details_page/domain/use_cases/get_package_info_use_case.dart';

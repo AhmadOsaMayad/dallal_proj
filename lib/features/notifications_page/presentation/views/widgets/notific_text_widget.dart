@@ -1,4 +1,4 @@
-import 'package:dallal_proj/core/widgets/text_widgets/r_text.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/r_text.dart';
 import 'package:flutter/material.dart';
 
 class NotificTextWidget extends StatelessWidget {

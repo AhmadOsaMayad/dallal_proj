@@ -1,6 +1,6 @@
 import 'package:dallal_proj/features/more_page/presentation/views/constants.dart';
 import 'package:dallal_proj/core/utils/app_router.dart';
-import 'package:dallal_proj/core/widgets/helpers/widgets_helper.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/widgets_helper.dart';
 import 'package:dallal_proj/features/more_page/presentation/views/widgets/items/box_holder.dart';
 import 'package:dallal_proj/features/more_page/presentation/views/widgets/items/form_bars.dart';
 import 'package:flutter/material.dart';

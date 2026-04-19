@@ -1,0 +1,71 @@
+import 'package:dallal_proj/core/theme/app_font_styles_colorer.dart';
+
+import 'package:dallal_proj/core/theme/app_font_styles.dart';
+import 'package:dallal_proj/core/shared/components/app_cards/property_card/items/card_details/card_date_txt.dart';
+import 'package:dallal_proj/core/shared/components/app_cards/property_card/items/card_btns/card_seperated_btns.dart';
+import 'package:dallal_proj/core/shared/components/app_cards/property_card/items/card_details/card_title_wid.dart';
+import 'package:dallal_proj/core/shared/widgets/custom_right_ico_line.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/widgets_helper.dart';
+import 'package:dallal_proj/core/shared/widgets/symmetric_pads/v_p_item.dart';
+import 'package:dallal_proj/core/shared/components/app_btns/models/x_b_size.dart';
+import 'package:dallal_proj/features/details_page/domain/entities/show_details_entity.dart';
+import 'package:dallal_proj/gen/assets/assets.gen.dart';
+import 'package:flutter/material.dart';
+
+class VCardGenDetSect extends StatelessWidget {
+  const VCardGenDetSect({
+    super.key,
+    required this.detailsEntity,
+    required this.isLikedNotifier,
+    this.onDetails,
+    this.onLikes,
+  });
+
+  final ShowDetailsEntity detailsEntity;
+  final ValueNotifier<bool> isLikedNotifier;
+  final void Function()? onDetails, onLikes;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.end,
+      children: [
+        CardDateTxt(date: WidH.str2date(detailsEntity.date!), fSize: 10),
+        const Spacer(flex: 3),
+        CardTitleWid(
+          text: detailsEntity.titleDet,
+          style: FsC.htStyle(FStyles.s14w6, 0.1),
+        ),
+        const Spacer(flex: 3),
+        CustomRightIcoLine(
+          text: detailsEntity.adress ?? '',
+          icoPath: Assets.icons.svg.location13,
+          style: FStyles.s12w5h1o6,
+        ),
+        VPItem(
+          tSpc: 3,
+          bSpc: 3,
+          child: CustomRightIcoLine(
+            text: detailsEntity.sectionDet,
+            icoPath: Assets.icons.svg.building13,
+            style: FStyles.s12w5h1o6,
+          ),
+        ),
+        CustomRightIcoLine(
+          text: detailsEntity.priceDet,
+          icoPath: Assets.icons.svg.tag13,
+          style: FStyles.s12w5h1o6,
+        ),
+        const Spacer(flex: 2),
+        CardSeperatedBtns(
+          moreBtnSize: const XBSize(width: 83.5429, height: 29),
+          detailsEntity: detailsEntity,
+          sepWidth: 177,
+          onTapDetails: onDetails,
+          onTapLikes: onLikes,
+          isLikedNotifier: isLikedNotifier,
+        ),
+      ],
+    );
+  }
+}

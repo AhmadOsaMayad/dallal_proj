@@ -1,10 +1,10 @@
 import 'package:dallal_proj/core/theme/app_colors.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:dallal_proj/core/theme/app_font_styles_colorer.dart';
-import 'package:dallal_proj/core/utils/app_funcs.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
 import 'package:dallal_proj/core/theme/app_font_styles.dart';
-import 'package:dallal_proj/core/widgets/cust_img_holder.dart';
-import 'package:dallal_proj/core/widgets/text_widgets/a_text.dart';
+import 'package:dallal_proj/core/shared/widgets/cust_img_holder.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/a_text.dart';
 import 'package:dallal_proj/features/home_page/domain/entities/banner_entity.dart';
 import 'package:flutter/material.dart';
 
@@ -14,8 +14,10 @@ class AdvItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: Funcs.respWidth(fract: 0.16, context: context),
-      width: Funcs.respWidth(fract: 0.85, context: context),
+      height: context.respWidth(fract: 0.16),
+      // Funcs.respWidth(fract: 0.16, context: context),
+      width: context.respWidth(fract: 0.85),
+      // Funcs.respWidth(fract: 0.85, context: context),
       decoration: BoxDecoration(
         color: kDSTeal,
         borderRadius: BorderRadius.circular(12),
@@ -37,9 +39,9 @@ class AdvItemViewer extends StatelessWidget {
         img: (banner.bannerImg?.isNotEmpty ?? false) ? banner.bannerImg : null,
         radius: 12,
         // align: Alignment.bottomCenter,
-        aspect:
-            Funcs.respWidth(fract: 0.85, context: context) /
-            Funcs.respWidth(fract: 0.16, context: context),
+        aspect: context.respWidth(fract: 0.85) / context.respWidth(fract: 0.16),
+        // Funcs.respWidth(fract: 0.85, context: context) /
+        // Funcs.respWidth(fract: 0.16, context: context),
       ),
     );
   }

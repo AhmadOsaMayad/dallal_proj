@@ -1,22 +1,22 @@
 import 'dart:developer';
 
-import 'package:dallal_proj/core/components/app_btns/white_btn.dart';
+import 'package:dallal_proj/core/shared/components/app_btns/white_btn.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:dallal_proj/core/theme/app_colors.dart';
 import 'package:dallal_proj/core/utils/functions/get_me_data.dart';
-import 'package:dallal_proj/core/widgets/helpers/show_snack_bar.dart';
-import 'package:dallal_proj/core/widgets/loadable_body.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/show_snack_bar.dart';
+import 'package:dallal_proj/core/shared/widgets/loadable_body.dart';
 import 'package:dallal_proj/features/login_page/data/models/set_profile_req_model.dart';
 import 'package:dallal_proj/features/login_page/domain/entities/loggedin_user_entity.dart';
 import 'package:dallal_proj/features/login_page/presentation/manager/set_profile_picture_cubit/set_profile_picture_cubit.dart';
 import 'package:dallal_proj/features/login_page/presentation/views/add_profile_item.dart.dart';
 import 'package:flutter/material.dart';
 import 'package:dallal_proj/core/utils/app_router.dart';
-import 'package:dallal_proj/core/widgets/text_widgets/r_text.dart';
-import 'package:dallal_proj/core/widgets/text_widgets/right_main_title.dart';
-import 'package:dallal_proj/core/components/app_btns/col_btn.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/r_text.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/right_main_title.dart';
+import 'package:dallal_proj/core/shared/components/app_btns/col_btn.dart';
 import 'package:dallal_proj/core/theme/app_font_styles.dart';
-import 'package:dallal_proj/core/widgets/page_padding.dart';
+import 'package:dallal_proj/core/shared/widgets/page_padding.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 

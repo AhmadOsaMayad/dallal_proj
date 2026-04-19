@@ -1,5 +1,19 @@
-const kImgP = 'assets/imgs/';
+const kUserProfsPath = '/api/media/get_media.php?type=user_profiles';
+const kUserProfsNfilePath = '/api/media/get_media.php?type=user_profiles&file=';
+const kImgs = 'assets/images/';
+const kImgJpg = '${kImgs}jpg/';
+const kImgJpeg = '${kImgs}jpeg/';
+const kImgPng = '${kImgs}png/';
+const kImgGif = '${kImgs}gif/';
 const kIcoP = 'assets/icons/';
+const kIcoSvg = '${kIcoP}svg/';
+const kIcoPng = '${kIcoP}png/';
+
+const kPfpJack = '${kImgs}jpg/pfpJack';
+const kGrDiamond = '${kImgPng}grdiamond.png';
+const kBlDiamond = '${kImgPng}bldiamond.png';
+const kOrDiamond = '${kImgPng}oradiamond.png';
+
 const kMeDataBox = 'me_data_box';
 const kFeaturedAdvBox = 'featured_advs_box';
 const kAllAdvBox = 'all_advs_box';
@@ -29,6 +43,8 @@ const kReset = 'إعادة تعيين';
 const kApply = 'تطبيق';
 const kGoBackToLogin = 'العودة إلى صفحة تسجيل الدخول';
 const kFillFieldFirst = 'يجب ملء هذا الحقل';
+
+const kLoggedNSxfl = 'تم تسجيل الدخول بنجاح';
 
 const kMainP = 'الرئيسية';
 const kSectsP = 'الأقسام';

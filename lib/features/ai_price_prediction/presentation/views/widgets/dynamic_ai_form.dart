@@ -1,17 +1,17 @@
-import 'package:dallal_proj/core/components/app_bottom_sheets/a_i_b_s/ai_bs_form_title/ai_bs_form_title.dart';
-import 'package:dallal_proj/core/components/app_btns/col_btn.dart';
-import 'package:dallal_proj/core/components/app_btns/models/x_b_size.dart';
+import 'package:dallal_proj/core/shared/components/app_bottom_sheets/a_i_b_s/ai_bs_form_title/ai_bs_form_title.dart';
+import 'package:dallal_proj/core/shared/components/app_btns/col_btn.dart';
+import 'package:dallal_proj/core/shared/components/app_btns/models/x_b_size.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:dallal_proj/core/theme/app_colors.dart';
 import 'package:dallal_proj/core/theme/app_font_styles.dart';
 import 'package:dallal_proj/core/theme/app_themes.dart';
-import 'package:dallal_proj/core/utils/app_funcs.dart';
-import 'package:dallal_proj/core/widgets/helpers/widgets_helper.dart';
-import 'package:dallal_proj/core/widgets/symmetric_pads/v_p_item.dart';
-import 'package:dallal_proj/core/widgets/two_item_widgets/two_itm_col.dart';
+import 'package:dallal_proj/core/extensions/escalator.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/widgets_helper.dart';
+import 'package:dallal_proj/core/shared/widgets/symmetric_pads/v_p_item.dart';
+import 'package:dallal_proj/core/shared/widgets/two_item_widgets/two_itm_col.dart';
 import 'package:dallal_proj/features/ai_price_prediction/data/repos/ai_prediction_repo_impl.dart';
 import 'package:dallal_proj/features/ai_price_prediction/presentation/manager/ai_prediction_cubit.dart';
-import 'package:dallal_proj/core/utils/service_locator.dart';
+import 'package:dallal_proj/core/di/service_locator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -113,7 +113,8 @@ class _DynamicAIFormContent extends StatelessWidget {
       bSpc: 20,
       child: Container(
         height: 136,
-        width: Funcs.frwGetter(368, context),
+        width: context.frwGetter(368),
+        // Funcs.frwGetter(368, context),
         padding: const EdgeInsets.only(right: 16, bottom: 20, left: 36),
         decoration: Themer.aiBtn(kPredictedPriceItemColors, 32),
         child: Center(

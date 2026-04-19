@@ -1,12 +1,12 @@
-import 'package:dallal_proj/core/components/app_btns/col_btn.dart';
-import 'package:dallal_proj/core/components/app_input_fields/verification_input/verification_code_field_box.dart';
+import 'package:dallal_proj/core/shared/components/app_btns/col_btn.dart';
+import 'package:dallal_proj/core/shared/components/app_input_fields/verification_input/verification_code_field_box.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:dallal_proj/core/theme/app_colors.dart';
-import 'package:dallal_proj/core/widgets/helpers/show_snack_bar.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/show_snack_bar.dart';
 import 'package:dallal_proj/features/verification_page/presentation/views/widgets/resend_text_widget.dart';
 import 'package:dallal_proj/features/verify_msg_page/data/models/verify_model.dart';
 import 'package:dallal_proj/features/verify_msg_page/domain/entities/verify_msg_entity.dart';
-import 'package:dallal_proj/features/verify_msg_page/domain/entities/verify_msg_type.dart';
+import 'package:dallal_proj/core/enums/verify_msg_type.dart';
 import 'package:dallal_proj/features/verify_msg_page/presentation/manager/get_otp_code_cubit/get_otp_code_cubit.dart';
 import 'package:dallal_proj/features/verify_msg_page/presentation/manager/resend_otp_code_cubit/resend_otp_code_cubit.dart';
 import 'package:dallal_proj/features/verify_msg_page/presentation/manager/verify_otp_code_cubit/verify_otp_code_cubit.dart';
@@ -15,9 +15,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:dallal_proj/core/utils/app_router.dart';
-import 'package:dallal_proj/core/widgets/text_widgets/body_text.dart';
-import 'package:dallal_proj/core/widgets/text_widgets/right_main_title.dart';
-import 'package:dallal_proj/core/components/app_input_fields/verification_input/multi_code_fields.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/body_text.dart';
+import 'package:dallal_proj/core/shared/widgets/text_widgets/right_main_title.dart';
+import 'package:dallal_proj/core/shared/components/app_input_fields/verification_input/multi_code_fields.dart';
 
 class VerifyMsgBody extends StatefulWidget {
   const VerifyMsgBody({super.key, required this.vMsgModel});

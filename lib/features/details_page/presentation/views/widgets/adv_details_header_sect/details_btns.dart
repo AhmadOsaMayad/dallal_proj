@@ -1,8 +1,8 @@
-import 'package:dallal_proj/core/widgets/helpers/s_bx.dart';
+import 'package:dallal_proj/core/shared/widgets/helpers/s_bx.dart';
 import 'package:dallal_proj/features/details_page/domain/entities/show_details_entity.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/adv_details_header_sect/card_fav_btn.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/adv_details_header_sect/card_share_btn.dart';
-import 'package:dallal_proj/core/components/app_btns/models/x_b_size.dart';
+import 'package:dallal_proj/core/shared/components/app_btns/models/x_b_size.dart';
 import 'package:dallal_proj/features/details_page/presentation/views/widgets/adv_details_header_sect/det_likes_btn.dart';
 import 'package:flutter/material.dart';
 

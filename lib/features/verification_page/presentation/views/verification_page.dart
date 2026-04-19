@@ -1,5 +1,5 @@
-import 'package:dallal_proj/core/widgets/custom_app_bar.dart';
-import 'package:dallal_proj/core/widgets/page_padding.dart';
+import 'package:dallal_proj/core/shared/widgets/custom_app_bar.dart';
+import 'package:dallal_proj/core/shared/widgets/page_padding.dart';
 import 'package:dallal_proj/features/verification_page/presentation/views/widgets/verification_body.dart';
 import 'package:flutter/material.dart';
 

@@ -25,6 +25,7 @@ class UserProfileModel extends RspAuth {
       name: json['name'] as String?,
       whatsapp: json['whatsapp'] as String?,
       profileImage: json['profile_image'] as String?,
+      // token: json['token'] as String?,
     );
   }
 
