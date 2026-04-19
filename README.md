@@ -48,7 +48,7 @@ Core capabilities include:
 
 ## 📦 Tech Stack
 
-- **Framework:** Flutter (Dart 3.x)
+- **Framework:** Flutter (Dart SDK `>=3.7.0 <4.0.0`)
 - **State:** flutter_bloc
 - **Routing:** go_router
 - **DI:** get_it
@@ -131,6 +131,11 @@ python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
 > Dev note: `--reload` is for local development/testing only.
 >
 > Security note: `0.0.0.0` is needed for phone/device access on the same network, so use this only on trusted local networks and ensure firewall rules restrict unwanted access.
+>
+> Local-only safer alternative:
+> ```bash
+> python -m uvicorn main:app --host 127.0.0.1 --port 8000
+> ```
 
 Detailed guide:
 - `lib/features/ai_price_prediction/AI_CONNECTION_GUIDE.md`
