@@ -128,7 +128,9 @@ For real-device local testing, set your laptop local IP and run the AI server on
 ```bash
 python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
-> Security note: `0.0.0.0` is needed for phone/device access on the same network, so keep this for trusted local networks only and ensure firewall rules restrict unwanted access.
+> Dev note: `--reload` is for local development/testing only.
+>
+> Security note: `0.0.0.0` is needed for phone/device access on the same network, so use this only on trusted local networks and ensure firewall rules restrict unwanted access.
 
 Detailed guide:
 - `lib/features/ai_price_prediction/AI_CONNECTION_GUIDE.md`
