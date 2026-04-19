@@ -133,7 +133,7 @@ For real-device testing on the same Wi-Fi network, set your laptop local IP and 
 ```bash
 python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
-> Dev note: `--reload` is for local development/testing only.
+> Development note: `--reload` is for local development/testing only.
 >
 > Security note: `0.0.0.0` is needed for phone/device access on the same network, so use this only on trusted local networks and ensure firewall rules restrict unwanted access.
 
