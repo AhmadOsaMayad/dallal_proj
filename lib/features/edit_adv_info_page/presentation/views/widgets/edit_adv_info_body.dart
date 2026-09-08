@@ -39,7 +39,7 @@ class _EditAdvBodyState extends State<EditAdvBody> {
 
   // Track existing images (from server - URLs) and their IDs
   List<MediaEntity> _existingMedia = [];
-  List<int> _mediaIdsToDelete = [];
+  final List<int> _mediaIdsToDelete = [];
 
   // Track new images (base64 strings to be uploaded)
   List<String> _newImagesBase64 = [];

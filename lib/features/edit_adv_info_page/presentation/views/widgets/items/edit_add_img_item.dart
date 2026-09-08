@@ -41,8 +41,8 @@ class EditAddImgItem extends StatefulWidget {
 
 class _EditAddImgItemState extends State<EditAddImgItem> {
   // New images picked by user (local files)
-  List<XFile> _newSelectedImages = [];
-  List<String> _newBase64Images = [];
+  final List<XFile> _newSelectedImages = [];
+  final List<String> _newBase64Images = [];
 
   final ValueNotifier<int> _currentPage = ValueNotifier(0);
   final PageController _pageController = PageController();
@@ -65,13 +65,13 @@ class _EditAddImgItemState extends State<EditAddImgItem> {
   Future<void> _pickNewImages() async {
     try {
       final ImagePicker picker = ImagePicker();
-      final List<XFile>? pickedFiles = await picker.pickMultiImage(
+      final List<XFile> pickedFiles = await picker.pickMultiImage(
         maxWidth: 1080,
         maxHeight: 1080,
         imageQuality: 85,
       );
 
-      if (pickedFiles != null && pickedFiles.isNotEmpty) {
+      if (pickedFiles.isNotEmpty) {
         // Calculate how many more images we can add (max 10 total)
         final int remainingSlots = 10 - _totalImages;
         if (remainingSlots <= 0) {
@@ -367,7 +367,7 @@ class _EditAddImgItemState extends State<EditAddImgItem> {
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               decoration: BoxDecoration(
-                color: Colors.blue.withOpacity(0.8),
+                color: Colors.blue.withValues(alpha: 0.8),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: const Text(
@@ -384,7 +384,7 @@ class _EditAddImgItemState extends State<EditAddImgItem> {
               onTap: () => _removeExistingImage(index),
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.red.withOpacity(0.8),
+                  color: Colors.red.withValues(alpha: 0.8),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 padding: const EdgeInsets.all(6),
@@ -424,7 +424,7 @@ class _EditAddImgItemState extends State<EditAddImgItem> {
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               decoration: BoxDecoration(
-                color: kPrimColG.withOpacity(0.8),
+                color: kPrimColG.withValues(alpha: 0.8),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: const Text(

@@ -5,7 +5,6 @@ import 'package:dallal_proj/core/shared/components/radio_components/h_radio_form
 import 'package:dallal_proj/core/shared/widgets/inf_comp.dart';
 import 'package:dallal_proj/core/shared/components/app_input_fields/phone_field/phone_field.dart';
 import 'package:dallal_proj/core/shared/widgets/toggle_absorber.dart';
-import 'package:dallal_proj/temp_try.dart';
 import 'package:flutter/material.dart';
 
 class RegisterRadioForm extends StatelessWidget {

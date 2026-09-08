@@ -95,6 +95,7 @@ import 'package:dallal_proj/features/verify_msg_page/presentation/manager/get_ot
 import 'package:dallal_proj/features/verify_msg_page/presentation/manager/resend_otp_code_cubit/resend_otp_code_cubit.dart';
 import 'package:dallal_proj/features/verify_msg_page/presentation/manager/verify_otp_code_cubit/verify_otp_code_cubit.dart';
 import 'package:dallal_proj/features/verify_msg_page/presentation/views/verify_msg_page.dart';
+import 'package:dallal_proj/core/utils/route_guard.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -126,6 +127,7 @@ abstract class AppRouter {
   static const kEditAdvPage = '/editAdvPage';
 
   static final router = GoRouter(
+    redirect: authGuard,
     routes: [
       GoRoute(
         path: '/',

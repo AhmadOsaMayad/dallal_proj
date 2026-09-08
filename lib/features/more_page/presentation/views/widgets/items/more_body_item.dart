@@ -4,7 +4,6 @@ import 'package:dallal_proj/features/more_page/presentation/views/widgets/items/
 import 'package:dallal_proj/features/more_page/presentation/views/widgets/items/more_ico_text.dart';
 import 'package:dallal_proj/features/more_page/presentation/views/widgets/items/more_tail_btn.dart';
 import 'package:dallal_proj/gen/assets/assets.gen.dart';
-import 'package:dallal_proj/temp_try.dart';
 import 'package:flutter/material.dart';
 
 class MoreBodyItem extends StatelessWidget {

@@ -5,16 +5,25 @@ import 'package:http/http.dart' as http;
 
 /// API Service for the local AI model connection.
 class AiApiService {
-  /// The base URL for the local AI prediction server.
+  /// The host for the AI prediction server.
   ///
-  /// Update [_laptopIp] to match your development machine's local IP address.
-  static const String _laptopIp = '192.168.1.8';
+  /// Override at build/run time with:
+  ///   flutter run --dart-define=AI_SERVER_HOST=192.168.1.8
+  static const String _laptopIp = String.fromEnvironment(
+    'AI_SERVER_HOST',
+    defaultValue: '192.168.1.8',
+  );
+
+  static const int _port = int.fromEnvironment(
+    'AI_SERVER_PORT',
+    defaultValue: 8000,
+  );
 
   String get baseUrl {
     if (kIsWeb) {
-      return 'http://127.0.0.1:8000';
+      return 'http://127.0.0.1:$_port';
     }
-    return 'http://$_laptopIp:8000';
+    return 'http://$_laptopIp:$_port';
   }
 
   final Duration _timeout = const Duration(seconds: 30);

@@ -5,7 +5,6 @@ import 'package:dallal_proj/features/sections_page/presentation/manager/fetch_ap
 import 'package:dallal_proj/features/sections_page/presentation/manager/fetch_house_list_cubit/fetch_house_list_cubit.dart';
 import 'package:dallal_proj/features/sections_page/presentation/manager/fetch_land_list_cubit/fetch_land_list_cubit.dart';
 import 'package:dallal_proj/features/sections_page/presentation/manager/fetch_shop_list_cubit/fetch_shop_list_cubit.dart';
-import 'package:dallal_proj/temp_try.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';

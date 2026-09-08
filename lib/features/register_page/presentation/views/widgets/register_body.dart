@@ -7,7 +7,6 @@ import 'package:dallal_proj/features/register_page/data/models/register_model.da
 import 'package:dallal_proj/features/register_page/presentation/manager/register_user_cubit/register_user_cubit.dart';
 import 'package:dallal_proj/features/verify_msg_page/domain/entities/verify_msg_entity.dart';
 import 'package:dallal_proj/core/enums/verify_msg_type.dart';
-import 'package:dallal_proj/temp_try.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';

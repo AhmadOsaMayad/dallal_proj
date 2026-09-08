@@ -43,7 +43,6 @@ class _CrAdvBodyState extends State<CrAdvBody> {
   String _locationText = '';
   String _googleMapUrl = '';
   String _floors = '';
-  String _partsString = '';
   String _price = '';
   String _currency = '';
   String _extraDetails = '';
@@ -222,9 +221,8 @@ class _CrAdvBodyState extends State<CrAdvBody> {
                           });
                         },
                         popOnCompleted: (value) {
-                          setState(() {
-                            _partsString = value;
-                          });
+                          // The selected parts string isn't consumed by this
+                          // body yet; kept as a no-op callback.
                         },
                         title: title,
                         sectFwidth: sectFwidth,

@@ -2,7 +2,6 @@ import 'package:dallal_proj/core/shared/components/app_bottom_sheets/log_require
 import 'package:dallal_proj/core/shared/components/app_cards/property_card/items/property_card_helper.dart';
 import 'package:dallal_proj/core/constants/app_texts.dart';
 import 'package:dallal_proj/core/extensions/push_navigator.dart';
-import 'package:dallal_proj/core/extensions/escalator.dart';
 import 'package:dallal_proj/core/utils/app_router.dart';
 import 'package:dallal_proj/core/shared/components/app_cards/property_card/items/card_btns/card_seperated_btns_box.dart';
 import 'package:dallal_proj/core/shared/components/app_cards/property_card/h_card/pending_btn.dart';

@@ -1,5 +1,4 @@
 import 'package:dallal_proj/core/extensions/push_navigator.dart';
-import 'package:dallal_proj/core/extensions/escalator.dart';
 import 'package:dallal_proj/core/shared/components/app_cards/property_card/items/card_image/card_property_image.dart';
 import 'package:dallal_proj/core/shared/components/app_cards/property_card/v_card/v_card_gen_det_sect.dart';
 import 'package:dallal_proj/core/shared/widgets/symmetric_pads/h_p_item.dart';

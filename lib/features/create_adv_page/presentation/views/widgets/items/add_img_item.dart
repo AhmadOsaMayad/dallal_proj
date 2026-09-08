@@ -24,7 +24,7 @@ class AddImgItem extends StatefulWidget {
 
 class _AddImgItemState extends State<AddImgItem> {
   List<XFile> _selectedImages = [];
-  List<String> _base64Images = [];
+  final List<String> _base64Images = [];
   final ValueNotifier<int> _currentPage = ValueNotifier(0);
   final PageController _pageController = PageController();
 
@@ -38,13 +38,13 @@ class _AddImgItemState extends State<AddImgItem> {
   Future<void> _pickImages() async {
     try {
       final ImagePicker picker = ImagePicker();
-      final List<XFile>? pickedFiles = await picker.pickMultiImage(
+      final List<XFile> pickedFiles = await picker.pickMultiImage(
         maxWidth: 1080,
         maxHeight: 1080,
         imageQuality: 85,
       );
 
-      if (pickedFiles != null && pickedFiles.isNotEmpty) {
+      if (pickedFiles.isNotEmpty) {
         final List<XFile> limitedFiles =
             pickedFiles.length > 10 ? pickedFiles.sublist(0, 10) : pickedFiles;
 

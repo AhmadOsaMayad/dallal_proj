@@ -1,9 +1,28 @@
 import 'package:dallal_proj/core/constants/app_texts.dart';
+import 'package:flutter/foundation.dart';
 
-const kDomainApp = "http://72.62.231.199/api-app/api/";
-const kGenAppDomain = "http://192.168.1.7:1234/dallal-proj/";
+/// Backend API base URL.
+///
+/// Override at build/run time with:
+///   flutter run --dart-define=API_BASE_URL=https://your-server.com/api/
+///   flutter build apk --dart-define=API_BASE_URL=https://your-server.com/api/
+const kDomainApp = String.fromEnvironment(
+  'API_BASE_URL',
+  defaultValue: 'http://72.62.231.199/api-app/api/',
+);
+
+/// Legacy dev domain kept for reference; not used by the app anymore.
+@Deprecated('Use kDomainApp with --dart-define=API_BASE_URL instead')
+const kGenAppDomain = 'http://192.168.1.7:1234/dallal-proj/';
 
 const kDefFontFam = 'Rubik';
+
+/// Whether debug-only tooling (verbose network logging, etc.) is enabled.
+/// Controlled by `--dart-define=DEBUG_API_LOGS=true`; defaults to debug builds.
+const kDebugApiLogs = bool.fromEnvironment(
+  'DEBUG_API_LOGS',
+  defaultValue: kDebugMode,
+);
 const kDefFilterOPtion = kNewestOPtion;
 const kDefReportOpt = kRptFakeAdv;
 const kDefYesNoOPtion = kNo;

@@ -13,7 +13,6 @@ import 'package:dallal_proj/core/shared/widgets/symmetric_pads/v_p_item.dart';
 import 'package:dallal_proj/core/shared/widgets/helpers/widgets_helper.dart';
 import 'package:dallal_proj/core/constants/mock_models.dart';
 import 'package:dallal_proj/core/shared/widgets/helpers/s_bx.dart';
-import 'package:dallal_proj/temp_try.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 

@@ -1,4 +1,3 @@
-import 'package:dallal_proj/core/theme/app_colors.dart';
 import 'package:dallal_proj/core/utils/app_router.dart';
 import 'package:dallal_proj/core/utils/functions/delete_user_login_data.dart';
 import 'package:dallal_proj/core/shared/widgets/helpers/show_snack_bar.dart';

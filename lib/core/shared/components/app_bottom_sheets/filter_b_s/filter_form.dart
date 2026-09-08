@@ -83,6 +83,9 @@ class _FilterFormState extends State<FilterForm> {
       (initial?.featuredOnly ?? 0) == 1 ? kYes : kDefYesNoOPtion,
     );
   }
+
+  @override
+  void dispose() {
     _selectedOptA.dispose();
     _selectedOptB.dispose();
     _minPriceController.dispose();

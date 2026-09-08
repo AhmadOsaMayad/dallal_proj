@@ -1,30 +1,57 @@
-// This is a basic Flutter widget test.
+// App smoke test.
 //
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
+// Boots the real app widget (with Hive backed by a temp dir and the service
+// locator registered, mirroring main()) and verifies the guest navigation
+// flow: splash holds, then routes signed-out users to the preview page.
+//
+// The original template counter test was removed because it never matched
+// this app and would fail on every run.
 
-import 'package:flutter/material.dart';
-import 'package:flutter_test/flutter_test.dart';
+import 'dart:io';
 
+import 'package:dallal_proj/core/common/entities/adv_card_entity/adv_card_entity.dart';
+import 'package:dallal_proj/core/constants/app_defs.dart';
+import 'package:dallal_proj/core/constants/app_texts.dart';
+import 'package:dallal_proj/core/di/service_locator.dart';
+import 'package:dallal_proj/features/login_page/domain/entities/loggedin_user_entity.dart';
+import 'package:dallal_proj/features/preview/presentation/views/preview_page.dart';
+import 'package:dallal_proj/features/splash/presentation/views/splash_view.dart';
 import 'package:dallal_proj/main.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
+  setUpAll(() async {
+    TestWidgetsFlutterBinding.ensureInitialized();
+
+    final Directory tempDir = await Directory.systemTemp.createTemp(
+      'dallal_test_hive',
+    );
+    Hive.init(tempDir.path);
+
+    Hive.registerAdapter(LoggedinUserEntityAdapter());
+    Hive.registerAdapter(AdvCardEntityAdapter());
+
+    await Hive.openBox<LoggedinUserEntity?>(kMeDataBox);
+    await Hive.openBox<AdvCardEntity?>(kFeaturedAdvBox);
+    await Hive.openBox<AdvCardEntity?>(kAllAdvBox);
+
+    setupServiceLocator();
+  });
+
+  testWidgets('boots into splash and routes guests to the preview page', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(const DallalProj());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // First frame: the splash screen with the animated logo.
+    expect(find.byType(SplashView), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
+    // The splash holds ~5 seconds before deciding where to navigate.
+    // With an empty auth box the user is treated as signed out.
+    await tester.pump(const Duration(seconds: 6));
     await tester.pump();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(find.byType(PreviewPage), findsOneWidget);
   });
 }

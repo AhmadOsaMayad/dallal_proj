@@ -10,7 +10,6 @@ import 'package:dallal_proj/core/enums/verify_msg_type.dart';
 import 'package:dallal_proj/features/verify_msg_page/presentation/manager/get_otp_code_cubit/get_otp_code_cubit.dart';
 import 'package:dallal_proj/features/verify_msg_page/presentation/manager/resend_otp_code_cubit/resend_otp_code_cubit.dart';
 import 'package:dallal_proj/features/verify_msg_page/presentation/manager/verify_otp_code_cubit/verify_otp_code_cubit.dart';
-import 'package:dallal_proj/temp_try.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';

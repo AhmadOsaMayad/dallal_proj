@@ -2,7 +2,6 @@ import 'package:dallal_proj/core/shared/components/app_cards/package_card/entiti
 import 'package:dallal_proj/core/utils/functions/is_success.dart';
 import 'package:dallal_proj/features/featuring_adv_page/data/models/feature_adv_model.dart';
 import 'package:dallal_proj/features/featuring_adv_page/domain/use_cases/feature_the_adv_use_case.dart';
-import 'package:dallal_proj/temp_try.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
 
